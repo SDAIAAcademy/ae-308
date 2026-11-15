@@ -1,0 +1,180 @@
+{
+ "nodes": [
+  {
+   "id": "importer",
+   "type": "external",
+   "zone": "outside",
+   "label": "Importer and broker"
+  },
+  {
+   "id": "officer",
+   "type": "external",
+   "zone": "authority",
+   "label": "Clearance officer"
+  },
+  {
+   "id": "planner",
+   "type": "process",
+   "zone": "agent",
+   "label": "Mukhallis: model and loop"
+  },
+  {
+   "id": "code",
+   "type": "process",
+   "zone": "agent",
+   "label": "Duty code runner"
+  },
+  {
+   "id": "kb",
+   "type": "store",
+   "zone": "agent",
+   "label": "Tariff knowledge base"
+  },
+  {
+   "id": "memory",
+   "type": "store",
+   "zone": "agent",
+   "label": "Importer memory"
+  },
+  {
+   "id": "case",
+   "type": "process",
+   "zone": "servers",
+   "label": "Case server"
+  },
+  {
+   "id": "comms",
+   "type": "process",
+   "zone": "servers",
+   "label": "Comms server"
+  },
+  {
+   "id": "records",
+   "type": "store",
+   "zone": "servers",
+   "label": "Importer records (Restricted)"
+  },
+  {
+   "id": "ratesite",
+   "type": "external",
+   "zone": "outside",
+   "label": "Exchange-rate site"
+  },
+  {
+   "id": "screen",
+   "type": "process",
+   "zone": "authority",
+   "label": "Case screen (renders replies)"
+  }
+ ],
+ "flows": [
+  {
+   "id": "F01",
+   "from": "officer",
+   "to": "planner",
+   "data": "the task"
+  },
+  {
+   "id": "F02",
+   "from": "importer",
+   "to": "case",
+   "data": "emails and invoices"
+  },
+  {
+   "id": "F03",
+   "from": "case",
+   "to": "planner",
+   "data": "message text (read_message)"
+  },
+  {
+   "id": "F04",
+   "from": "records",
+   "to": "case",
+   "data": "importer record"
+  },
+  {
+   "id": "F05",
+   "from": "case",
+   "to": "planner",
+   "data": "importer record (get_importer)"
+  },
+  {
+   "id": "F06",
+   "from": "kb",
+   "to": "planner",
+   "data": "tariff notes (search_tariff)"
+  },
+  {
+   "id": "F07",
+   "from": "memory",
+   "to": "planner",
+   "data": "notes (recall)"
+  },
+  {
+   "id": "F08",
+   "from": "planner",
+   "to": "memory",
+   "data": "notes (remember)"
+  },
+  {
+   "id": "F09",
+   "from": "planner",
+   "to": "code",
+   "data": "generated code"
+  },
+  {
+   "id": "F10",
+   "from": "planner",
+   "to": "case",
+   "data": "update_case, release_hold"
+  },
+  {
+   "id": "F11",
+   "from": "planner",
+   "to": "comms",
+   "data": "send_email, fetch_rate, send_case_summary"
+  },
+  {
+   "id": "F12",
+   "from": "comms",
+   "to": "importer",
+   "data": "email"
+  },
+  {
+   "id": "F13",
+   "from": "comms",
+   "to": "ratesite",
+   "data": "request with an address the model chose"
+  },
+  {
+   "id": "F14",
+   "from": "ratesite",
+   "to": "comms",
+   "data": "rate page"
+  },
+  {
+   "id": "F15",
+   "from": "comms",
+   "to": "case",
+   "data": "case lookup with the shared key"
+  },
+  {
+   "id": "F16",
+   "from": "planner",
+   "to": "screen",
+   "data": "the reply, rendered"
+  },
+  {
+   "id": "F17",
+   "from": "screen",
+   "to": "ratesite",
+   "data": "image and link requests of the rendered reply"
+  },
+  {
+   "id": "F18",
+   "from": "importer",
+   "to": "kb",
+   "data": "broker circulars added as notes"
+  }
+ ]
+}

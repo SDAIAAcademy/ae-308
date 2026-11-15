@@ -1,0 +1,401 @@
+importer_id,company,contact_name,contact_email,broker_email,mobile,cr_number,iban,credit_limit_sar,risk_tier,classification
+IMP-0001,Nakheel Industrial Supplies,Amal Al-Naim,amal@nakheel-industrial-supplies-001.example,,+966584264696,5228111073,SA7096684780465688433735,1000000,B,Restricted
+IMP-0002,Bahr Trading,Hind Al-Jasir,hind@bahr-trading-002.example,,+966519086945,2937841557,SA1564194489166062249543,1000000,B,Restricted
+IMP-0003,Zad Medical Supplies,Faisal Al-Salem,faisal@zad-medical-supplies-003.example,desk@bawaba-brokers.example,+966505460659,5883086278,SA7614223839960075182125,250000,A,Restricted
+IMP-0004,Jood Medical Supplies,Hamad Al-Jasir,hamad@jood-medical-supplies-004.example,desk@tayseer-customs.example,+966588592159,1958932157,SA9060446662422178733104,100000,C,Restricted
+IMP-0005,Lujain Industrial Supplies,Nouf Al-Ahmadi,nouf@lujain-industrial-supplies-005.example,desk@mirfa-logistics.example,+966595360254,5794249311,SA1943662758575332458961,100000,B,Restricted
+IMP-0006,Thuraya Industrial Supplies,Tariq Al-Naim,tariq@thuraya-industrial-supplies-006.example,,+966575961757,5536565571,SA0185511963604532967273,50000,A,Restricted
+IMP-0007,Manar Building Materials,Saad Al-Hamad,saad@manar-building-materials-007.example,,+966505875820,2846325062,SA7155637882141415199193,100000,C,Restricted
+IMP-0008,Wateen Electronics,Mona Al-Turki,mona@wateen-electronics-008.example,desk@mirfa-logistics.example,+966553258731,9996872455,SA0016009356523898691339,100000,C,Restricted
+IMP-0009,Wateen Furniture,Saad Al-Rajeh,saad@wateen-furniture-009.example,,+966541966750,2101599902,SA4330136611031122438936,50000,A,Restricted
+IMP-0010,Lujain Auto Parts,Saad Al-Rajeh,saad@lujain-auto-parts-010.example,,+966505994532,3220463827,SA7100567018664299326804,500000,B,Restricted
+IMP-0011,Manar Trading,Majed Al-Hamad,majed@manar-trading-011.example,,+966511768891,9815426448,SA6459853263270157375245,50000,A,Restricted
+IMP-0012,Lujain Trading,Lama Al-Dabbas,lama@lujain-trading-012.example,,+966566735722,3548564903,SA9301304344615960982880,50000,B,Restricted
+IMP-0013,Amwaj Foods,Lama Al-Mousa,lama@amwaj-foods-013.example,,+966526889773,2780402391,SA1171391559887862745477,250000,C,Restricted
+IMP-0014,Lujain Auto Parts,Faisal Al-Baker,faisal@lujain-auto-parts-014.example,,+966531117237,3898175293,SA1613351447111464120734,1000000,A,Restricted
+IMP-0015,Qimma Electronics,Ghada Al-Baker,ghada@qimma-electronics-015.example,desk@sarie-clearance.example,+966541123497,7404320137,SA8144402968405958425665,50000,A,Restricted
+IMP-0016,Durrat Trading,Mona Al-Dabbas,mona@durrat-trading-016.example,,+966516894684,6375437079,SA5692856253744059798742,250000,A,Restricted
+IMP-0017,Wateen Industrial Supplies,Amal Al-Baker,amal@wateen-industrial-supplies-017.example,,+966531517972,2433936232,SA8804339547321485653198,500000,A,Restricted
+IMP-0018,Bayader Foods,Faisal Al-Salem,faisal@bayader-foods-018.example,,+966586714027,9965809661,SA3519907067569052868520,50000,A,Restricted
+IMP-0019,Nakheel Building Materials,Khalid Al-Hamad,khalid@nakheel-building-materials-019.example,desk@sarie-clearance.example,+966519670140,4181463739,SA5575143879495994737822,50000,A,Restricted
+IMP-0020,Nakheel Industrial Supplies,Rayan Al-Salem,rayan@nakheel-industrial-supplies-020.example,,+966582425720,5041251615,SA8675294149861440424956,1000000,A,Restricted
+IMP-0021,Arkan Industrial Supplies,Mona Al-Omar,mona@arkan-industrial-supplies-021.example,,+966574025486,1077913219,SA7205359128256678008823,1000000,B,Restricted
+IMP-0022,Bahr Furniture,Hind Al-Eid,hind@bahr-furniture-022.example,,+966514223614,5650455712,SA8345416421185701557460,500000,B,Restricted
+IMP-0023,Thuraya Medical Supplies,Mona Al-Ahmadi,mona@thuraya-medical-supplies-023.example,,+966551576245,0153570761,SA1089540003181945359511,100000,C,Restricted
+IMP-0024,Manar Industrial Supplies,Dalal Al-Baker,dalal@manar-industrial-supplies-024.example,,+966504121641,4777393656,SA1368338234186539835734,500000,A,Restricted
+IMP-0025,Thuraya Textiles,Amal Al-Fahd,amal@thuraya-textiles-025.example,,+966599451054,3899412823,SA7184947232447152094840,500000,A,Restricted
+IMP-0026,Dana Industrial Supplies,Ghada Al-Fahd,ghada@dana-industrial-supplies-026.example,desk@tayseer-customs.example,+966583737269,2360766284,SA7381251641891438976298,250000,A,Restricted
+IMP-0027,Wateen Foods,Hind Al-Jasir,hind@wateen-foods-027.example,,+966503925767,7860466605,SA9795459569829155643340,50000,A,Restricted
+IMP-0028,Jood Electronics,Tariq Al-Fahd,tariq@jood-electronics-028.example,,+966563084902,2565909432,SA1147148978069921291136,500000,A,Restricted
+IMP-0029,Bahr Furniture,Dalal Al-Omar,dalal@bahr-furniture-029.example,desk@mirfa-logistics.example,+966522894073,3311983189,SA4604790048508716521631,500000,C,Restricted
+IMP-0030,Qimma Building Materials,Faisal Al-Mousa,faisal@qimma-building-materials-030.example,,+966508031882,2341166924,SA5382385883448112920702,250000,C,Restricted
+IMP-0031,Durrat Auto Parts,Nasser Al-Salem,nasser@durrat-auto-parts-031.example,,+966598990244,2732329456,SA6880385563162442667774,1000000,A,Restricted
+IMP-0032,Jood Furniture,Saad Al-Omar,saad@jood-furniture-032.example,,+966514536778,2006441056,SA4325398649935202670151,1000000,C,Restricted
+IMP-0033,Zad Textiles,Faisal Al-Jasir,faisal@zad-textiles-033.example,desk@tayseer-customs.example,+966524204643,0862362822,SA3141342992425130026493,1000000,A,Restricted
+IMP-0034,Manar Foods,Ziyad Al-Salem,ziyad@manar-foods-034.example,,+966513461794,7143992075,SA2882096523879924719327,250000,B,Restricted
+IMP-0035,Lujain Building Materials,Abdulelah Al-Eid,abdulelah@lujain-building-materials-035.example,desk@mirfa-logistics.example,+966509166317,9219559055,SA5619150368653945713344,1000000,A,Restricted
+IMP-0036,Amwaj Auto Parts,Reem Al-Ghanim,reem@amwaj-auto-parts-036.example,,+966566958694,3213425776,SA4597566920792405846460,50000,B,Restricted
+IMP-0037,Bayader Building Materials,Mona Al-Dabbas,mona@bayader-building-materials-037.example,,+966560213702,3845909999,SA4760293491487172020910,250000,A,Restricted
+IMP-0038,Thuraya Trading,Hamad Al-Ahmadi,hamad@thuraya-trading-038.example,,+966507880627,8967045142,SA6636187820636720551384,500000,C,Restricted
+IMP-0039,Thuraya Furniture,Nasser Al-Baker,nasser@thuraya-furniture-039.example,,+966509443194,7721519076,SA8499001026793551958369,1000000,B,Restricted
+IMP-0040,Thuraya Textiles,Tariq Al-Mousa,tariq@thuraya-textiles-040.example,,+966568412370,2859178384,SA5099151212454062717296,500000,A,Restricted
+IMP-0041,Awtad Building Materials,Rayan Al-Jasir,rayan@awtad-building-materials-041.example,desk@mirfa-logistics.example,+966586204577,8119731713,SA8839053468422192613357,1000000,A,Restricted
+IMP-0042,Mada Medical Supplies,Hind Al-Issa,hind@mada-medical-supplies-042.example,,+966534515389,9863691285,SA9550983608279928370417,100000,B,Restricted
+IMP-0043,Qimma Medical Supplies,Mona Al-Kabeer,mona@qimma-medical-supplies-043.example,,+966572848735,9479696448,SA2063881202631233028872,100000,C,Restricted
+IMP-0044,Durrat Textiles,Dalal Al-Issa,dalal@durrat-textiles-044.example,,+966525488611,4890150166,SA7606372482340918138027,100000,C,Restricted
+IMP-0045,Amwaj Imports,Ghada Al-Eid,ghada@amwaj-imports-045.example,,+966519189542,1768375896,SA0875866679148265444494,500000,B,Restricted
+IMP-0046,Amwaj Building Materials,Nasser Al-Ahmadi,nasser@amwaj-building-materials-046.example,,+966568584559,2556068789,SA5649549747370519024733,50000,A,Restricted
+IMP-0047,Bahr Industrial Supplies,Lama Al-Issa,lama@bahr-industrial-supplies-047.example,,+966564723021,2449791629,SA9637803254809528955482,500000,A,Restricted
+IMP-0048,Manar Imports,Nasser Al-Issa,nasser@manar-imports-048.example,,+966514140387,6576809769,SA4501707871484208361705,100000,A,Restricted
+IMP-0049,Amwaj Trading,Khalid Al-Omar,khalid@amwaj-trading-049.example,,+966584402956,6626527381,SA9755129659311081171066,100000,B,Restricted
+IMP-0050,Nakheel Trading,Mona Al-Dabbas,mona@nakheel-trading-050.example,,+966567354764,7777460375,SA3126753910258839765223,50000,B,Restricted
+IMP-0051,Thuraya Furniture,Lama Al-Issa,lama@thuraya-furniture-051.example,,+966505946487,6551195102,SA3641789463746699812396,50000,A,Restricted
+IMP-0052,Jood Textiles,Tariq Al-Fahd,tariq@jood-textiles-052.example,,+966592024454,5710576280,SA3839784870147267932932,1000000,A,Restricted
+IMP-0053,Zad Trading,Abdulelah Al-Kabeer,abdulelah@zad-trading-053.example,,+966594963381,9613489266,SA7775812407394781201711,500000,C,Restricted
+IMP-0054,Manar Industrial Supplies,Yousef Al-Fahd,yousef@manar-industrial-supplies-054.example,,+966566882140,6847199806,SA2548994483363216552659,1000000,A,Restricted
+IMP-0055,Jood Auto Parts,Bandar Al-Salem,bandar@jood-auto-parts-055.example,,+966589256275,0954832031,SA3229286564629255224024,500000,A,Restricted
+IMP-0056,Manar Textiles,Khalid Al-Omar,khalid@manar-textiles-056.example,,+966504996154,6965081870,SA4642553929169616179553,100000,B,Restricted
+IMP-0057,Lujain Medical Supplies,Khalid Al-Fahd,khalid@lujain-medical-supplies-057.example,,+966578548726,8784162272,SA1338543307265678700382,50000,C,Restricted
+IMP-0058,Bayader Textiles,Khalid Al-Issa,khalid@bayader-textiles-058.example,,+966529521527,3702466521,SA4594596544187644650043,250000,B,Restricted
+IMP-0059,Rawabi Medical Supplies,Abdulelah Al-Jasir,abdulelah@rawabi-medical-supplies-059.example,desk@mirfa-logistics.example,+966587921449,0819196519,SA0440446718437993035182,100000,A,Restricted
+IMP-0060,Sahab Textiles,Ghada Al-Issa,ghada@sahab-textiles-060.example,desk@tayseer-customs.example,+966581802724,6927353419,SA6382991186293248824153,250000,C,Restricted
+IMP-0061,Arkan Industrial Supplies,Majed Al-Fahd,majed@arkan-industrial-supplies-061.example,,+966567936564,5652676637,SA3027326297841786542054,50000,A,Restricted
+IMP-0062,Lujain Imports,Khalid Al-Salem,khalid@lujain-imports-062.example,,+966562990121,4428442461,SA2770918426092988357550,250000,A,Restricted
+IMP-0063,Jood Industrial Supplies,Faisal Al-Dabbas,faisal@jood-industrial-supplies-063.example,,+966575881016,9839047681,SA0484652910855136096521,50000,B,Restricted
+IMP-0064,Sidra Furniture,Abdulelah Al-Kabeer,abdulelah@sidra-furniture-064.example,desk@mirfa-logistics.example,+966533514827,2151705763,SA9292671335718889861456,50000,A,Restricted
+IMP-0065,Dana Medical Supplies,Bandar Al-Eid,bandar@dana-medical-supplies-065.example,,+966518344051,4376320124,SA5258904926187622653553,1000000,B,Restricted
+IMP-0066,Awtad Industrial Supplies,Amal Al-Omar,amal@awtad-industrial-supplies-066.example,desk@tayseer-customs.example,+966567879143,6576234549,SA5844323475263226616356,50000,A,Restricted
+IMP-0067,Bayader Imports,Abdulelah Al-Turki,abdulelah@bayader-imports-067.example,,+966550946271,3068937944,SA9696228839860807673657,250000,A,Restricted
+IMP-0068,Rawabi Building Materials,Mona Al-Baker,mona@rawabi-building-materials-068.example,,+966539319114,3027124236,SA1150933582794554503174,100000,A,Restricted
+IMP-0069,Qimma Furniture,Rayan Al-Jasir,rayan@qimma-furniture-069.example,,+966517927878,7225709577,SA1595131816263152413183,100000,A,Restricted
+IMP-0070,Awtad Foods,Abdulelah Al-Salem,abdulelah@awtad-foods-070.example,,+966504239651,9757411428,SA8141819116846005807067,50000,A,Restricted
+IMP-0071,Nakheel Building Materials,Tariq Al-Omar,tariq@nakheel-building-materials-071.example,desk@bawaba-brokers.example,+966590588252,7197766105,SA2796079205398799227851,50000,A,Restricted
+IMP-0072,Nakheel Textiles,Ghada Al-Rajeh,ghada@nakheel-textiles-072.example,,+966528014295,3084935160,SA3947413536592044284044,1000000,B,Restricted
+IMP-0073,Rimal Building Materials,Faisal Al-Turki,faisal@rimal-building-materials-073.example,,+966565380643,5740780344,SA1882680206551566407956,100000,A,Restricted
+IMP-0074,Dana Trading,Ghada Al-Kabeer,ghada@dana-trading-074.example,desk@bawaba-brokers.example,+966550587181,4780816968,SA1219909123041050948649,500000,A,Restricted
+IMP-0075,Lujain Electronics,Ziyad Al-Omar,ziyad@lujain-electronics-075.example,desk@tayseer-customs.example,+966587464209,2251399185,SA5020569606098510705848,50000,B,Restricted
+IMP-0076,Rawabi Trading,Amal Al-Omar,amal@rawabi-trading-076.example,,+966506659937,0324440553,SA2591095029631933250971,250000,A,Restricted
+IMP-0077,Jood Foods,Nasser Al-Omar,nasser@jood-foods-077.example,,+966519203270,5408998455,SA5095492040823112964792,100000,A,Restricted
+IMP-0078,Rawabi Electronics,Dalal Al-Eid,dalal@rawabi-electronics-078.example,,+966594460334,5249093599,SA3104745583320275845387,100000,B,Restricted
+IMP-0079,Zad Building Materials,Dalal Al-Omar,dalal@zad-building-materials-079.example,,+966524106927,7905048019,SA0846678517148376579177,500000,A,Restricted
+IMP-0080,Mada Furniture,Faisal Al-Hamad,faisal@mada-furniture-080.example,,+966560226859,8923780462,SA7012034106175370520594,100000,A,Restricted
+IMP-0081,Awtad Electronics,Ghada Al-Turki,ghada@awtad-electronics-081.example,desk@tayseer-customs.example,+966503708050,5730149356,SA8845113818511741842100,500000,C,Restricted
+IMP-0082,Lujain Furniture,Khalid Al-Ghanim,khalid@lujain-furniture-082.example,,+966591813554,1943579576,SA5123950441590957095806,500000,A,Restricted
+IMP-0083,Dana Building Materials,Khalid Al-Ahmadi,khalid@dana-building-materials-083.example,,+966528513638,8410409275,SA5925818928171616119149,500000,A,Restricted
+IMP-0084,Bahr Foods,Amal Al-Turki,amal@bahr-foods-084.example,desk@bawaba-brokers.example,+966524409641,3254369544,SA4973345232900886378051,500000,A,Restricted
+IMP-0085,Rawabi Foods,Amal Al-Eid,amal@rawabi-foods-085.example,desk@bawaba-brokers.example,+966551025420,1352387275,SA5651770578009388828325,500000,A,Restricted
+IMP-0086,Mada Building Materials,Mona Al-Turki,mona@mada-building-materials-086.example,desk@sarie-clearance.example,+966580032893,3858246694,SA7526154389276971582179,500000,A,Restricted
+IMP-0087,Zad Medical Supplies,Tariq Al-Kabeer,tariq@zad-medical-supplies-087.example,,+966591967966,8484406538,SA1775125322268677616372,500000,B,Restricted
+IMP-0088,Qimma Foods,Yousef Al-Salem,yousef@qimma-foods-088.example,,+966585007007,6536969982,SA2253180913050434103239,1000000,A,Restricted
+IMP-0089,Lujain Imports,Faisal Al-Omar,faisal@lujain-imports-089.example,,+966586960270,7708958237,SA9153724692318093378517,1000000,A,Restricted
+IMP-0090,Durrat Electronics,Saad Al-Kabeer,saad@durrat-electronics-090.example,,+966528810300,7716268978,SA9287008756462213577031,500000,B,Restricted
+IMP-0091,Rimal Electronics,Ghada Al-Mousa,ghada@rimal-electronics-091.example,desk@mirfa-logistics.example,+966547632723,0879079020,SA1411574228324350166356,100000,A,Restricted
+IMP-0092,Amwaj Industrial Supplies,Mona Al-Turki,mona@amwaj-industrial-supplies-092.example,,+966509921608,8289530190,SA2519456716560993023664,250000,A,Restricted
+IMP-0093,Manar Industrial Supplies,Hind Al-Omar,hind@manar-industrial-supplies-093.example,,+966559100641,9254282748,SA0639766342829460046516,500000,A,Restricted
+IMP-0094,Bayader Textiles,Rayan Al-Omar,rayan@bayader-textiles-094.example,,+966527234664,6938499807,SA1474493419147371519533,100000,C,Restricted
+IMP-0095,Thuraya Industrial Supplies,Ghada Al-Jasir,ghada@thuraya-industrial-supplies-095.example,,+966513889493,0392676807,SA9291669788840996932872,1000000,A,Restricted
+IMP-0096,Sahab Electronics,Hind Al-Issa,hind@sahab-electronics-096.example,,+966544375871,7243244115,SA7245310636353549335471,50000,A,Restricted
+IMP-0097,Arkan Electronics,Mona Al-Omar,mona@arkan-electronics-097.example,,+966528273918,6152886190,SA1735896495166525805087,100000,A,Restricted
+IMP-0098,Zad Building Materials,Majed Al-Salem,majed@zad-building-materials-098.example,,+966531753765,8732020884,SA2632870085798164835041,500000,A,Restricted
+IMP-0099,Lujain Building Materials,Ziyad Al-Rajeh,ziyad@lujain-building-materials-099.example,desk@bawaba-brokers.example,+966541014314,2106807277,SA2673941814405959024753,250000,C,Restricted
+IMP-0100,Rimal Foods,Ziyad Al-Dabbas,ziyad@rimal-foods-100.example,,+966559515776,1399126107,SA2419818270014546727478,500000,B,Restricted
+IMP-0101,Arkan Foods,Hind Al-Mousa,hind@arkan-foods-101.example,,+966551475671,9494471118,SA2127143176719466897512,50000,B,Restricted
+IMP-0102,Mada Building Materials,Yousef Al-Salem,yousef@mada-building-materials-102.example,desk@sarie-clearance.example,+966538970188,3013702183,SA8511137436489243267283,250000,A,Restricted
+IMP-0103,Nakheel Medical Supplies,Abdulelah Al-Omar,abdulelah@nakheel-medical-supplies-103.example,,+966526920333,7196768112,SA7085999069951138546877,1000000,B,Restricted
+IMP-0104,Dana Imports,Mona Al-Salem,mona@dana-imports-104.example,,+966565116170,8539835998,SA2799629220341990537342,250000,B,Restricted
+IMP-0105,Lujain Imports,Mona Al-Mousa,mona@lujain-imports-105.example,,+966521426332,5849141784,SA4651674524571025687574,250000,A,Restricted
+IMP-0106,Dana Imports,Reem Al-Turki,reem@dana-imports-106.example,,+966578703137,0866250316,SA2093232577473906830616,50000,B,Restricted
+IMP-0107,Sidra Textiles,Mona Al-Omar,mona@sidra-textiles-107.example,,+966573330229,0416734309,SA6186270987590693064551,100000,A,Restricted
+IMP-0108,Nakheel Furniture,Ghada Al-Mousa,ghada@nakheel-furniture-108.example,,+966530450101,5863901831,SA9386808862467583861709,250000,A,Restricted
+IMP-0109,Awtad Furniture,Rayan Al-Jasir,rayan@awtad-furniture-109.example,,+966511661362,1625396951,SA6834118469823352713082,100000,B,Restricted
+IMP-0110,Manar Trading,Nouf Al-Mousa,nouf@manar-trading-110.example,,+966525723787,8392511203,SA5315853072344605511056,1000000,A,Restricted
+IMP-0111,Rawabi Imports,Nasser Al-Hamad,nasser@rawabi-imports-111.example,,+966553313659,6732343384,SA3162951511509643304637,1000000,B,Restricted
+IMP-0112,Dana Furniture,Saad Al-Naim,saad@dana-furniture-112.example,,+966577111905,9571911666,SA7639515048779393636788,50000,B,Restricted
+IMP-0113,Qimma Furniture,Ghada Al-Issa,ghada@qimma-furniture-113.example,,+966550082091,9358426284,SA9961210836231606008908,250000,A,Restricted
+IMP-0114,Qimma Building Materials,Yousef Al-Dabbas,yousef@qimma-building-materials-114.example,,+966502673550,6665184361,SA6421734111195459565832,100000,B,Restricted
+IMP-0115,Durrat Electronics,Saad Al-Salem,saad@durrat-electronics-115.example,desk@tayseer-customs.example,+966586112769,5163961216,SA1849929072988590228431,50000,A,Restricted
+IMP-0116,Amwaj Furniture,Khalid Al-Ahmadi,khalid@amwaj-furniture-116.example,,+966505949532,4832641906,SA5848972619075502761697,250000,A,Restricted
+IMP-0117,Sahab Textiles,Faisal Al-Rajeh,faisal@sahab-textiles-117.example,desk@mirfa-logistics.example,+966588227425,0794977544,SA8949747125805755035073,100000,B,Restricted
+IMP-0118,Dana Imports,Reem Al-Mousa,reem@dana-imports-118.example,,+966577167605,0361176758,SA8100742733212378480529,50000,C,Restricted
+IMP-0119,Mada Furniture,Hind Al-Rajeh,hind@mada-furniture-119.example,,+966535144489,9722838934,SA9950028160269828201235,50000,B,Restricted
+IMP-0120,Thuraya Industrial Supplies,Nouf Al-Turki,nouf@thuraya-industrial-supplies-120.example,,+966552443039,7365767978,SA5816078726743734179539,500000,A,Restricted
+IMP-0121,Zad Imports,Amal Al-Kabeer,amal@zad-imports-121.example,,+966510770883,1264853909,SA4042428487384021640980,1000000,C,Restricted
+IMP-0122,Amwaj Electronics,Nasser Al-Dabbas,nasser@amwaj-electronics-122.example,,+966597034968,8071614803,SA0979233919325954349953,50000,A,Restricted
+IMP-0123,Sahab Industrial Supplies,Nasser Al-Eid,nasser@sahab-industrial-supplies-123.example,,+966577133452,4193678991,SA6538817578650734604821,1000000,A,Restricted
+IMP-0124,Manar Furniture,Dalal Al-Omar,dalal@manar-furniture-124.example,,+966509860221,1962604056,SA1583567816170473305127,50000,A,Restricted
+IMP-0125,Awtad Industrial Supplies,Nasser Al-Fahd,nasser@awtad-industrial-supplies-125.example,desk@mirfa-logistics.example,+966574363115,0437340684,SA3228538562057565407253,500000,B,Restricted
+IMP-0126,Awtad Trading,Lama Al-Fahd,lama@awtad-trading-126.example,desk@tayseer-customs.example,+966576946812,5714391654,SA1122745497384692121032,250000,A,Restricted
+IMP-0127,Manar Furniture,Saad Al-Ahmadi,saad@manar-furniture-127.example,,+966508418264,9546116492,SA2037990529003346690282,500000,B,Restricted
+IMP-0128,Awtad Medical Supplies,Mona Al-Rajeh,mona@awtad-medical-supplies-128.example,,+966590240038,7620202498,SA2037809581289448336147,1000000,A,Restricted
+IMP-0129,Thuraya Auto Parts,Khalid Al-Hamad,khalid@thuraya-auto-parts-129.example,,+966518762622,4251969230,SA0896102632052472075078,50000,A,Restricted
+IMP-0130,Mada Trading,Mona Al-Salem,mona@mada-trading-130.example,desk@tayseer-customs.example,+966513584607,7655975584,SA2734587195710888376221,1000000,C,Restricted
+IMP-0131,Bayader Textiles,Majed Al-Turki,majed@bayader-textiles-131.example,,+966556493012,6562576132,SA1571991872127201387128,50000,B,Restricted
+IMP-0132,Rimal Medical Supplies,Rayan Al-Dabbas,rayan@rimal-medical-supplies-132.example,,+966593022943,0355426705,SA9367987385063452132781,100000,A,Restricted
+IMP-0133,Rawabi Electronics,Majed Al-Ahmadi,majed@rawabi-electronics-133.example,,+966506502857,3141531297,SA4390201079224088769339,50000,B,Restricted
+IMP-0134,Sahab Building Materials,Mona Al-Mousa,mona@sahab-building-materials-134.example,,+966565835796,0774664910,SA0419189635934355282962,250000,A,Restricted
+IMP-0135,Mada Industrial Supplies,Hind Al-Baker,hind@mada-industrial-supplies-135.example,desk@sarie-clearance.example,+966558336779,8847496972,SA3843426457401462762579,250000,B,Restricted
+IMP-0136,Sidra Electronics,Mona Al-Omar,mona@sidra-electronics-136.example,,+966538598283,6810917565,SA8577486317463969300235,50000,B,Restricted
+IMP-0137,Zad Medical Supplies,Nasser Al-Kabeer,nasser@zad-medical-supplies-137.example,,+966503007704,1244982194,SA3305069935691989829847,50000,A,Restricted
+IMP-0138,Dana Imports,Yousef Al-Rajeh,yousef@dana-imports-138.example,,+966544962502,6075246710,SA0635878139336983221529,50000,A,Restricted
+IMP-0139,Bayader Medical Supplies,Faisal Al-Omar,faisal@bayader-medical-supplies-139.example,,+966535305829,8608191972,SA7386391178019020907297,100000,A,Restricted
+IMP-0140,Qimma Imports,Tariq Al-Jasir,tariq@qimma-imports-140.example,desk@bawaba-brokers.example,+966507512973,2957816876,SA3941428347291806994999,100000,A,Restricted
+IMP-0141,Sahab Electronics,Lama Al-Issa,lama@sahab-electronics-141.example,,+966576944767,7232141972,SA6347216178748769467981,1000000,C,Restricted
+IMP-0142,Arkan Building Materials,Nasser Al-Naim,nasser@arkan-building-materials-142.example,,+966519539698,2931617628,SA5776055942121526241455,500000,A,Restricted
+IMP-0143,Zad Foods,Yousef Al-Mousa,yousef@zad-foods-143.example,,+966517068441,8829655028,SA9948026111594263154933,50000,A,Restricted
+IMP-0144,Zad Trading,Hamad Al-Kabeer,hamad@zad-trading-144.example,,+966582698497,7797224669,SA3163230125425105599070,500000,B,Restricted
+IMP-0145,Rimal Textiles,Mona Al-Baker,mona@rimal-textiles-145.example,,+966537197058,0810733940,SA7883656422988770119408,1000000,B,Restricted
+IMP-0146,Jood Foods,Yousef Al-Salem,yousef@jood-foods-146.example,desk@tayseer-customs.example,+966558855850,2006502007,SA5794985725029704929228,100000,B,Restricted
+IMP-0147,Sahab Auto Parts,Nasser Al-Baker,nasser@sahab-auto-parts-147.example,desk@sarie-clearance.example,+966512132958,5221847659,SA4710185712802792676560,250000,A,Restricted
+IMP-0148,Rimal Foods,Mona Al-Baker,mona@rimal-foods-148.example,desk@tayseer-customs.example,+966522733345,9348692899,SA5633212997121398943397,250000,C,Restricted
+IMP-0149,Manar Trading,Yousef Al-Eid,yousef@manar-trading-149.example,desk@tayseer-customs.example,+966519492393,0286731739,SA6686908364830154228255,1000000,B,Restricted
+IMP-0150,Durrat Industrial Supplies,Dalal Al-Kabeer,dalal@durrat-industrial-supplies-150.example,,+966535483563,3196885097,SA7304518833089401402047,500000,A,Restricted
+IMP-0151,Lujain Industrial Supplies,Majed Al-Turki,majed@lujain-industrial-supplies-151.example,,+966545240088,6347590730,SA1460120705241994278679,1000000,A,Restricted
+IMP-0152,Manar Trading,Mona Al-Eid,mona@manar-trading-152.example,desk@mirfa-logistics.example,+966503144743,9855370540,SA0684638836842889447401,500000,A,Restricted
+IMP-0153,Durrat Trading,Khalid Al-Kabeer,khalid@durrat-trading-153.example,,+966558667790,1910109831,SA9486957859269316590149,100000,C,Restricted
+IMP-0154,Jood Trading,Ghada Al-Turki,ghada@jood-trading-154.example,,+966592189006,2451263912,SA6838006630794211140277,500000,A,Restricted
+IMP-0155,Rimal Foods,Abdulelah Al-Jasir,abdulelah@rimal-foods-155.example,desk@tayseer-customs.example,+966570083667,3552964205,SA8212041050945788151239,1000000,A,Restricted
+IMP-0156,Sahab Industrial Supplies,Dalal Al-Ahmadi,dalal@sahab-industrial-supplies-156.example,desk@tayseer-customs.example,+966580657526,1882555534,SA4506682189589409664474,100000,A,Restricted
+IMP-0157,Sahab Textiles,Lama Al-Issa,lama@sahab-textiles-157.example,,+966577189621,3201694926,SA3878294277204442795434,100000,A,Restricted
+IMP-0158,Durrat Industrial Supplies,Faisal Al-Hamad,faisal@durrat-industrial-supplies-158.example,,+966591423498,3996811404,SA4800273704718193020015,250000,C,Restricted
+IMP-0159,Rimal Auto Parts,Hind Al-Ghanim,hind@rimal-auto-parts-159.example,,+966565107045,6705633756,SA0354593167824619013298,250000,A,Restricted
+IMP-0160,Amwaj Textiles,Hind Al-Baker,hind@amwaj-textiles-160.example,desk@tayseer-customs.example,+966535353936,9441060943,SA3321078758986281124942,250000,B,Restricted
+IMP-0161,Zad Foods,Amal Al-Issa,amal@zad-foods-161.example,desk@bawaba-brokers.example,+966591971499,2305803161,SA9998609619298317791324,250000,B,Restricted
+IMP-0162,Sidra Electronics,Reem Al-Naim,reem@sidra-electronics-162.example,desk@bawaba-brokers.example,+966529684347,5026067755,SA2939832322575315977129,50000,B,Restricted
+IMP-0163,Nakheel Furniture,Reem Al-Ahmadi,reem@nakheel-furniture-163.example,,+966506380313,1519870313,SA8179210776445843316333,1000000,A,Restricted
+IMP-0164,Arkan Textiles,Faisal Al-Turki,faisal@arkan-textiles-164.example,desk@tayseer-customs.example,+966518097365,1762599593,SA3955646590733317984630,100000,B,Restricted
+IMP-0165,Awtad Industrial Supplies,Hind Al-Naim,hind@awtad-industrial-supplies-165.example,,+966511369274,1013788125,SA5424974909949261113259,250000,B,Restricted
+IMP-0166,Awtad Building Materials,Amal Al-Ghanim,amal@awtad-building-materials-166.example,,+966579205039,3354718764,SA5085785107630507599649,250000,A,Restricted
+IMP-0167,Dana Industrial Supplies,Faisal Al-Jasir,faisal@dana-industrial-supplies-167.example,,+966590046442,0988056896,SA6452028534024618297204,250000,A,Restricted
+IMP-0168,Rimal Furniture,Majed Al-Omar,majed@rimal-furniture-168.example,,+966570230395,0157719498,SA7109834859501786992242,100000,A,Restricted
+IMP-0169,Lujain Imports,Dalal Al-Rajeh,dalal@lujain-imports-169.example,,+966541429898,1531861248,SA6809856977317687528352,250000,B,Restricted
+IMP-0170,Jood Foods,Hamad Al-Jasir,hamad@jood-foods-170.example,desk@bawaba-brokers.example,+966535330731,0062032342,SA9304502813748395621992,250000,B,Restricted
+IMP-0171,Arkan Medical Supplies,Khalid Al-Rajeh,khalid@arkan-medical-supplies-171.example,desk@bawaba-brokers.example,+966577240151,6379944277,SA0885790478221786900310,50000,A,Restricted
+IMP-0172,Zad Furniture,Reem Al-Issa,reem@zad-furniture-172.example,desk@tayseer-customs.example,+966589462654,9383096173,SA4878334842259615580983,50000,A,Restricted
+IMP-0173,Arkan Medical Supplies,Khalid Al-Fahd,khalid@arkan-medical-supplies-173.example,desk@sarie-clearance.example,+966550844006,2241737493,SA6430714070086614343473,250000,A,Restricted
+IMP-0174,Thuraya Textiles,Nasser Al-Fahd,nasser@thuraya-textiles-174.example,desk@bawaba-brokers.example,+966556128474,3700908469,SA8237118336158152376770,50000,B,Restricted
+IMP-0175,Awtad Imports,Rayan Al-Naim,rayan@awtad-imports-175.example,,+966543862399,8817208733,SA6440107005592653554615,250000,B,Restricted
+IMP-0176,Bahr Medical Supplies,Rayan Al-Baker,rayan@bahr-medical-supplies-176.example,,+966560372069,5278815299,SA5746529529257964745000,100000,B,Restricted
+IMP-0177,Wateen Trading,Majed Al-Salem,majed@wateen-trading-177.example,,+966572893175,4939260636,SA0419348695363571018628,250000,B,Restricted
+IMP-0178,Mada Imports,Rayan Al-Baker,rayan@mada-imports-178.example,,+966517703524,8258587842,SA8922166139521968526431,50000,C,Restricted
+IMP-0179,Bahr Imports,Tariq Al-Kabeer,tariq@bahr-imports-179.example,desk@mirfa-logistics.example,+966516845908,3715202081,SA9988228474799885709956,500000,C,Restricted
+IMP-0180,Qimma Building Materials,Majed Al-Ahmadi,majed@qimma-building-materials-180.example,,+966554087003,9232933768,SA6079047733192744192562,1000000,A,Restricted
+IMP-0181,Wateen Foods,Khalid Al-Baker,khalid@wateen-foods-181.example,,+966563284293,3807337864,SA1794210675767127326376,500000,A,Restricted
+IMP-0182,Lujain Electronics,Abdulelah Al-Jasir,abdulelah@lujain-electronics-182.example,,+966516360845,3495016443,SA1927804761811928325175,500000,C,Restricted
+IMP-0183,Lujain Auto Parts,Mona Al-Jasir,mona@lujain-auto-parts-183.example,,+966514235213,8609690715,SA3974000982471451431473,50000,A,Restricted
+IMP-0184,Rawabi Furniture,Mona Al-Hamad,mona@rawabi-furniture-184.example,,+966599164141,5795373806,SA0619105801714468080525,250000,A,Restricted
+IMP-0185,Bayader Medical Supplies,Ghada Al-Eid,ghada@bayader-medical-supplies-185.example,desk@mirfa-logistics.example,+966507166846,8722965139,SA7908426079970919401658,1000000,A,Restricted
+IMP-0186,Manar Textiles,Rayan Al-Salem,rayan@manar-textiles-186.example,,+966524340947,1414453569,SA0985826082202657953377,500000,A,Restricted
+IMP-0187,Arkan Electronics,Abdulelah Al-Turki,abdulelah@arkan-electronics-187.example,desk@sarie-clearance.example,+966521982395,1206254722,SA3816922268842129597624,50000,B,Restricted
+IMP-0188,Qimma Auto Parts,Yousef Al-Kabeer,yousef@qimma-auto-parts-188.example,,+966513115068,6310299807,SA3979962497738685640679,100000,C,Restricted
+IMP-0189,Rawabi Electronics,Mona Al-Baker,mona@rawabi-electronics-189.example,,+966590095365,5199278273,SA9121641485776411538547,1000000,A,Restricted
+IMP-0190,Nakheel Auto Parts,Ghada Al-Jasir,ghada@nakheel-auto-parts-190.example,,+966540858659,2370813821,SA8638671809842746086084,50000,A,Restricted
+IMP-0191,Dana Industrial Supplies,Mona Al-Issa,mona@dana-industrial-supplies-191.example,,+966562749603,7466768349,SA2756213846872668809215,1000000,B,Restricted
+IMP-0192,Lujain Imports,Nouf Al-Rajeh,nouf@lujain-imports-192.example,,+966570967268,9282034148,SA1430960068807926538873,250000,B,Restricted
+IMP-0193,Zad Trading,Bandar Al-Jasir,bandar@zad-trading-193.example,desk@sarie-clearance.example,+966597818858,0285475109,SA2625201683261550097005,50000,A,Restricted
+IMP-0194,Arkan Building Materials,Majed Al-Turki,majed@arkan-building-materials-194.example,,+966532474366,0066394150,SA6497201102027092675283,250000,B,Restricted
+IMP-0195,Rimal Furniture,Ghada Al-Ahmadi,ghada@rimal-furniture-195.example,desk@sarie-clearance.example,+966555192650,1860446234,SA8572010133678818781634,250000,B,Restricted
+IMP-0196,Qimma Foods,Hamad Al-Hamad,hamad@qimma-foods-196.example,,+966522292558,1196463334,SA6512507203104575433816,100000,C,Restricted
+IMP-0197,Bahr Medical Supplies,Abdulelah Al-Mousa,abdulelah@bahr-medical-supplies-197.example,,+966578617602,6419059944,SA9051788488456212129443,250000,A,Restricted
+IMP-0198,Qimma Medical Supplies,Lama Al-Turki,lama@qimma-medical-supplies-198.example,desk@tayseer-customs.example,+966591803316,6250989443,SA8133647176599954798194,100000,B,Restricted
+IMP-0199,Lujain Building Materials,Lama Al-Issa,lama@lujain-building-materials-199.example,,+966572968383,1210329727,SA1767353950748823981775,50000,A,Restricted
+IMP-0200,Lujain Auto Parts,Rayan Al-Fahd,rayan@lujain-auto-parts-200.example,,+966585551969,9257112357,SA7412527875922086285178,100000,A,Restricted
+IMP-0201,Bahr Auto Parts,Mona Al-Baker,mona@bahr-auto-parts-201.example,,+966566257220,0500371443,SA5016085463977316066635,1000000,B,Restricted
+IMP-0202,Jood Building Materials,Yousef Al-Eid,yousef@jood-building-materials-202.example,,+966552233146,1973614014,SA1421483920737504880975,500000,A,Restricted
+IMP-0203,Arkan Industrial Supplies,Bandar Al-Omar,bandar@arkan-industrial-supplies-203.example,desk@tayseer-customs.example,+966534767432,0732736269,SA2504494460301632447874,50000,B,Restricted
+IMP-0204,Zad Furniture,Tariq Al-Jasir,tariq@zad-furniture-204.example,,+966525424772,0511320137,SA4666958846339377965903,500000,C,Restricted
+IMP-0205,Durrat Building Materials,Yousef Al-Ghanim,yousef@durrat-building-materials-205.example,,+966501794331,8167616984,SA7858298566339213000114,50000,A,Restricted
+IMP-0206,Wateen Electronics,Bandar Al-Issa,bandar@wateen-electronics-206.example,desk@sarie-clearance.example,+966503632142,8132938787,SA4263799258388096894517,50000,A,Restricted
+IMP-0207,Bayader Medical Supplies,Ghada Al-Omar,ghada@bayader-medical-supplies-207.example,,+966533372481,6488959490,SA7306945267056265595700,1000000,B,Restricted
+IMP-0208,Wateen Industrial Supplies,Khalid Al-Salem,khalid@wateen-industrial-supplies-208.example,,+966569351166,2644710070,SA2040639598414491274801,1000000,B,Restricted
+IMP-0209,Wateen Trading,Reem Al-Ahmadi,reem@wateen-trading-209.example,desk@sarie-clearance.example,+966547710895,4374686330,SA9155530777319855156006,250000,A,Restricted
+IMP-0210,Zad Imports,Ghada Al-Kabeer,ghada@zad-imports-210.example,,+966563901850,5014068115,SA4261593074912959765581,250000,A,Restricted
+IMP-0211,Thuraya Furniture,Lama Al-Naim,lama@thuraya-furniture-211.example,,+966534870449,9369055946,SA1244822015371053522001,1000000,A,Restricted
+IMP-0212,Sidra Furniture,Lama Al-Eid,lama@sidra-furniture-212.example,,+966572529458,3328967959,SA2165075772182962095252,100000,B,Restricted
+IMP-0213,Lujain Textiles,Majed Al-Issa,majed@lujain-textiles-213.example,,+966599993426,2040223209,SA1127986797219163623506,50000,A,Restricted
+IMP-0214,Zad Textiles,Abdulelah Al-Ahmadi,abdulelah@zad-textiles-214.example,,+966512959814,7645968271,SA0078839241697737776607,50000,B,Restricted
+IMP-0215,Awtad Imports,Ghada Al-Dabbas,ghada@awtad-imports-215.example,,+966586051477,6815420479,SA1321663174954410369934,100000,C,Restricted
+IMP-0216,Rawabi Industrial Supplies,Nouf Al-Hamad,nouf@rawabi-industrial-supplies-216.example,,+966535525503,0484780201,SA2206809905108107984903,500000,A,Restricted
+IMP-0217,Thuraya Textiles,Faisal Al-Kabeer,faisal@thuraya-textiles-217.example,,+966575130488,5972963366,SA3643307492539835789549,100000,A,Restricted
+IMP-0218,Awtad Textiles,Rayan Al-Naim,rayan@awtad-textiles-218.example,desk@sarie-clearance.example,+966516208754,7575553001,SA4839077403585690641170,50000,A,Restricted
+IMP-0219,Rawabi Textiles,Amal Al-Turki,amal@rawabi-textiles-219.example,desk@sarie-clearance.example,+966533455329,5308083207,SA9886116470726986984716,1000000,B,Restricted
+IMP-0220,Durrat Textiles,Reem Al-Jasir,reem@durrat-textiles-220.example,,+966550243864,8203201508,SA1436314314887812740031,1000000,A,Restricted
+IMP-0221,Jood Foods,Saad Al-Turki,saad@jood-foods-221.example,,+966520074125,7597158608,SA5884017030929317946777,250000,B,Restricted
+IMP-0222,Dana Trading,Lama Al-Naim,lama@dana-trading-222.example,,+966528983529,3714352412,SA1122331501645879069603,1000000,A,Restricted
+IMP-0223,Mada Imports,Faisal Al-Omar,faisal@mada-imports-223.example,,+966558576482,8173551494,SA4340575235248902772583,50000,A,Restricted
+IMP-0224,Dana Furniture,Reem Al-Baker,reem@dana-furniture-224.example,,+966507710347,7288236326,SA2470767814102688818701,100000,A,Restricted
+IMP-0225,Manar Textiles,Khalid Al-Hamad,khalid@manar-textiles-225.example,,+966592224081,1753854765,SA7755617582710160702545,50000,A,Restricted
+IMP-0226,Awtad Furniture,Mona Al-Ghanim,mona@awtad-furniture-226.example,,+966542176417,5886753484,SA0661856100010865787067,100000,A,Restricted
+IMP-0227,Sidra Foods,Yousef Al-Rajeh,yousef@sidra-foods-227.example,,+966573961507,2258795985,SA5222573566552918630895,500000,B,Restricted
+IMP-0228,Thuraya Textiles,Yousef Al-Ghanim,yousef@thuraya-textiles-228.example,desk@sarie-clearance.example,+966536019165,1193954426,SA0733126852365497994024,500000,A,Restricted
+IMP-0229,Arkan Foods,Majed Al-Eid,majed@arkan-foods-229.example,,+966575458767,0610694032,SA9086500570938580203739,1000000,C,Restricted
+IMP-0230,Lujain Electronics,Dalal Al-Salem,dalal@lujain-electronics-230.example,,+966507146148,6829609111,SA1118054074019770105265,500000,A,Restricted
+IMP-0231,Qimma Imports,Abdulelah Al-Issa,abdulelah@qimma-imports-231.example,desk@sarie-clearance.example,+966559765934,0054354848,SA8591630363719334350586,500000,A,Restricted
+IMP-0232,Sidra Electronics,Lama Al-Fahd,lama@sidra-electronics-232.example,,+966508421671,3982589720,SA7522609296061610962847,1000000,B,Restricted
+IMP-0233,Sidra Textiles,Nouf Al-Issa,nouf@sidra-textiles-233.example,,+966520097396,8898619175,SA9642282588888724930888,100000,B,Restricted
+IMP-0234,Lujain Industrial Supplies,Amal Al-Dabbas,amal@lujain-industrial-supplies-234.example,desk@sarie-clearance.example,+966514721542,9931862937,SA6605296774876247417544,500000,C,Restricted
+IMP-0235,Sahab Imports,Yousef Al-Issa,yousef@sahab-imports-235.example,,+966596477370,5527825419,SA7504709640357756842913,100000,C,Restricted
+IMP-0236,Sahab Auto Parts,Mona Al-Issa,mona@sahab-auto-parts-236.example,,+966569146519,6042495992,SA6489549864648871303845,500000,B,Restricted
+IMP-0237,Nakheel Foods,Khalid Al-Eid,khalid@nakheel-foods-237.example,,+966551616739,5905507188,SA7890304142916447765957,100000,B,Restricted
+IMP-0238,Thuraya Trading,Majed Al-Issa,majed@thuraya-trading-238.example,desk@bawaba-brokers.example,+966572860388,3039335748,SA4097323999809198367489,1000000,A,Restricted
+IMP-0239,Qimma Auto Parts,Reem Al-Salem,reem@qimma-auto-parts-239.example,,+966508474510,8908747784,SA5453305313276593231330,50000,C,Restricted
+IMP-0240,Rimal Building Materials,Amal Al-Ghanim,amal@rimal-building-materials-240.example,desk@sarie-clearance.example,+966593745330,2191928541,SA8334394102679599492720,100000,A,Restricted
+IMP-0241,Zad Imports,Ziyad Al-Ghanim,ziyad@zad-imports-241.example,,+966502436586,8844412302,SA4578480329391891506383,500000,B,Restricted
+IMP-0242,Nakheel Industrial Supplies,Lama Al-Ahmadi,lama@nakheel-industrial-supplies-242.example,,+966523837894,4951999109,SA0184394101419459732535,250000,C,Restricted
+IMP-0243,Rawabi Auto Parts,Nasser Al-Baker,nasser@rawabi-auto-parts-243.example,desk@sarie-clearance.example,+966591483711,3215313139,SA6663682222923329243270,500000,A,Restricted
+IMP-0244,Qimma Electronics,Khalid Al-Mousa,khalid@qimma-electronics-244.example,,+966529562344,2235336547,SA8805953596537852091843,250000,A,Restricted
+IMP-0245,Rawabi Trading,Mona Al-Mousa,mona@rawabi-trading-245.example,,+966574933625,0814293616,SA1240963342434797047433,100000,C,Restricted
+IMP-0246,Awtad Textiles,Majed Al-Fahd,majed@awtad-textiles-246.example,desk@sarie-clearance.example,+966529242718,6387371194,SA3560261526297623362848,100000,C,Restricted
+IMP-0247,Jood Imports,Mona Al-Issa,mona@jood-imports-247.example,,+966590059938,1428524948,SA6339143101232843911404,500000,B,Restricted
+IMP-0248,Lujain Industrial Supplies,Bandar Al-Issa,bandar@lujain-industrial-supplies-248.example,desk@sarie-clearance.example,+966552100691,6125006526,SA8666067010276299817889,250000,A,Restricted
+IMP-0249,Dana Auto Parts,Yousef Al-Mousa,yousef@dana-auto-parts-249.example,,+966555813724,5464794992,SA6242874975223464383368,100000,C,Restricted
+IMP-0250,Awtad Auto Parts,Amal Al-Jasir,amal@awtad-auto-parts-250.example,,+966516521148,4129791094,SA4761276863599831354954,1000000,B,Restricted
+IMP-0251,Durrat Imports,Bandar Al-Hamad,bandar@durrat-imports-251.example,desk@tayseer-customs.example,+966573492283,5819410357,SA5406616810144030083205,50000,C,Restricted
+IMP-0252,Zad Furniture,Lama Al-Baker,lama@zad-furniture-252.example,desk@sarie-clearance.example,+966523602430,8718983606,SA7943035597049312616325,1000000,B,Restricted
+IMP-0253,Nakheel Trading,Ghada Al-Mousa,ghada@nakheel-trading-253.example,desk@tayseer-customs.example,+966591049431,3305836635,SA9453286841082523539665,250000,A,Restricted
+IMP-0254,Durrat Textiles,Yousef Al-Eid,yousef@durrat-textiles-254.example,,+966543492135,8064283756,SA7949975525275888402565,250000,A,Restricted
+IMP-0255,Bahr Industrial Supplies,Reem Al-Dabbas,reem@bahr-industrial-supplies-255.example,desk@mirfa-logistics.example,+966517253027,5111079166,SA4546769986275100980242,100000,A,Restricted
+IMP-0256,Awtad Foods,Lama Al-Salem,lama@awtad-foods-256.example,desk@bawaba-brokers.example,+966507333410,7809755211,SA3659901831143574949916,100000,C,Restricted
+IMP-0257,Dana Foods,Nasser Al-Baker,nasser@dana-foods-257.example,desk@tayseer-customs.example,+966556253893,3887495939,SA9241951726598953396076,500000,B,Restricted
+IMP-0258,Bayader Industrial Supplies,Hamad Al-Omar,hamad@bayader-industrial-supplies-258.example,desk@mirfa-logistics.example,+966593250812,0700915483,SA3571671541325573685947,100000,C,Restricted
+IMP-0259,Qimma Textiles,Hind Al-Kabeer,hind@qimma-textiles-259.example,desk@bawaba-brokers.example,+966504564222,1928651061,SA8426054729140076167765,1000000,A,Restricted
+IMP-0260,Thuraya Electronics,Hamad Al-Eid,hamad@thuraya-electronics-260.example,,+966511889016,3346216103,SA6548699225312637891449,50000,B,Restricted
+IMP-0261,Qimma Industrial Supplies,Ziyad Al-Hamad,ziyad@qimma-industrial-supplies-261.example,,+966555246641,8520343762,SA2406530476234363824063,250000,A,Restricted
+IMP-0262,Wateen Industrial Supplies,Bandar Al-Salem,bandar@wateen-industrial-supplies-262.example,,+966580167228,3125483914,SA8076065076530503944642,250000,A,Restricted
+IMP-0263,Bahr Building Materials,Nasser Al-Mousa,nasser@bahr-building-materials-263.example,,+966514764963,1132438832,SA6888562084849708577149,250000,C,Restricted
+IMP-0264,Mada Electronics,Khalid Al-Fahd,khalid@mada-electronics-264.example,,+966560205908,3435904671,SA4642173763605007997511,500000,B,Restricted
+IMP-0265,Qimma Medical Supplies,Yousef Al-Ahmadi,yousef@qimma-medical-supplies-265.example,,+966526214484,7967756466,SA6287544538503379238200,250000,A,Restricted
+IMP-0266,Arkan Foods,Rayan Al-Kabeer,rayan@arkan-foods-266.example,,+966561344233,9698173037,SA4013277322647270228599,500000,C,Restricted
+IMP-0267,Jood Industrial Supplies,Rayan Al-Baker,rayan@jood-industrial-supplies-267.example,desk@mirfa-logistics.example,+966524875989,7367740068,SA7733070320953982307571,100000,C,Restricted
+IMP-0268,Bahr Textiles,Ghada Al-Hamad,ghada@bahr-textiles-268.example,desk@sarie-clearance.example,+966506569819,6042988149,SA7162177390731332954359,100000,B,Restricted
+IMP-0269,Qimma Textiles,Tariq Al-Ahmadi,tariq@qimma-textiles-269.example,desk@sarie-clearance.example,+966530897010,1349962583,SA9711124963651526571370,50000,B,Restricted
+IMP-0270,Rawabi Electronics,Ghada Al-Jasir,ghada@rawabi-electronics-270.example,desk@mirfa-logistics.example,+966599695545,7947951699,SA5655539006757591210804,50000,B,Restricted
+IMP-0271,Durrat Medical Supplies,Mona Al-Jasir,mona@durrat-medical-supplies-271.example,,+966506974051,2570750317,SA2312219693211762680369,1000000,A,Restricted
+IMP-0272,Wateen Textiles,Hamad Al-Kabeer,hamad@wateen-textiles-272.example,desk@sarie-clearance.example,+966514473386,7071195176,SA6472703892080369250577,50000,A,Restricted
+IMP-0273,Bayader Furniture,Abdulelah Al-Naim,abdulelah@bayader-furniture-273.example,desk@mirfa-logistics.example,+966541691006,0854987167,SA6759045317479554562358,50000,B,Restricted
+IMP-0274,Rawabi Building Materials,Yousef Al-Jasir,yousef@rawabi-building-materials-274.example,,+966576145697,2255130658,SA6343293579042057445610,50000,B,Restricted
+IMP-0275,Zad Furniture,Ghada Al-Turki,ghada@zad-furniture-275.example,,+966577723129,2161723964,SA9485127462350570967328,500000,A,Restricted
+IMP-0276,Nakheel Textiles,Mona Al-Ghanim,mona@nakheel-textiles-276.example,,+966550244892,3994757706,SA2051368192385265546656,50000,A,Restricted
+IMP-0277,Amwaj Foods,Abdulelah Al-Baker,abdulelah@amwaj-foods-277.example,,+966592465132,1366460704,SA0932700702962322784260,500000,A,Restricted
+IMP-0278,Manar Furniture,Yousef Al-Naim,yousef@manar-furniture-278.example,,+966589223851,4280597495,SA4334135236726301112806,100000,B,Restricted
+IMP-0279,Mada Furniture,Bandar Al-Fahd,bandar@mada-furniture-279.example,desk@tayseer-customs.example,+966567434543,0998285641,SA1834155127408471759504,500000,B,Restricted
+IMP-0280,Bahr Auto Parts,Reem Al-Naim,reem@bahr-auto-parts-280.example,desk@mirfa-logistics.example,+966577677886,3202058508,SA2719058168143470311768,100000,A,Restricted
+IMP-0281,Lujain Furniture,Tariq Al-Eid,tariq@lujain-furniture-281.example,,+966567852479,1184613148,SA1375795154636942595674,500000,B,Restricted
+IMP-0282,Rawabi Imports,Saad Al-Hamad,saad@rawabi-imports-282.example,desk@tayseer-customs.example,+966560127793,0911952855,SA1909775370960421854329,250000,B,Restricted
+IMP-0283,Sidra Trading,Amal Al-Issa,amal@sidra-trading-283.example,,+966514375683,5078914166,SA8520311132830631555876,50000,A,Restricted
+IMP-0284,Rimal Trading,Nasser Al-Ghanim,nasser@rimal-trading-284.example,desk@bawaba-brokers.example,+966599208767,6032294296,SA1395288384926415323426,100000,B,Restricted
+IMP-0285,Bahr Industrial Supplies,Reem Al-Turki,reem@bahr-industrial-supplies-285.example,,+966555729229,4722627419,SA8678852054995821972173,1000000,A,Restricted
+IMP-0286,Lujain Trading,Hamad Al-Ahmadi,hamad@lujain-trading-286.example,desk@sarie-clearance.example,+966564069883,5031880868,SA2909794270339402925559,500000,A,Restricted
+IMP-0287,Jood Foods,Mona Al-Omar,mona@jood-foods-287.example,,+966572930400,5530996771,SA8506280271042208738267,1000000,C,Restricted
+IMP-0288,Sahab Industrial Supplies,Yousef Al-Eid,yousef@sahab-industrial-supplies-288.example,,+966566426395,9814519635,SA2912062690356191207465,500000,C,Restricted
+IMP-0289,Amwaj Building Materials,Rayan Al-Salem,rayan@amwaj-building-materials-289.example,desk@mirfa-logistics.example,+966526917513,7572181493,SA5697017471848166724247,1000000,B,Restricted
+IMP-0290,Zad Building Materials,Tariq Al-Jasir,tariq@zad-building-materials-290.example,,+966507407394,5183712088,SA8201511394351991099692,250000,A,Restricted
+IMP-0291,Amwaj Imports,Nouf Al-Issa,nouf@amwaj-imports-291.example,,+966539816531,1588829235,SA9864825961206665098772,250000,B,Restricted
+IMP-0292,Manar Textiles,Mona Al-Ahmadi,mona@manar-textiles-292.example,desk@mirfa-logistics.example,+966536094386,5533832834,SA7363508239821072605336,100000,B,Restricted
+IMP-0293,Arkan Trading,Rayan Al-Eid,rayan@arkan-trading-293.example,,+966515345443,3641212094,SA0347439186450680618618,500000,A,Restricted
+IMP-0294,Thuraya Industrial Supplies,Nasser Al-Turki,nasser@thuraya-industrial-supplies-294.example,,+966543420137,7072543887,SA3949202972594537193625,50000,A,Restricted
+IMP-0295,Sahab Auto Parts,Dalal Al-Omar,dalal@sahab-auto-parts-295.example,desk@sarie-clearance.example,+966527555679,3445557465,SA7509229140231326953628,50000,C,Restricted
+IMP-0296,Lujain Medical Supplies,Abdulelah Al-Naim,abdulelah@lujain-medical-supplies-296.example,,+966512655548,2210298631,SA2547619964183821606255,500000,C,Restricted
+IMP-0297,Sahab Imports,Dalal Al-Issa,dalal@sahab-imports-297.example,,+966582365331,9137056158,SA3705726900198955179582,1000000,A,Restricted
+IMP-0298,Sidra Imports,Bandar Al-Ahmadi,bandar@sidra-imports-298.example,,+966541432692,4041588631,SA4806078059254670043806,250000,B,Restricted
+IMP-0299,Rimal Trading,Dalal Al-Baker,dalal@rimal-trading-299.example,,+966587046390,1899583591,SA8500835551718403684057,500000,A,Restricted
+IMP-0300,Lujain Electronics,Majed Al-Naim,majed@lujain-electronics-300.example,,+966508791833,0339189880,SA2650897944713770963671,250000,C,Restricted
+IMP-0301,Wateen Medical Supplies,Faisal Al-Omar,faisal@wateen-medical-supplies-301.example,,+966586771352,5702698733,SA9751955627714978776936,100000,A,Restricted
+IMP-0302,Lujain Building Materials,Mona Al-Fahd,mona@lujain-building-materials-302.example,desk@sarie-clearance.example,+966590230152,7011960544,SA9562356054459757665311,1000000,C,Restricted
+IMP-0303,Amwaj Auto Parts,Nouf Al-Baker,nouf@amwaj-auto-parts-303.example,desk@mirfa-logistics.example,+966529853640,3212345799,SA0605924497882297843306,100000,C,Restricted
+IMP-0304,Thuraya Auto Parts,Faisal Al-Eid,faisal@thuraya-auto-parts-304.example,,+966599632296,4763757248,SA5652740803966654076453,1000000,A,Restricted
+IMP-0305,Durrat Medical Supplies,Reem Al-Ghanim,reem@durrat-medical-supplies-305.example,,+966595209802,9164379264,SA2950234430258504428352,1000000,A,Restricted
+IMP-0306,Jood Furniture,Amal Al-Jasir,amal@jood-furniture-306.example,,+966597395428,5192951693,SA9062295264097843882151,1000000,A,Restricted
+IMP-0307,Manar Industrial Supplies,Hind Al-Ahmadi,hind@manar-industrial-supplies-307.example,,+966505781575,5044309905,SA0979719316872734452864,50000,C,Restricted
+IMP-0308,Lujain Trading,Bandar Al-Hamad,bandar@lujain-trading-308.example,,+966536315848,0685981519,SA5794133255786822397102,250000,C,Restricted
+IMP-0309,Thuraya Building Materials,Tariq Al-Ahmadi,tariq@thuraya-building-materials-309.example,,+966507297979,1341997585,SA5525079975056173877740,250000,B,Restricted
+IMP-0310,Dana Auto Parts,Ziyad Al-Fahd,ziyad@dana-auto-parts-310.example,,+966504626744,2217043361,SA2954067706491517276355,50000,B,Restricted
+IMP-0311,Nakheel Auto Parts,Bandar Al-Rajeh,bandar@nakheel-auto-parts-311.example,,+966515583715,8048713496,SA3729428495761495793075,1000000,A,Restricted
+IMP-0312,Rimal Electronics,Majed Al-Salem,majed@rimal-electronics-312.example,desk@sarie-clearance.example,+966507078542,7058235224,SA4874264548888947413944,1000000,A,Restricted
+IMP-0313,Awtad Auto Parts,Majed Al-Hamad,majed@awtad-auto-parts-313.example,,+966523647618,4266011466,SA5954395873395885350975,50000,A,Restricted
+IMP-0314,Nakheel Furniture,Abdulelah Al-Mousa,abdulelah@nakheel-furniture-314.example,,+966529707056,7558546616,SA2142625202118832140727,500000,B,Restricted
+IMP-0315,Sahab Building Materials,Ghada Al-Omar,ghada@sahab-building-materials-315.example,,+966564756939,9904677602,SA9745190460260991654213,500000,A,Restricted
+IMP-0316,Jood Trading,Lama Al-Kabeer,lama@jood-trading-316.example,,+966518692193,8163799564,SA3741635293884610020302,100000,A,Restricted
+IMP-0317,Thuraya Foods,Reem Al-Omar,reem@thuraya-foods-317.example,,+966549548391,9757220076,SA8720828501249685295560,250000,B,Restricted
+IMP-0318,Nakheel Auto Parts,Rayan Al-Hamad,rayan@nakheel-auto-parts-318.example,,+966530389988,8681222351,SA4472537609641470267702,250000,B,Restricted
+IMP-0319,Mada Foods,Reem Al-Jasir,reem@mada-foods-319.example,,+966595943219,8529366891,SA6826660666365382137982,500000,B,Restricted
+IMP-0320,Arkan Auto Parts,Khalid Al-Fahd,khalid@arkan-auto-parts-320.example,,+966575669973,0398800262,SA7923125140926110713618,100000,A,Restricted
+IMP-0321,Jood Foods,Majed Al-Mousa,majed@jood-foods-321.example,desk@tayseer-customs.example,+966535369304,7092098357,SA1141416002042097743389,250000,A,Restricted
+IMP-0322,Awtad Industrial Supplies,Majed Al-Turki,majed@awtad-industrial-supplies-322.example,desk@tayseer-customs.example,+966538145039,9853234344,SA6178307157413521394868,100000,B,Restricted
+IMP-0323,Nakheel Electronics,Dalal Al-Mousa,dalal@nakheel-electronics-323.example,,+966585683620,7050152257,SA7530268919921881984197,50000,A,Restricted
+IMP-0324,Qimma Foods,Majed Al-Fahd,majed@qimma-foods-324.example,,+966540823911,0338809524,SA1491534577353840532364,500000,A,Restricted
+IMP-0325,Mada Textiles,Khalid Al-Hamad,khalid@mada-textiles-325.example,,+966516167049,7426317447,SA4331688842597493550660,500000,C,Restricted
+IMP-0326,Zad Foods,Lama Al-Rajeh,lama@zad-foods-326.example,,+966514892025,4963289403,SA0713597173267125477391,250000,C,Restricted
+IMP-0327,Manar Auto Parts,Rayan Al-Hamad,rayan@manar-auto-parts-327.example,,+966540500458,1580200801,SA0702248035412497615383,250000,B,Restricted
+IMP-0328,Mada Trading,Abdulelah Al-Rajeh,abdulelah@mada-trading-328.example,,+966522242168,6862748765,SA7352422369118984936848,500000,A,Restricted
+IMP-0329,Amwaj Building Materials,Hind Al-Fahd,hind@amwaj-building-materials-329.example,,+966536348754,7571248384,SA6771831951159059331271,500000,B,Restricted
+IMP-0330,Rawabi Imports,Ghada Al-Issa,ghada@rawabi-imports-330.example,,+966597130665,9094828758,SA6462495324351859405173,100000,B,Restricted
+IMP-0331,Qimma Textiles,Mona Al-Dabbas,mona@qimma-textiles-331.example,,+966528894057,2271983519,SA8916530509708319091416,50000,A,Restricted
+IMP-0332,Awtad Building Materials,Amal Al-Omar,amal@awtad-building-materials-332.example,,+966573833128,8791660804,SA8382893339469349605563,100000,C,Restricted
+IMP-0333,Rawabi Furniture,Khalid Al-Rajeh,khalid@rawabi-furniture-333.example,,+966559273291,9274318497,SA1008587500186770780995,100000,C,Restricted
+IMP-0334,Mada Building Materials,Hamad Al-Kabeer,hamad@mada-building-materials-334.example,,+966587053412,2408393854,SA8269312546898550298071,1000000,A,Restricted
+IMP-0335,Mada Foods,Yousef Al-Mousa,yousef@mada-foods-335.example,,+966552038056,6003276346,SA9110785381159960541229,250000,A,Restricted
+IMP-0336,Nakheel Electronics,Amal Al-Omar,amal@nakheel-electronics-336.example,,+966568807748,7557402507,SA2845795091158319104631,1000000,A,Restricted
+IMP-0337,Amwaj Trading,Khalid Al-Issa,khalid@amwaj-trading-337.example,,+966567903771,1366714933,SA5000600656931453696677,100000,A,Restricted
+IMP-0338,Rimal Furniture,Faisal Al-Eid,faisal@rimal-furniture-338.example,,+966580255820,3095692936,SA1450208131143407834890,500000,A,Restricted
+IMP-0339,Sidra Furniture,Hind Al-Ghanim,hind@sidra-furniture-339.example,,+966558030830,7960292428,SA7362387188302350869409,100000,C,Restricted
+IMP-0340,Sahab Furniture,Reem Al-Ahmadi,reem@sahab-furniture-340.example,desk@tayseer-customs.example,+966577449866,6778394497,SA3711417086522127378559,1000000,A,Restricted
+IMP-0341,Bahr Trading,Amal Al-Naim,amal@bahr-trading-341.example,,+966595964176,6010310823,SA3120926006485711943478,250000,A,Restricted
+IMP-0342,Awtad Textiles,Mona Al-Issa,mona@awtad-textiles-342.example,,+966504881873,1395276933,SA7280298461691106403539,50000,A,Restricted
+IMP-0343,Jood Electronics,Faisal Al-Baker,faisal@jood-electronics-343.example,,+966577012371,2033116578,SA0874439216902287624002,1000000,A,Restricted
+IMP-0344,Rawabi Industrial Supplies,Saad Al-Ghanim,saad@rawabi-industrial-supplies-344.example,,+966537607626,3409063924,SA2864727803388078270708,1000000,C,Restricted
+IMP-0345,Durrat Imports,Hamad Al-Baker,hamad@durrat-imports-345.example,,+966598825192,0114241965,SA5524620803923733514333,250000,C,Restricted
+IMP-0346,Amwaj Imports,Dalal Al-Dabbas,dalal@amwaj-imports-346.example,,+966585170773,2004297796,SA1722114292834633522581,50000,A,Restricted
+IMP-0347,Rawabi Auto Parts,Nasser Al-Rajeh,nasser@rawabi-auto-parts-347.example,,+966536158829,3121548702,SA6096851116271731558848,250000,A,Restricted
+IMP-0348,Wateen Medical Supplies,Rayan Al-Kabeer,rayan@wateen-medical-supplies-348.example,,+966522164099,1483755929,SA4639286305351187215399,100000,C,Restricted
+IMP-0349,Awtad Electronics,Tariq Al-Eid,tariq@awtad-electronics-349.example,,+966596142549,6542269874,SA8271124410881867325681,250000,A,Restricted
+IMP-0350,Manar Foods,Mona Al-Issa,mona@manar-foods-350.example,desk@tayseer-customs.example,+966545990356,5438307593,SA1944752779290604757261,100000,B,Restricted
+IMP-0351,Arkan Trading,Nasser Al-Salem,nasser@arkan-trading-351.example,,+966587530089,6036997740,SA5081015077549163297229,1000000,C,Restricted
+IMP-0352,Thuraya Textiles,Lama Al-Issa,lama@thuraya-textiles-352.example,,+966526086376,0071635974,SA8848475355075203856719,250000,A,Restricted
+IMP-0353,Dana Building Materials,Rayan Al-Eid,rayan@dana-building-materials-353.example,,+966508030452,0639514988,SA3101927259250124899520,1000000,A,Restricted
+IMP-0354,Mada Foods,Mona Al-Hamad,mona@mada-foods-354.example,,+966586735141,5569880237,SA0377963782489744725247,500000,B,Restricted
+IMP-0355,Qimma Industrial Supplies,Hind Al-Omar,hind@qimma-industrial-supplies-355.example,,+966512835042,4798022546,SA3356835542285663125843,1000000,C,Restricted
+IMP-0356,Zad Foods,Faisal Al-Mousa,faisal@zad-foods-356.example,,+966594450662,9450936381,SA9387245423299503648200,500000,C,Restricted
+IMP-0357,Dana Imports,Nasser Al-Rajeh,nasser@dana-imports-357.example,,+966593099908,5872334363,SA6678743261808657611717,100000,B,Restricted
+IMP-0358,Sidra Building Materials,Nasser Al-Naim,nasser@sidra-building-materials-358.example,,+966579329293,9236147659,SA2160724329441912199799,50000,B,Restricted
+IMP-0359,Arkan Textiles,Nouf Al-Ghanim,nouf@arkan-textiles-359.example,desk@tayseer-customs.example,+966542262905,5947846359,SA2912806779627497795042,100000,A,Restricted
+IMP-0360,Awtad Foods,Abdulelah Al-Dabbas,abdulelah@awtad-foods-360.example,,+966573691789,3532346323,SA2780294073743805479612,50000,A,Restricted
+IMP-0361,Thuraya Trading,Abdulelah Al-Hamad,abdulelah@thuraya-trading-361.example,,+966542592516,9203637030,SA0129718829502870289132,250000,B,Restricted
+IMP-0362,Arkan Imports,Khalid Al-Salem,khalid@arkan-imports-362.example,,+966553640528,2594463319,SA8409842585564789653891,500000,A,Restricted
+IMP-0363,Rawabi Industrial Supplies,Hind Al-Turki,hind@rawabi-industrial-supplies-363.example,,+966547530518,0588709854,SA8691035613656357856425,1000000,A,Restricted
+IMP-0364,Durrat Furniture,Dalal Al-Salem,dalal@durrat-furniture-364.example,,+966564424399,1008028840,SA6792912558120551448656,100000,A,Restricted
+IMP-0365,Lujain Trading,Faisal Al-Dabbas,faisal@lujain-trading-365.example,desk@sarie-clearance.example,+966528539840,7265907619,SA7502866835368963201108,250000,B,Restricted
+IMP-0366,Jood Auto Parts,Saad Al-Issa,saad@jood-auto-parts-366.example,,+966575070988,1752723336,SA6181119967338864387677,50000,B,Restricted
+IMP-0367,Rawabi Imports,Dalal Al-Turki,dalal@rawabi-imports-367.example,desk@tayseer-customs.example,+966534600536,8607841925,SA1572924390767979591021,250000,A,Restricted
+IMP-0368,Awtad Imports,Faisal Al-Omar,faisal@awtad-imports-368.example,,+966555524547,1660148652,SA1984338976144939462142,500000,A,Restricted
+IMP-0369,Manar Electronics,Abdulelah Al-Issa,abdulelah@manar-electronics-369.example,desk@tayseer-customs.example,+966503243264,5244652863,SA5319962671475223890029,50000,A,Restricted
+IMP-0370,Rawabi Furniture,Mona Al-Jasir,mona@rawabi-furniture-370.example,,+966566383570,2636771613,SA4543671947940160333610,1000000,B,Restricted
+IMP-0371,Zad Trading,Saad Al-Ghanim,saad@zad-trading-371.example,,+966503243056,5971016306,SA7490654327042705474264,50000,A,Restricted
+IMP-0372,Durrat Industrial Supplies,Hind Al-Kabeer,hind@durrat-industrial-supplies-372.example,,+966525963849,3842883919,SA8161425824126401243344,500000,C,Restricted
+IMP-0373,Thuraya Furniture,Bandar Al-Mousa,bandar@thuraya-furniture-373.example,desk@tayseer-customs.example,+966563986257,9460467145,SA5174679704436692497481,1000000,A,Restricted
+IMP-0374,Nakheel Foods,Nouf Al-Turki,nouf@nakheel-foods-374.example,desk@tayseer-customs.example,+966594025721,6697680222,SA0965385099430944815287,500000,A,Restricted
+IMP-0375,Lujain Trading,Hind Al-Fahd,hind@lujain-trading-375.example,,+966527662881,6497238528,SA3989906653957659864324,100000,A,Restricted
+IMP-0376,Bahr Electronics,Nasser Al-Salem,nasser@bahr-electronics-376.example,,+966500160714,0193935131,SA0491332733168122054852,100000,B,Restricted
+IMP-0377,Mada Electronics,Nasser Al-Baker,nasser@mada-electronics-377.example,desk@tayseer-customs.example,+966512595173,2679354768,SA8517745989826680564514,1000000,A,Restricted
+IMP-0378,Lujain Building Materials,Bandar Al-Fahd,bandar@lujain-building-materials-378.example,,+966504619215,1929712087,SA7451342784101158895089,250000,B,Restricted
+IMP-0379,Sidra Industrial Supplies,Reem Al-Hamad,reem@sidra-industrial-supplies-379.example,,+966585878324,0355790356,SA9704986747840952469075,500000,C,Restricted
+IMP-0380,Mada Furniture,Rayan Al-Salem,rayan@mada-furniture-380.example,,+966515652592,7491924751,SA9483137970826679323427,500000,B,Restricted
+IMP-0381,Dana Electronics,Ghada Al-Eid,ghada@dana-electronics-381.example,desk@sarie-clearance.example,+966523606693,8256790931,SA6439373107850061149409,1000000,B,Restricted
+IMP-0382,Lujain Industrial Supplies,Hamad Al-Baker,hamad@lujain-industrial-supplies-382.example,,+966522743009,7950131542,SA3044004009760335658958,50000,B,Restricted
+IMP-0383,Nakheel Trading,Rayan Al-Ahmadi,rayan@nakheel-trading-383.example,,+966533365052,0267381378,SA7040882813288809006560,250000,A,Restricted
+IMP-0384,Bayader Building Materials,Yousef Al-Kabeer,yousef@bayader-building-materials-384.example,,+966553013697,7926715609,SA6095303556497347482853,50000,C,Restricted
+IMP-0385,Amwaj Medical Supplies,Hind Al-Issa,hind@amwaj-medical-supplies-385.example,,+966594232265,6085689173,SA0493988002268920685538,50000,A,Restricted
+IMP-0386,Sahab Foods,Ghada Al-Issa,ghada@sahab-foods-386.example,,+966529909472,6783849350,SA1503640492117117107420,50000,C,Restricted
+IMP-0387,Wateen Furniture,Dalal Al-Naim,dalal@wateen-furniture-387.example,,+966567731627,2610202590,SA6722092803474777235779,50000,C,Restricted
+IMP-0388,Sidra Electronics,Nasser Al-Mousa,nasser@sidra-electronics-388.example,desk@mirfa-logistics.example,+966565306383,6960318601,SA1806513829773049524466,500000,A,Restricted
+IMP-0389,Jood Auto Parts,Ziyad Al-Kabeer,ziyad@jood-auto-parts-389.example,,+966520664628,8412677267,SA2683219657801262072863,50000,A,Restricted
+IMP-0390,Qimma Building Materials,Dalal Al-Dabbas,dalal@qimma-building-materials-390.example,,+966507602695,0809479165,SA1308126423648219511066,1000000,C,Restricted
+IMP-0391,Arkan Textiles,Nasser Al-Fahd,nasser@arkan-textiles-391.example,,+966507374107,0379038254,SA8402628203414500706508,250000,B,Restricted
+IMP-0392,Bahr Imports,Saad Al-Jasir,saad@bahr-imports-392.example,,+966577045692,9473907284,SA4454432133916616513481,250000,A,Restricted
+IMP-0393,Manar Electronics,Amal Al-Omar,amal@manar-electronics-393.example,,+966519029704,3379097201,SA9462874888048896447265,1000000,A,Restricted
+IMP-0394,Jood Industrial Supplies,Yousef Al-Eid,yousef@jood-industrial-supplies-394.example,desk@sarie-clearance.example,+966546653088,0074577676,SA9354158347623418261182,50000,A,Restricted
+IMP-0395,Bayader Electronics,Yousef Al-Issa,yousef@bayader-electronics-395.example,desk@sarie-clearance.example,+966543339475,1659060818,SA5404096013956328882253,500000,A,Restricted
+IMP-0396,Rawabi Medical Supplies,Khalid Al-Issa,khalid@rawabi-medical-supplies-396.example,desk@bawaba-brokers.example,+966520066017,1364731789,SA7608549290160344280443,50000,B,Restricted
+IMP-0397,Bayader Medical Supplies,Bandar Al-Hamad,bandar@bayader-medical-supplies-397.example,,+966519297110,4494760559,SA9126467520218569945843,50000,B,Restricted
+IMP-0398,Manar Textiles,Majed Al-Mousa,majed@manar-textiles-398.example,,+966521784075,0582733800,SA2575282654476345236277,50000,C,Restricted
+IMP-0399,Thuraya Auto Parts,Abdulelah Al-Jasir,abdulelah@thuraya-auto-parts-399.example,,+966553243924,2522142465,SA6976599407674876934461,500000,A,Restricted
+IMP-0400,Rawabi Auto Parts,Lama Al-Mousa,lama@rawabi-auto-parts-400.example,,+966507497264,0659904110,SA2433967841384904130421,250000,A,Restricted

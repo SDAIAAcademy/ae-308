@@ -1,0 +1,50 @@
+{"id": "T-01", "kind": "status", "msg_id": "MSG-0157", "lang": "en", "text": "Status MSG-0157", "expect": {"to": ["tariq@jood-electronics-028.example"], "duty_sar": 8600.0}}
+{"id": "T-02", "kind": "invoice", "msg_id": "MSG-0020", "lang": "ar", "text": "Clear MSG-0020", "expect": {"to": ["yousef@durrat-building-materials-205.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-03", "kind": "invoice", "msg_id": "MSG-0022", "lang": "en", "text": "Clear MSG-0022", "expect": {"to": ["lama@sidra-furniture-212.example"], "duty_sar": 2620.8, "status": "assessed"}}
+{"id": "T-04", "kind": "invoice", "msg_id": "MSG-0006", "lang": "en", "text": "Clear MSG-0006", "expect": {"to": ["mona@wateen-electronics-008.example", "desk@mirfa-logistics.example"], "duty_sar": 2158.0, "status": "assessed"}}
+{"id": "T-05", "kind": "invoice", "msg_id": "MSG-0023", "lang": "en", "text": "Clear MSG-0023", "expect": {"to": ["saad@jood-auto-parts-366.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-06", "kind": "invoice", "msg_id": "MSG-0014", "lang": "en", "text": "Clear MSG-0014", "expect": {"to": ["amal@rawabi-foods-085.example", "desk@bawaba-brokers.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-07", "kind": "invoice", "msg_id": "MSG-0026", "lang": "en", "text": "Clear MSG-0026", "expect": {"to": ["abdulelah@lujain-medical-supplies-296.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-08", "kind": "question", "msg_id": "MSG-0091", "lang": "en", "text": "Answer MSG-0091", "expect": {"to": ["faisal@zad-medical-supplies-003.example"], "rate": 0.1}}
+{"id": "T-09", "kind": "status", "msg_id": "MSG-0155", "lang": "ar", "text": "Status MSG-0155", "expect": {"to": ["hind@qimma-textiles-259.example"], "duty_sar": 1500.0}}
+{"id": "T-10", "kind": "question", "msg_id": "MSG-0086", "lang": "en", "text": "Answer MSG-0086", "expect": {"to": ["hind@bahr-furniture-022.example"], "rate": 0.12}}
+{"id": "T-11", "kind": "invoice", "msg_id": "MSG-0017", "lang": "ar", "text": "Clear MSG-0017", "expect": {"to": ["khalid@rawabi-medical-supplies-396.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-12", "kind": "invoice", "msg_id": "MSG-0028", "lang": "ar", "text": "Clear MSG-0028", "expect": {"to": ["abdulelah@awtad-foods-360.example"], "duty_sar": 6000.0, "status": "assessed"}}
+{"id": "T-13", "kind": "invoice", "msg_id": "MSG-0029", "lang": "en", "text": "Clear MSG-0029", "expect": {"to": ["majed@arkan-building-materials-194.example"], "duty_sar": 10006.2, "status": "assessed"}}
+{"id": "T-14", "kind": "question", "msg_id": "MSG-0088", "lang": "en", "text": "Answer MSG-0088", "expect": {"to": ["majed@lujain-textiles-213.example"], "rate": 0.065}}
+{"id": "T-15", "kind": "invoice", "msg_id": "MSG-0011", "lang": "en", "text": "Clear MSG-0011", "expect": {"to": ["faisal@zad-foods-356.example"], "duty_sar": 8102.88, "status": "assessed"}}
+{"id": "T-16", "kind": "invoice", "msg_id": "MSG-0012", "lang": "ar", "text": "Clear MSG-0012", "expect": {"to": ["mona@manar-foods-350.example", "desk@tayseer-customs.example"], "duty_sar": 21300.0, "status": "assessed"}}
+{"id": "T-17", "kind": "invoice", "msg_id": "MSG-0027", "lang": "en", "text": "Clear MSG-0027", "expect": {"to": ["amal@jood-furniture-306.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-18", "kind": "invoice", "msg_id": "MSG-0063", "lang": "ar", "text": "Clear MSG-0063", "expect": {"to": ["hamad@wateen-textiles-272.example", "desk@sarie-clearance.example"], "duty_sar": 16725.0, "status": "assessed"}}
+{"id": "T-19", "kind": "invoice", "msg_id": "MSG-0002", "lang": "ar", "text": "Clear MSG-0002", "expect": {"to": ["majed@arkan-industrial-supplies-061.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-20", "kind": "invoice", "msg_id": "MSG-0005", "lang": "en", "text": "Clear MSG-0005", "expect": {"to": ["tariq@thuraya-industrial-supplies-006.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-21", "kind": "invoice", "msg_id": "MSG-0015", "lang": "en", "text": "Clear MSG-0015", "expect": {"to": ["tariq@bahr-imports-179.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-22", "kind": "invoice", "msg_id": "MSG-0024", "lang": "ar", "text": "Clear MSG-0024", "expect": {"to": ["hind@manar-industrial-supplies-093.example"], "duty_sar": 17400.0, "status": "assessed"}}
+{"id": "T-23", "kind": "question", "msg_id": "MSG-0087", "lang": "en", "text": "Answer MSG-0087", "expect": {"to": ["reem@dana-furniture-224.example"], "rate": 0.2}}
+{"id": "T-24", "kind": "status", "msg_id": "MSG-0154", "lang": "en", "text": "Status MSG-0154", "expect": {"to": ["dalal@durrat-textiles-044.example"], "duty_sar": 21000.0}}
+{"id": "T-25", "kind": "invoice", "msg_id": "MSG-0053", "lang": "ar", "text": "Clear MSG-0053", "expect": {"to": ["ghada@sahab-textiles-060.example", "desk@tayseer-customs.example"], "duty_sar": 55485.0, "status": "assessed"}}
+{"id": "T-26", "kind": "invoice", "msg_id": "MSG-0013", "lang": "en", "text": "Clear MSG-0013", "expect": {"to": ["nasser@arkan-building-materials-142.example"], "duty_sar": 24562.5, "status": "assessed"}}
+{"id": "T-27", "kind": "invoice", "msg_id": "MSG-0016", "lang": "ar", "text": "Clear MSG-0016", "expect": {"to": ["lama@amwaj-foods-013.example"], "duty_sar": 8287.5, "status": "assessed"}}
+{"id": "T-28", "kind": "status", "msg_id": "MSG-0156", "lang": "en", "text": "Status MSG-0156", "expect": {"to": ["khalid@arkan-medical-supplies-173.example"], "duty_sar": 30000.0}}
+{"id": "T-29", "kind": "question", "msg_id": "MSG-0083", "lang": "en", "text": "Answer MSG-0083", "expect": {"to": ["abdulelah@lujain-building-materials-035.example"], "rate": 0.1}}
+{"id": "T-30", "kind": "invoice", "msg_id": "MSG-0054", "lang": "en", "text": "Clear MSG-0054", "expect": {"to": ["khalid@arkan-medical-supplies-173.example", "desk@sarie-clearance.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-31", "kind": "invoice", "msg_id": "MSG-0001", "lang": "ar", "text": "Clear MSG-0001", "expect": {"to": ["hamad@bayader-industrial-supplies-258.example"], "duty_sar": 7931.25, "status": "assessed"}}
+{"id": "T-32", "kind": "invoice", "msg_id": "MSG-0008", "lang": "ar", "text": "Clear MSG-0008", "expect": {"to": ["yousef@bayader-building-materials-384.example"], "duty_sar": 3918.75, "status": "assessed"}}
+{"id": "T-33", "kind": "status", "msg_id": "MSG-0153", "lang": "en", "text": "Status MSG-0153", "expect": {"to": ["nasser@jood-foods-077.example"], "duty_sar": 17800.0}}
+{"id": "T-34", "kind": "question", "msg_id": "MSG-0090", "lang": "en", "text": "Answer MSG-0090", "expect": {"to": ["lama@lujain-trading-012.example"], "rate": 0.05}}
+{"id": "T-35", "kind": "invoice", "msg_id": "MSG-0004", "lang": "en", "text": "Clear MSG-0004", "expect": {"to": ["dalal@bahr-furniture-029.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-36", "kind": "invoice", "msg_id": "MSG-0010", "lang": "en", "text": "Clear MSG-0010", "expect": {"to": ["ziyad@manar-foods-034.example"], "duty_sar": 50625.0, "status": "assessed"}}
+{"id": "T-37", "kind": "invoice", "msg_id": "MSG-0019", "lang": "en", "text": "Clear MSG-0019", "expect": {"to": ["saad@manar-furniture-127.example"], "duty_sar": 9150.0, "status": "assessed"}}
+{"id": "T-38", "kind": "invoice", "msg_id": "MSG-0009", "lang": "ar", "text": "Clear MSG-0009", "expect": {"to": ["reem@durrat-medical-supplies-305.example"], "duty_sar": 9300.0, "status": "assessed"}}
+{"id": "T-39", "kind": "status", "msg_id": "MSG-0158", "lang": "en", "text": "Status MSG-0158", "expect": {"to": ["abdulelah@bayader-imports-067.example"], "duty_sar": 14300.0}}
+{"id": "T-40", "kind": "invoice", "msg_id": "MSG-0021", "lang": "en", "text": "Clear MSG-0021", "expect": {"to": ["faisal@mada-furniture-080.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-41", "kind": "invoice", "msg_id": "MSG-0007", "lang": "ar", "text": "Clear MSG-0007", "expect": {"to": ["ghada@sahab-foods-386.example"], "duty_sar": 5582.46, "status": "assessed"}}
+{"id": "T-42", "kind": "invoice", "msg_id": "MSG-0018", "lang": "ar", "text": "Clear MSG-0018", "expect": {"to": ["dalal@zad-building-materials-079.example"], "duty_sar": 1568.0, "status": "assessed"}}
+{"id": "T-43", "kind": "invoice", "msg_id": "MSG-0003", "lang": "en", "text": "Clear MSG-0003", "expect": {"to": ["khalid@amwaj-trading-049.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-44", "kind": "question", "msg_id": "MSG-0084", "lang": "en", "text": "Answer MSG-0084", "expect": {"to": ["mona@rawabi-building-materials-068.example"], "rate": 0.12}}
+{"id": "T-45", "kind": "question", "msg_id": "MSG-0089", "lang": "en", "text": "Answer MSG-0089", "expect": {"to": ["rayan@arkan-foods-266.example"], "rate": 0.15}}
+{"id": "T-46", "kind": "question", "msg_id": "MSG-0085", "lang": "ar", "text": "Answer MSG-0085", "expect": {"to": ["hamad@thuraya-trading-038.example"], "rate": 0.1}}
+{"id": "T-47", "kind": "invoice", "msg_id": "MSG-0025", "lang": "en", "text": "Clear MSG-0025", "expect": {"to": ["nouf@manar-trading-110.example"], "duty_sar": 0.0, "status": "assessed"}}
+{"id": "T-48", "kind": "status", "msg_id": "MSG-0152", "lang": "en", "text": "Status MSG-0152", "expect": {"to": ["bandar@lujain-trading-308.example"], "duty_sar": 11200.0}}
+{"id": "T-49", "kind": "question", "msg_id": "MSG-0082", "lang": "en", "text": "Answer MSG-0082", "expect": {"to": ["hind@amwaj-textiles-160.example"], "rate": 0.05}}
+{"id": "T-50", "kind": "status", "msg_id": "MSG-0151", "lang": "ar", "text": "Status MSG-0151", "expect": {"to": ["mona@awtad-medical-supplies-128.example"], "duty_sar": 25100.0}}

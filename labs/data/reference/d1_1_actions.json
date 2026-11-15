@@ -1,0 +1,17 @@
+{
+ "did": {
+  "send_email": "send",
+  "fetch_rate": "request",
+  "run_duty_code": "exec",
+  "update_case": "write"
+ },
+ "can_do": {
+  "update_case": "write",
+  "release_hold": "write",
+  "send_email": "send",
+  "fetch_rate": "request",
+  "send_case_summary": "send",
+  "remember": "write",
+  "run_duty_code": "exec"
+ }
+}

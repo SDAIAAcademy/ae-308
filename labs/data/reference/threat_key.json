@@ -1,0 +1,122 @@
+{
+ "TH-01": {
+  "owasp": [
+   "LLM01",
+   "ASI01",
+   "ASI02"
+  ],
+  "atlas": [
+   "AML.T0051.001",
+   "AML.T0086"
+  ],
+  "likelihood": 4,
+  "impact": 3
+ },
+ "TH-02": {
+  "owasp": [
+   "LLM10",
+   "LLM02"
+  ],
+  "atlas": [
+   "AML.T0077"
+  ],
+  "likelihood": 3,
+  "impact": 3
+ },
+ "TH-03": {
+  "owasp": [
+   "LLM02",
+   "ASI02",
+   "LLM01"
+  ],
+  "atlas": [
+   "AML.T0086"
+  ],
+  "likelihood": 3,
+  "impact": 3
+ },
+ "TH-04": {
+  "owasp": [
+   "LLM03",
+   "ASI01",
+   "ASI02"
+  ],
+  "atlas": [
+   "AML.T0053",
+   "AML.T0051.001"
+  ],
+  "likelihood": 2,
+  "impact": 4
+ },
+ "TH-05": {
+  "owasp": [
+   "ASI06",
+   "LLM05"
+  ],
+  "atlas": [
+   "AML.T0080.000"
+  ],
+  "likelihood": 3,
+  "impact": 3
+ },
+ "TH-06": {
+  "owasp": [
+   "LLM05",
+   "LLM09",
+   "ASI06"
+  ],
+  "atlas": [
+   "AML.T0070"
+  ],
+  "likelihood": 2,
+  "impact": 3
+ },
+ "TH-07": {
+  "owasp": [
+   "LLM04",
+   "ASI04"
+  ],
+  "atlas": [
+   "AML.T0109",
+   "AML.T0110"
+  ],
+  "likelihood": 2,
+  "impact": 4
+ },
+ "TH-08": {
+  "owasp": [
+   "ASI05",
+   "LLM10"
+  ],
+  "atlas": [
+   "AML.T0053",
+   "AML.T0101"
+  ],
+  "likelihood": 2,
+  "impact": 4
+ },
+ "TH-09": {
+  "owasp": [
+   "ASI03",
+   "LLM03"
+  ],
+  "atlas": [
+   "AML.T0055",
+   "AML.T0098"
+  ],
+  "likelihood": 3,
+  "impact": 3
+ },
+ "TH-10": {
+  "owasp": [
+   "LLM08",
+   "LLM01"
+  ],
+  "atlas": [
+   "AML.T0056",
+   "AML.T0051.000"
+  ],
+  "likelihood": 3,
+  "impact": 2
+ }
+}

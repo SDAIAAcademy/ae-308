@@ -1,0 +1,14 @@
+{
+ "importer": [
+  "read_message"
+ ],
+ "kb": [
+  "search_tariff"
+ ],
+ "memory": [
+  "recall"
+ ],
+ "web": [
+  "fetch_rate"
+ ]
+}

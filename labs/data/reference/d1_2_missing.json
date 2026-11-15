@@ -1,0 +1,32 @@
+[
+ {
+  "from": "kb",
+  "to": "planner",
+  "data": "tariff notes (search_tariff)"
+ },
+ {
+  "from": "memory",
+  "to": "planner",
+  "data": "notes (recall)"
+ },
+ {
+  "from": "planner",
+  "to": "memory",
+  "data": "notes (remember)"
+ },
+ {
+  "from": "comms",
+  "to": "ratesite",
+  "data": "request with an address the model chose"
+ },
+ {
+  "from": "screen",
+  "to": "ratesite",
+  "data": "image requests of the rendered reply"
+ },
+ {
+  "from": "code",
+  "to": "ratesite",
+  "data": "whatever generated code sends"
+ }
+]

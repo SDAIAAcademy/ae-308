@@ -1,0 +1,15 @@
+# A GitHub Actions workflow for the capstone repository: copy it to .github/workflows/.
+# It runs the security regression suite on every push and pull request and fails the change
+# when a known attack works again or the benign tasks fall under 95%.
+name: security-regression
+on: [push, pull_request]
+jobs:
+  suite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        run: pip install uv
+      - name: Run the suite on the hardened build
+        working-directory: labs
+        run: uv run python ci/security_suite.py --build hardened
