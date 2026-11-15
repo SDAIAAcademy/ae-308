@@ -16,17 +16,17 @@
 <section class="slide" id="from-207-and-302" data-lo="LO1">
   <div class="kicker">Where this course starts</div>
   <h2>You arrive with a risk list, a first attack log and an agent you built</h2>
-  <table class="t small"><tr><th>From</th><th>You already have</th><th>Here it becomes</th></tr><tr><td>AE-207</td><td>The OWASP list, ten injection attempts, four basic controls, a register on the national scale</td><td>Two lists and a technique catalogue; rates over repeated trials; containment that does not depend on the model</td></tr><tr><td>AE-302</td><td>A loop, tools, a protocol server, traces, one planted instruction and one leg removed</td><td>A full threat model of an agent someone else built, attacked through every entry point</td></tr></table>
+  <table class="t"><tr><th>From</th><th>You already have</th><th>Here it becomes</th></tr><tr><td>AE-207</td><td>The OWASP list, ten injection attempts, four basic controls, a register on the national scale</td><td>Two lists and a technique catalogue; rates over repeated trials; containment that does not depend on the model</td></tr><tr><td>AE-302</td><td>A loop, tools, a protocol server, traces, one planted instruction and one leg removed</td><td>A full threat model of an agent someone else built, attacked through every entry point</td></tr></table>
   <div class="callout note mt-s"><b>Not here.</b> Planning and running a red-team programme, assurance cases and briefing an executive are AE-407.</div>
   <aside class="notes"><p>One minute. Ask two people what their AE-302 agent could have leaked. Nothing from those courses is retaught; sessions point back to them by name.</p></aside>
 </section>
 
 <!-- Session 1 -->
-<section class="slide section" id="s1" data-auto="section" data-session="1">
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-label="Session 1">
   <aside class="notes"><p>Session 1 sets the stance for the whole course. The title is the thesis: a fooled model must break nothing important.</p></aside>
 </section>
 
-<section class="slide" id="assume-fooled" data-lo="LO1">
+<section class="slide" id="assume-fooled" data-lo="LO1" data-label="Session 1">
   <div class="kicker">The stance</div>
   <h2>Assume the model will be fooled, then ask what it can reach</h2>
   <div class="cols cols-2"><div class="stack"><div class="card flat c-coral"><h4>The question that fails</h4><p class="small mb0">"How do we stop the model from obeying an attacker?" Nobody can promise that, and an attacker retries for free.</p></div></div><div class="stack"><div class="card flat c-teal"><h4>The question that works</h4><p class="small mb0">"When the model obeys an attacker, what can it read, and what can it do?" That has an answer you can test.</p></div></div></div>
@@ -34,14 +34,14 @@
   <aside class="notes"><p>Write the two questions on the board and leave them there all week. Every control of Day 3 answers the second question; the guardrail of Day 4 is the only control that tries to answer the first, and it comes last and with two error rates.</p></aside>
 </section>
 
-<section class="slide" id="component-or-actor" data-lo="LO1">
+<section class="slide" id="component-or-actor" data-lo="LO1" data-label="Session 1">
   <div class="kicker">Two ways to see the model</div>
   <h2>A component transforms text; an actor chooses what happens next</h2>
-  <table class="t small"><tr><th>Model as component</th><th>Model as actor</th></tr><tr><td>It decides</td><td>Nothing: the application calls it and uses the output</td><td>Which tool to call, with which arguments, and when to stop</td></tr><tr><td>A fooled model</td><td>Returns wrong text</td><td>Takes wrong actions</td></tr><tr><td>The worst case</td><td>Whatever the application does with that text</td><td>Everything its tools and credentials allow</td></tr><tr class="hl"><td>Mukhallis</td><td>The quarantined extraction of Day 3</td><td>The planner with twelve tools</td></tr></table>
+  <table class="t"><tr><th></th><th>Model as component</th><th>Model as actor</th></tr><tr><td>It decides</td><td>Nothing: the application calls it and uses the output</td><td>Which tool to call, with which arguments, and when to stop</td></tr><tr><td>A fooled model</td><td>Returns wrong text</td><td>Takes wrong actions</td></tr><tr><td>The worst case</td><td>Whatever the application does with that text</td><td>Everything its tools and credentials allow</td></tr><tr class="hl"><td>Mukhallis</td><td>The quarantined extraction of Day 3</td><td>The planner with twelve tools</td></tr></table>
   <aside class="notes"><p>The distinction comes back on Day 3: the split turns the model that reads invoices into a component. Ask: in your own systems, which calls are components and which are actors?</p></aside>
 </section>
 
-<section class="slide" id="three-legs-recap" data-lo="LO1">
+<section class="slide" id="three-legs-recap" data-lo="LO1" data-label="Session 1">
   <div class="kicker">From AE-302</div>
   <h2>Private data, untrusted content, an exit path: any agent that holds all three can be made to leak</h2>
   <div class="flow"><div class="step c-teal"><b>Private data</b>400 importer records, classified Restricted</div><div class="arrow">→</div><div class="step c-cyan"><b>Untrusted content</b>emails, invoices, notes, memory, tool text</div><div class="arrow">→</div><div class="step c-purple"><b>An exit path</b>email, a fetched address, a rendered image</div></div>
@@ -49,14 +49,14 @@
   <aside class="notes"><p>This is the recap of AE-302 Lab 4.3, one slide. The source is Simon Willison's essay on the three together. Here the three become columns of a threat model. Sources: Willison, The lethal trifecta for AI agents (June 2025).</p></aside>
 </section>
 
-<section class="slide" id="entry-points" data-lo="LO1">
+<section class="slide" id="entry-points" data-lo="LO1" data-label="Session 1">
   <div class="kicker">What the model reads</div>
   <h2>Every tool result has an author, and the author is not always the authority</h2>
   <table class="t small"><tr><th>Origin</th><th>Arrives by</th><th>Who can write it</th><th>Outsider?</th></tr><tr><td>importer</td><td><code>read_message</code></td><td>The importer, or anyone who emails the inbox</td><td>Yes</td></tr><tr><td>kb</td><td><code>search_tariff</code></td><td>The tariff committee, and brokers who upload circulars</td><td>Yes</td></tr><tr><td>memory</td><td><code>recall</code></td><td>The model, from what it read earlier</td><td>Yes</td></tr><tr><td>web</td><td><code>fetch_rate</code></td><td>Whoever runs the page the model was pointed at</td><td>Yes</td></tr><tr><td>system</td><td>case-system answers</td><td>The authority's own records</td><td>No</td></tr></table>
   <aside class="notes"><p>These are the four origins Lab 1.1 finds in the traces of ten tasks. Dwell on memory: only the model writes to it, and the model writes what it read. Two more entry points never show as a tool result: the tool descriptions each server sends, and the system prompt. They are the lab's stretch.</p></aside>
 </section>
 
-<section class="slide" id="actions" data-lo="LO1">
+<section class="slide" id="actions" data-lo="LO1" data-label="Session 1">
   <div class="kicker">What the agent can do</div>
   <h2>The ten tasks used four of seven actions; the attacker wants the other three</h2>
   <div class="cols cols-2"><div class="stack"><table class="t small"><tr><th>Tool</th><th>Effect</th><th>Used by a benign task</th></tr><tr><td><code>update_case</code></td><td>write</td><td>Yes</td></tr><tr><td><code>send_email</code></td><td>send</td><td>Yes</td></tr><tr><td><code>fetch_rate</code></td><td>request</td><td>Yes</td></tr><tr><td><code>run_duty_code</code></td><td>exec</td><td>Yes</td></tr><tr class="hl"><td><code>release_hold</code></td><td>write</td><td>No</td></tr><tr class="hl"><td><code>remember</code></td><td>write</td><td>No</td></tr><tr class="hl"><td><code>send_case_summary</code></td><td>send</td><td>No</td></tr></table></div><div class="stack"><div class="callout tip mt-s"><b>Read the tool list, not the logs.</b> A benign run shows what the agent does. The tool list shows what it can do.</div>
@@ -64,14 +64,14 @@
   <aside class="notes"><p>Real output of the lab's solution run. Ask which of the seven cannot be undone: an email that left, a released hold, anything generated code sent or overwrote.</p></aside>
 </section>
 
-<section class="slide" id="check-fooled" data-lo="LO1">
+<section class="slide" id="check-fooled" data-lo="LO1" data-label="Session 1">
   <div class="kicker">Checkpoint</div>
   <h2>Which claim survives a fooled model?</h2>
   <div class="quiz" data-type="single" data-lo="LO1"><p class="lead">Wissam, who built Mukhallis, lists four reasons why it is safe. Which one still holds on the day the model obeys a hostile invoice?</p><div class="opts"><div class="opt" data-why="Treats an instruction as a control: the attacker&#x27;s text sits in the same context and competes with it">The system prompt says never to share one importer's data with another</div><div class="opt" data-why="Reads benign behaviour as a limit: the tool is on the list, so a fooled model can call it">In ten test tasks the agent never called <code>release_hold</code></div><div class="opt" data-ok>The case server refuses any call for a case other than the one the officer opened</div><div class="opt" data-why="Takes past obedience on benign text as evidence about hostile text">The model was tested on 200 messages and followed its instructions every time</div></div><div class="callout tip why"><b>Why.</b> Only the third is enforced outside the model. The other three describe what the model usually does, which is exactly what an attacker changes.</div></div>
   <aside class="notes"><p>Answer: the case server's refusal. As found, the case server does no such thing: that is Lab 3.3. If the room picks the system prompt, go back to the two questions on the board.</p></aside>
 </section>
 
-<section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1">
+<section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1" data-label="Session 1">
   <aside class="notes"><p>Walk the room. Typical problems: listing the origin <code>system</code> as an entry point; forgetting that <code>fetch_rate</code> is both an action and an entry point. Anyone stuck on an exercise can run on: the cell after it loads the reference result. Work without AI assistants today.</p></aside>
 </section>
 
@@ -113,7 +113,7 @@
 <section class="slide" id="four-exits" data-lo="LO1">
   <div class="kicker">Exits</div>
   <h2>The diagram's use is a short list: four ways out</h2>
-  <table class="t small"><tr><th>Exit</th><th>Tool or part</th><th>Day 3 or 4 control</th></tr><tr><td>Email to any address</td><td><code>send_email</code>, <code>send_case_summary</code></td><td>Recipient rules, one approval</td></tr><tr><td>A request to an address the model chose</td><td><code>fetch_rate</code></td><td>Egress allowlist, a fixed argument</td></tr><tr><td>Images of the rendered reply</td><td>the case screen</td><td>Escaping before rendering</td></tr><tr><td>Whatever generated code sends</td><td><code>run_duty_code</code></td><td>A sandbox with no network</td></tr></table>
+  <table class="t"><tr><th>Exit</th><th>Tool or part</th><th>Day 3 or 4 control</th></tr><tr><td>Email to any address</td><td><code>send_email</code>, <code>send_case_summary</code></td><td>Recipient rules, one approval</td></tr><tr><td>A request to an address the model chose</td><td><code>fetch_rate</code></td><td>Egress allowlist, a fixed argument</td></tr><tr><td>Images of the rendered reply</td><td>the case screen</td><td>Escaping before rendering</td></tr><tr><td>Whatever generated code sends</td><td><code>run_duty_code</code></td><td>A sandbox with no network</td></tr></table>
   <aside class="notes"><p>This table is the plan of Days 3 and 4. Each control removes one leg at one exit. Keep it on screen when you introduce those sessions.</p></aside>
 </section>
 
@@ -200,7 +200,7 @@
 <section class="slide" id="national-scale" data-lo="LO1">
   <div class="kicker">Scoring</div>
   <h2>The national framework scores likelihood and impact from 1 to 4</h2>
-  <div class="cols cols-2"><div class="stack"><table class="t small"><tr><th>Score</th><th>Likelihood</th><th>Impact</th></tr><tr><td class="num">1</td><td>rare</td><td>low</td></tr><tr><td class="num">2</td><td>unlikely</td><td>medium</td></tr><tr><td class="num">3</td><td>likely</td><td>high</td></tr><tr><td class="num">4</td><td>almost certain</td><td>catastrophic</td></tr></table></div><div class="stack"><table class="t small"><tr><th>Level</th><th>Band</th></tr><tr><td>1 to 2</td><td>low</td></tr><tr><td>3 to 6</td><td>medium</td></tr><tr><td>8 to 12</td><td>high</td></tr><tr><td class="num">16</td><td>catastrophic</td></tr></table></div></div>
+  <div class="cols cols-2"><div class="stack"><table class="t"><tr><th>Score</th><th>Likelihood</th><th>Impact</th></tr><tr><td class="num">1</td><td>rare</td><td>low</td></tr><tr><td class="num">2</td><td>unlikely</td><td>medium</td></tr><tr><td class="num">3</td><td>likely</td><td>high</td></tr><tr><td class="num">4</td><td>almost certain</td><td>catastrophic</td></tr></table></div><div class="stack"><table class="t"><tr><th>Level</th><th>Band</th></tr><tr><td>1 to 2</td><td>low</td></tr><tr><td>3 to 6</td><td>medium</td></tr><tr><td>8 to 12</td><td>high</td></tr><tr><td class="num">16</td><td>catastrophic</td></tr></table></div></div>
   <p class="small">Level is likelihood times impact. Treatments: avoid, mitigate, transfer, accept.</p>
   <aside class="notes"><p>The scale of the National AI Risk Management Framework, as AE-207 used it in its Lab 2.4. One slide of recap. What is new here: the likelihood will be replaced by a measured rate tomorrow. Sources: National AI Risk Management Framework (SDAIA, April 2026).</p></aside>
 </section>
