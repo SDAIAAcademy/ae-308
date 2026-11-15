@@ -29,6 +29,8 @@ uv run python capstone/attack.py --build capstone/build.py --attacks data/attack
 uv run python capstone/attack.py --build ../../other-team/build.py --attacks my_attacks.jsonl --trials 10 --log attack_log.jsonl
 ```
 
+The first line runs all thirty starter attacks at ten trials against your own build: about 2,500 model calls, so run it with the stand-in, never against a hosted model and never out of the attack budget of 600 calls. The attack budget counts the calls made against the other team's build.
+
 An attack is one JSON line with the fields of `data/attacks.jsonl`: `id`, `technique`, `channel` (`email`, `invoice`, `kb`, `tool`, `chat`), `goal`, `lang`, `msg_id`, `task`, `text`, `attacker`. The judge decides by `goal` from the state of the world. With the stand-in model the wording that works is bounded by what it recognises (see `PATTERNS` in `mukhallis.py`); the channel, the goal, the victim task and what you combine are yours to choose. With a hosted model, any wording is in scope: report the model's name with every rate.
 
 ## What you submit
