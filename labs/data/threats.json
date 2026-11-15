@@ -1,0 +1,72 @@
+[
+ {
+  "id": "TH-01",
+  "source": "an importer",
+  "entry": "the body of an email",
+  "action": "send_email",
+  "harm": "another importer's record is emailed to an outside address"
+ },
+ {
+  "id": "TH-02",
+  "source": "an importer",
+  "entry": "the text of an invoice",
+  "action": "the reply the case screen renders",
+  "harm": "an IBAN leaves in the address of an image"
+ },
+ {
+  "id": "TH-03",
+  "source": "an importer",
+  "entry": "the text of an invoice",
+  "action": "fetch_rate",
+  "harm": "an IBAN leaves in a tool argument to an outside host"
+ },
+ {
+  "id": "TH-04",
+  "source": "an importer",
+  "entry": "the body of an email",
+  "action": "release_hold",
+  "harm": "a shipment under customs hold is released"
+ },
+ {
+  "id": "TH-05",
+  "source": "an importer",
+  "entry": "the body of an email, stored by remember",
+  "action": "send_email in a later session",
+  "harm": "every later reply goes to an outside address"
+ },
+ {
+  "id": "TH-06",
+  "source": "a broker who uploads a circular",
+  "entry": "a note in the tariff knowledge base",
+  "action": "send_email",
+  "harm": "replies to many importers are redirected"
+ },
+ {
+  "id": "TH-07",
+  "source": "the operator of a protocol server",
+  "entry": "a tool description changed after approval",
+  "action": "fetch_rate",
+  "harm": "records leak on every task"
+ },
+ {
+  "id": "TH-08",
+  "source": "an importer",
+  "entry": "generated duty code",
+  "action": "run_duty_code",
+  "harm": "the importer file is read and the tariff table overwritten"
+ },
+ {
+  "id": "TH-09",
+  "source": "anyone who can reach the comms server",
+  "entry": "a tool call with the shared key",
+  "action": "send_case_summary",
+  "harm": "any case is sent to any address"
+ },
+ {
+  "id": "TH-10",
+  "source": "an importer in the portal chat",
+  "entry": "the task text itself",
+  "action": "the reply",
+  "harm": "the system prompt, with the key written in it, is printed"
+ }
+]

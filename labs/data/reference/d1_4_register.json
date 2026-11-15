@@ -1,0 +1,82 @@
+[
+ {
+  "id": "TH-01",
+  "likelihood": 4,
+  "impact": 3,
+  "level": 12,
+  "band": "high",
+  "reason": "anyone can email the inbox; one Restricted record leaves"
+ },
+ {
+  "id": "TH-02",
+  "likelihood": 3,
+  "impact": 3,
+  "level": 9,
+  "band": "high",
+  "reason": "anyone can send an invoice; needs the reply to be rendered; one IBAN leaves"
+ },
+ {
+  "id": "TH-03",
+  "likelihood": 3,
+  "impact": 3,
+  "level": 9,
+  "band": "high",
+  "reason": "anyone can send an invoice; needs a foreign-currency case; one IBAN leaves"
+ },
+ {
+  "id": "TH-05",
+  "likelihood": 3,
+  "impact": 3,
+  "level": 9,
+  "band": "high",
+  "reason": "one email is enough and it persists; every later reply of that importer is redirected"
+ },
+ {
+  "id": "TH-09",
+  "likelihood": 3,
+  "impact": 3,
+  "level": 9,
+  "band": "high",
+  "reason": "anyone who reaches the comms server; any case goes to any address"
+ },
+ {
+  "id": "TH-04",
+  "likelihood": 2,
+  "impact": 4,
+  "level": 8,
+  "band": "high",
+  "reason": "needs a shipment under hold and the right wording; uninspected goods leave the port"
+ },
+ {
+  "id": "TH-07",
+  "likelihood": 2,
+  "impact": 4,
+  "level": 8,
+  "band": "high",
+  "reason": "needs control of a server; then records leak on every task"
+ },
+ {
+  "id": "TH-08",
+  "likelihood": 2,
+  "impact": 4,
+  "level": 8,
+  "band": "high",
+  "reason": "needs the model to write hostile code; the importer file is read, the tariff table overwritten"
+ },
+ {
+  "id": "TH-06",
+  "likelihood": 2,
+  "impact": 3,
+  "level": 6,
+  "band": "medium",
+  "reason": "needs a broker's upload right; replies of many importers are redirected"
+ },
+ {
+  "id": "TH-10",
+  "likelihood": 3,
+  "impact": 2,
+  "level": 6,
+  "band": "medium",
+  "reason": "any importer can type in the portal chat; the prompt and a key are shown to one person"
+ }
+]

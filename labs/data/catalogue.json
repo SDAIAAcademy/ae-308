@@ -1,0 +1,44 @@
+{
+ "note": "Names as published on the dates in the course sources. Editions and ids change: check before you cite.",
+ "owasp_llm_2026": {
+  "LLM01": "Prompt Injection",
+  "LLM02": "Sensitive Information Disclosure",
+  "LLM03": "Excessive Agency",
+  "LLM04": "Supply Chain",
+  "LLM05": "Data and Model Poisoning",
+  "LLM06": "Unbounded Consumption",
+  "LLM07": "Misinformation",
+  "LLM08": "Hidden Context Exposure",
+  "LLM09": "Vector and Embedding Weaknesses",
+  "LLM10": "Improper Output Handling"
+ },
+ "owasp_agentic_2026": {
+  "ASI01": "Agent Goal Hijack",
+  "ASI02": "Tool Misuse and Exploitation",
+  "ASI03": "Identity and Privilege Abuse",
+  "ASI04": "Agentic Supply Chain Vulnerabilities",
+  "ASI05": "Unexpected Code Execution",
+  "ASI06": "Memory and Context Poisoning",
+  "ASI07": "Insecure Inter-Agent Communication",
+  "ASI08": "Cascading Failures",
+  "ASI09": "Human-Agent Trust Exploitation",
+  "ASI10": "Rogue Agents"
+ },
+ "mitre_atlas_5_6": {
+  "AML.T0051.000": "LLM Prompt Injection: Direct",
+  "AML.T0051.001": "LLM Prompt Injection: Indirect",
+  "AML.T0053": "AI Agent Tool Invocation",
+  "AML.T0055": "Unsecured Credentials",
+  "AML.T0056": "Extract LLM System Prompt",
+  "AML.T0057": "LLM Data Leakage",
+  "AML.T0070": "RAG Poisoning",
+  "AML.T0077": "LLM Response Rendering",
+  "AML.T0080.000": "AI Agent Context Poisoning: Memory",
+  "AML.T0086": "Exfiltration via AI Agent Tool Invocation",
+  "AML.T0098": "AI Agent Tool Credential Harvesting",
+  "AML.T0109": "AI Supply Chain Rug Pull",
+  "AML.T0110": "AI Agent Tool Poisoning",
+  "AML.T0034": "Cost Harvesting",
+  "AML.T0101": "Data Destruction via AI Agent Tool Invocation"
+ }
+}

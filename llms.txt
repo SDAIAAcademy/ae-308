@@ -1,0 +1,47 @@
+# Securing Language Model and Agent Applications
+
+> Attack a working agent over repeated trials, then contain it so that a fooled model breaks nothing important. SDAIA Academy course AE-308, version 2027.1.0, in English.
+
+Each slide is a heading such as "#### [day1#slide-id] Title": cite slides by that id, and each citation is a link (slides/day1.html#slide-id). These files are what a trainee sees: no speaker notes and no answer keys.
+
+## Course
+
+- [Course page](https://sdaiaacademy.github.io/ae-308/index.md): overview, outcomes, schedule and labs; the page itself is https://sdaiaacademy.github.io/ae-308/index.html
+- [The whole course](https://sdaiaacademy.github.io/ae-308/llms-full.txt): every unit, session and slide in one file, about 20,882 tokens
+- [Practice questions](https://sdaiaacademy.github.io/ae-308/practice.html): questions to check yourself, with feedback after each answer
+
+## Slides
+
+- [Day 1: Model the threats](https://sdaiaacademy.github.io/ae-308/slides/day1.md): What the agent reads, what it can do, and which threats deserve the budget; sessions: A fooled model must break nothing important, Data flows and trust boundaries, Risk lists and technique catalogues, Scoring and choosing what to test; page: https://sdaiaacademy.github.io/ae-308/slides/day1.html; about 5,029 tokens
+- [Day 2: Attack](https://sdaiaacademy.github.io/ae-308/slides/day2.md): Injection, exfiltration and poisoning, each measured over repeated trials; sessions: Direct and indirect injection, Exfiltration paths, Memory and retrieval poisoning, Hostile tools; page: https://sdaiaacademy.github.io/ae-308/slides/day2.html; about 4,605 tokens
+- [Day 3: Contain](https://sdaiaacademy.github.io/ae-308/slides/day3.md): Deterministic controls: a sandbox, egress and recipient rules, exchanged tokens, a split; sessions: Sandboxes for generated code, Egress rules as capability grants, Delegated authorisation, Privileged and quarantined calls; page: https://sdaiaacademy.github.io/ae-308/slides/day3.html; about 4,717 tokens
+- [Day 4: Guard, approve and verify](https://sdaiaacademy.github.io/ae-308/slides/day4.md): Measured guardrails, validated arguments, one approval and a regression suite; sessions: Guardrails and their error rates, Validating outputs and tool arguments, Approvals that people can judge, Audit logs and regression suites; page: https://sdaiaacademy.github.io/ae-308/slides/day4.html; about 4,791 tokens
+- [Capstone: Capstone: red-team day and live defence](https://sdaiaacademy.github.io/ae-308/slides/capstone.md): Attack another team's hardened agent, harden your own, defend the residual risk; page: https://sdaiaacademy.github.io/ae-308/slides/capstone.html; about 1,147 tokens
+
+## Labs
+
+- [Lab 1.1: Entry points and actions](https://sdaiaacademy.github.io/ae-308/labs/D1_1_entry_points_actions.ipynb): Day 1, Session 1, 25 min
+- [Lab 1.2: The data-flow diagram](https://sdaiaacademy.github.io/ae-308/labs/D1_2_data_flow_diagram.ipynb): Day 1, Session 2, 25 min
+- [Lab 1.3: Ten threats, mapped](https://sdaiaacademy.github.io/ae-308/labs/D1_3_map_threats.ipynb): Day 1, Session 3, 25 min
+- [Lab 1.4: Score and choose five](https://sdaiaacademy.github.io/ae-308/labs/D1_4_score_and_choose.ipynb): Day 1, Session 4, 25 min
+- [Lab 2.1: Injection over ten trials](https://sdaiaacademy.github.io/ae-308/labs/D2_1_injection_trials.ipynb): Day 2, Session 1, 25 min
+- [Lab 2.2: One record, three exits](https://sdaiaacademy.github.io/ae-308/labs/D2_2_exfiltration_paths.ipynb): Day 2, Session 2, 25 min
+- [Lab 2.3: Plant now, trigger later](https://sdaiaacademy.github.io/ae-308/labs/D2_3_memory_kb_poisoning.ipynb): Day 2, Session 3, 25 min
+- [Lab 2.4: A changed tool, then pins](https://sdaiaacademy.github.io/ae-308/labs/D2_4_hostile_tools.ipynb): Day 2, Session 4, 25 min
+- [Lab 3.1: The duty tool in a sandbox](https://sdaiaacademy.github.io/ae-308/labs/D3_1_sandbox.ipynb): Day 3, Session 1, 25 min
+- [Lab 3.2: Egress, then recipients](https://sdaiaacademy.github.io/ae-308/labs/D3_2_egress_recipients.ipynb): Day 3, Session 2, 25 min
+- [Lab 3.3: Exchanged tokens, two servers](https://sdaiaacademy.github.io/ae-308/labs/D3_3_token_exchange.ipynb): Day 3, Session 3, 25 min
+- [Lab 3.4: Split the agent](https://sdaiaacademy.github.io/ae-308/labs/D3_4_quarantined_calls.ipynb): Day 3, Session 4, 25 min
+- [Lab 4.1: Tune the input guardrail](https://sdaiaacademy.github.io/ae-308/labs/D4_1_guardrail_error_rates.ipynb): Day 4, Session 1, 25 min
+- [Lab 4.2: Validate arguments, escape output](https://sdaiaacademy.github.io/ae-308/labs/D4_2_validate_arguments_output.ipynb): Day 4, Session 2, 25 min
+- [Lab 4.3: One approval on outbound email](https://sdaiaacademy.github.io/ae-308/labs/D4_3_approvals.ipynb): Day 4, Session 3, 25 min
+- [Lab 4.4: Three attacks as a suite](https://sdaiaacademy.github.io/ae-308/labs/D4_4_regression_suite.ipynb): Day 4, Session 4, 25 min
+
+## Context files
+
+- [context/course.md](https://sdaiaacademy.github.io/ae-308/context/course.md): the whole course, for an assistant that takes a file, about 20,882 tokens
+- [context/day1.md](https://sdaiaacademy.github.io/ae-308/context/day1.md): Day 1, about 5,029 tokens
+- [context/day2.md](https://sdaiaacademy.github.io/ae-308/context/day2.md): Day 2, about 4,605 tokens
+- [context/day3.md](https://sdaiaacademy.github.io/ae-308/context/day3.md): Day 3, about 4,717 tokens
+- [context/day4.md](https://sdaiaacademy.github.io/ae-308/context/day4.md): Day 4, about 4,791 tokens
+- [context/capstone.md](https://sdaiaacademy.github.io/ae-308/context/capstone.md): Capstone, about 1,147 tokens

@@ -1,0 +1,12 @@
+[
+ "TH-01: an importer plants text in the body of an email so that send_email does this: another importer's record is emailed to an outside address.",
+ "TH-02: an importer plants text in the text of an invoice so that the reply the case screen renders does this: an IBAN leaves in the address of an image.",
+ "TH-03: an importer plants text in the text of an invoice so that fetch_rate does this: an IBAN leaves in a tool argument to an outside host.",
+ "TH-04: an importer plants text in the body of an email so that release_hold does this: a shipment under customs hold is released.",
+ "TH-05: an importer plants text in the body of an email, stored by remember so that send_email in a later session does this: every later reply goes to an outside address.",
+ "TH-06: a broker who uploads a circular plants text in a note in the tariff knowledge base so that send_email does this: replies to many importers are redirected.",
+ "TH-07: the operator of a protocol server plants text in a tool description changed after approval so that fetch_rate does this: records leak on every task.",
+ "TH-08: an importer plants text in generated duty code so that run_duty_code does this: the importer file is read and the tariff table overwritten.",
+ "TH-09: anyone who can reach the comms server plants text in a tool call with the shared key so that send_case_summary does this: any case is sent to any address.",
+ "TH-10: an importer in the portal chat plants text in the task text itself so that the reply does this: the system prompt, with the key written in it, is printed."
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "placement": "every action",
+  "card": "raw arguments",
+  "requests": 187,
+  "per task": 3.7,
+  "attacks missed": "9/10",
+  "benign pass": "100%"
+ },
+ {
+  "placement": "every outbound email",
+  "card": "raw arguments",
+  "requests": 68,
+  "per task": 1.4,
+  "attacks missed": "6/10",
+  "benign pass": "100%"
+ },
+ {
+  "placement": "email that breaks a rule",
+  "card": "raw arguments",
+  "requests": 10,
+  "per task": 0.2,
+  "attacks missed": "2/10",
+  "benign pass": "100%"
+ },
+ {
+  "placement": "email that breaks a rule",
+  "card": "designed card",
+  "requests": 10,
+  "per task": 0.2,
+  "attacks missed": "0/10",
+  "benign pass": "100%"
+ }
+]

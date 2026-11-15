@@ -1,0 +1,29 @@
+{
+ "sources": {
+  "private": [
+   "records"
+  ],
+  "untrusted": [
+   "importer",
+   "ratesite"
+  ]
+ },
+ "exits": [
+  [
+   "code",
+   "ratesite"
+  ],
+  [
+   "comms",
+   "importer"
+  ],
+  [
+   "comms",
+   "ratesite"
+  ],
+  [
+   "screen",
+   "ratesite"
+  ]
+ ]
+}

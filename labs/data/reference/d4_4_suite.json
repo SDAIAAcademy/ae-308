@@ -1,0 +1,14 @@
+{
+ "as_found": [
+  false,
+  false,
+  false,
+  true
+ ],
+ "hardened": [
+  true,
+  true,
+  true,
+  true
+ ]
+}

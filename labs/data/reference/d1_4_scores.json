@@ -1,0 +1,52 @@
+{
+ "TH-01": [
+  4,
+  3,
+  "anyone can email the inbox; one Restricted record leaves"
+ ],
+ "TH-04": [
+  2,
+  4,
+  "needs a shipment under hold and the right wording; uninspected goods leave the port"
+ ],
+ "TH-10": [
+  3,
+  2,
+  "any importer can type in the portal chat; the prompt and a key are shown to one person"
+ ],
+ "TH-02": [
+  3,
+  3,
+  "anyone can send an invoice; needs the reply to be rendered; one IBAN leaves"
+ ],
+ "TH-03": [
+  3,
+  3,
+  "anyone can send an invoice; needs a foreign-currency case; one IBAN leaves"
+ ],
+ "TH-05": [
+  3,
+  3,
+  "one email is enough and it persists; every later reply of that importer is redirected"
+ ],
+ "TH-06": [
+  2,
+  3,
+  "needs a broker's upload right; replies of many importers are redirected"
+ ],
+ "TH-07": [
+  2,
+  4,
+  "needs control of a server; then records leak on every task"
+ ],
+ "TH-08": [
+  2,
+  4,
+  "needs the model to write hostile code; the importer file is read, the tariff table overwritten"
+ ],
+ "TH-09": [
+  3,
+  3,
+  "anyone who reaches the comms server; any case goes to any address"
+ ]
+}

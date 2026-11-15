@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="page" data-track="ai-engineering">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Securing Language Model and Agent Applications · SDAIA Academy</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<meta name="description" content="Attack a working agent over repeated trials, then contain it so that a fooled model breaks nothing important">
+<link rel="icon" href="_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="index.md">
+<link rel="describedby" href="llms.txt">
+<link rel="stylesheet" href="_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo" id="logo"></div><nav><a href="slides/day1.html">Slides</a><a href="practice.html">Practice</a><a href="index.md" type="text/markdown">Markdown</a></nav></div>
+<div class="kicker">AI Engineering Track · SDAIA Academy · AE-308</div>
+<h1>Securing Language Model and Agent Applications<span class="sub ar" lang="ar" dir="rtl">تأمين تطبيقات النماذج اللغوية والوكلاء</span></h1>
+<p>Attack a working agent over repeated trials, then contain it so that a fooled model breaks nothing important</p>
+<div class="meta"><span class="track">AI Engineering Track</span><span>4 teaching days + capstone day</span><span>26 hours</span><span>Level 300</span><span>AI Engineering · Associate badge</span></div>
+</div>
+</header>
+<main class="wrap">
+<h2>About the course</h2>
+<p>Participants attack and then defend a working agent: a synthetic clearance assistant for a fictional port authority that reads importers' emails and invoices, searches a tariff knowledge base, remembers each importer, runs code to compute duties and acts through Model Context Protocol (MCP) servers. They threat-model it, run injection, exfiltration and poisoning attacks over repeated trials, then contain it with a sandbox and egress rules, scoped short-lived delegated tokens, separated privileged and quarantined model calls, measured guardrails and approvals placed where a person adds safety. Red-team programmes are AE-407.</p>
+<p><b>Who it is for:</b> Practitioners. Engineers who have completed the level 200 set or can show equivalent work: a deployed model or language model application they built and can explain.</p>
+<p><b>Format:</b> Intensive: 4 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task</p>
+<h2>The case study</h2>
+<div class="note info"><b>Fanar Ports Authority.</b> Fanar Ports Authority is a fictional Gulf-coast port authority. Its platform team built Mukhallis, a clearance assistant that reads importers' emails and invoices, searches the tariff notes, remembers each importer, runs code to compute duties and acts through two protocol servers, the case system and outbound communications. Participants take it as found, threat-model it, attack it over repeated trials and contain it. Every one of the 400 importer records, the 200 emails and invoices, the tariff notes and the attack texts is synthetic, generated with a fixed seed, and planted with the weaknesses the labs find: one API key shared by both servers, a server that acts for anyone, a link inside the duty tool's work folder, a tool description that changes after approval, and legitimate Arabic requests that a guardrail blocks.</div>
+<h2>The course</h2>
+<div class="day">
+<div class="day-head c-teal"><div><div class="t">Day 1 · 4 sessions · 4 labs</div><h3>Model the threats</h3></div><a class="btn" href="slides/day1.html">Open the slides</a></div>
+<div class="scroll"><table>
+<tr><th>Session</th><th>Topic</th><th>Lab</th></tr>
+<tr><td>1</td><td><b>A fooled model must break nothing important</b><br>What a fooled model can read and do: entry points for untrusted text, and actions<ul><li>Explain why a design must hold when the model is fooled</li><li>List the entry points for untrusted text from run traces</li><li>List every action the agent can take and its effect</li></ul></td><td><a href="labs/D1_1_entry_points_actions.ipynb">Lab 1.1 · Entry points and actions</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D1_1_entry_points_actions.ipynb">Open in Colab</a></td></tr>
+<tr><td>2</td><td><b>Data flows and trust boundaries</b><br>Where private data, untrusted content and an exit path meet in one context<ul><li>Draw the agent as processes, stores, external entities and flows</li><li>Mark trust boundaries and the flows that cross them</li><li>Find where private data, untrusted content and an exit path meet</li></ul></td><td><a href="labs/D1_2_data_flow_diagram.ipynb">Lab 1.2 · The data-flow diagram</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D1_2_data_flow_diagram.ipynb">Open in Colab</a></td></tr>
+<tr><td>3</td><td><b>Risk lists and technique catalogues</b><br>Each threat mapped to a risk entry and an adversary technique<ul><li>Tell a risk entry from an adversary technique</li><li>Map a threat to an OWASP entry and a MITRE ATLAS technique</li><li>State a threat as source, entry point, action and harm</li></ul></td><td><a href="labs/D1_3_map_threats.ipynb">Lab 1.3 · Ten threats, mapped</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D1_3_map_threats.ipynb">Open in Colab</a></td></tr>
+<tr><td>4</td><td><b>Scoring and choosing what to test</b><br>The national likelihood and impact scale, and a budget of model calls<ul><li>Score a threat on the national four-by-four scale with a stated reason</li><li>Choose what to test under a fixed budget of model calls</li><li>Plan trials so that a success rate has a useful interval</li></ul></td><td><a href="labs/D1_4_score_and_choose.ipynb">Lab 1.4 · Score and choose five</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D1_4_score_and_choose.ipynb">Open in Colab</a></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-cyan"><div><div class="t">Day 2 · 4 sessions · 4 labs</div><h3>Attack</h3></div><a class="btn" href="slides/day2.html">Open the slides</a></div>
+<div class="scroll"><table>
+<tr><th>Session</th><th>Topic</th><th>Lab</th></tr>
+<tr><td>1</td><td><b>Direct and indirect injection</b><br>Injected text by the task channel or inside what the agent reads, measured as a rate<ul><li>Tell direct injection from indirect injection by who writes the text</li><li>Run an attack over repeated trials and judge success by code</li><li>Report a success rate with an interval, in Arabic and English</li></ul></td><td><a href="labs/D2_1_injection_trials.ipynb">Lab 2.1 · Injection over ten trials</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D2_1_injection_trials.ipynb">Open in Colab</a></td></tr>
+<tr><td>2</td><td><b>Exfiltration paths</b><br>Data leaves by a rendered link, a tool argument, or the email tool itself<ul><li>Name the exit paths of an agent from its tool list</li><li>Leak a record through a link, a tool argument and a permitted tool</li><li>Detect a leak in an egress log, encoded or not</li></ul></td><td><a href="labs/D2_2_exfiltration_paths.ipynb">Lab 2.2 · One record, three exits</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D2_2_exfiltration_paths.ipynb">Open in Colab</a></td></tr>
+<tr><td>3</td><td><b>Memory and retrieval poisoning</b><br>An instruction planted in notes or memory waits for a later session<ul><li>Explain why stored text is more dangerous than passing text</li><li>Plant an instruction that retrieval returns for a chosen query</li><li>Trigger a memory instruction in a later session and measure it</li></ul></td><td><a href="labs/D2_3_memory_kb_poisoning.ipynb">Lab 2.3 · Plant now, trigger later</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D2_3_memory_kb_poisoning.ipynb">Open in Colab</a></td></tr>
+<tr><td>4</td><td><b>Hostile tools</b><br>A tool description is text the model obeys, and a server can change it<ul><li>Explain why a tool description is an entry point</li><li>Observe an agent after a description changes post approval</li><li>Pin approved descriptions by hash and refuse a changed tool</li></ul></td><td><a href="labs/D2_4_hostile_tools.ipynb">Lab 2.4 · A changed tool, then pins</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D2_4_hostile_tools.ipynb">Open in Colab</a></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-coral"><div><div class="t">Day 3 · 4 sessions · 4 labs</div><h3>Contain</h3></div><a class="btn" href="slides/day3.html">Open the slides</a></div>
+<div class="scroll"><table>
+<tr><th>Session</th><th>Topic</th><th>Lab</th></tr>
+<tr><td>1</td><td><b>Sandboxes for generated code</b><br>No network, read-only mounts, and a path resolved before it is checked<ul><li>State what a sandbox for generated code must deny</li><li>Run a code tool with no network and read-only mounts</li><li>Fix a path check that a symbolic link escapes</li></ul></td><td><a href="labs/D3_1_sandbox.ipynb">Lab 3.1 · The duty tool in a sandbox</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D3_1_sandbox.ipynb">Open in Colab</a></td></tr>
+<tr><td>2</td><td><b>Egress rules as capability grants</b><br>An allowed host grants all it can do: email leaks until recipients are ruled<ul><li>Write an egress allowlist by host for the agent's gateway</li><li>Show which leak an allowed host still carries</li><li>Close it with recipient rules while benign tasks still pass</li></ul></td><td><a href="labs/D3_2_egress_recipients.ipynb">Lab 3.2 · Egress, then recipients</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D3_2_egress_recipients.ipynb">Open in Colab</a></td></tr>
+<tr><td>3</td><td><b>Delegated authorisation</b><br>One exchanged token per call: one audience, a narrow scope, a short life<ul><li>Explain token passthrough and the confused deputy</li><li>Exchange a user token for an audience-bound short-lived token</li><li>Audit every tool call's token and test the deputy</li></ul></td><td><a href="labs/D3_3_token_exchange.ipynb">Lab 3.3 · Exchanged tokens, two servers</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D3_3_token_exchange.ipynb">Open in Colab</a></td></tr>
+<tr><td>4</td><td><b>Privileged and quarantined calls</b><br>The model that reads untrusted text has no tools; the planner sees typed fields<ul><li>Describe the privileged and the quarantined call</li><li>Split the agent so invoice text never reaches the planner</li><li>Rerun the attacks and state what the split leaves open</li></ul></td><td><a href="labs/D3_4_quarantined_calls.ipynb">Lab 3.4 · Split the agent</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D3_4_quarantined_calls.ipynb">Open in Colab</a></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-purple"><div><div class="t">Day 4 · 4 sessions · 4 labs</div><h3>Guard, approve and verify</h3></div><a class="btn" href="slides/day4.html">Open the slides</a></div>
+<div class="scroll"><table>
+<tr><th>Session</th><th>Topic</th><th>Lab</th></tr>
+<tr><td>1</td><td><b>Guardrails and their error rates</b><br>A classifier with two error rates; a blocked legitimate request is a cost<ul><li>Compute false-positive and false-negative rates at a threshold</li><li>Tune a threshold on bilingual attack and benign sets</li><li>Report both error rates by language with intervals</li></ul></td><td><a href="labs/D4_1_guardrail_error_rates.ipynb">Lab 4.1 · Tune the input guardrail</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D4_1_guardrail_error_rates.ipynb">Open in Colab</a></td></tr>
+<tr><td>2</td><td><b>Validating outputs and tool arguments</b><br>Schemas and policy rules on tool arguments; output escaped before rendering<ul><li>Write an argument schema that rejects wrong types and ranges</li><li>Add policy rules that depend on the case in hand</li><li>Escape model output so that a link or image cannot fire</li></ul></td><td><a href="labs/D4_2_validate_arguments_output.ipynb">Lab 4.2 · Validate arguments, escape output</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D4_2_validate_arguments_output.ipynb">Open in Colab</a></td></tr>
+<tr><td>3</td><td><b>Approvals that people can judge</b><br>One approval where a person can judge, showing what they need to decide<ul><li>Explain approval fatigue with counts from 50 tasks</li><li>Place one approval where a person adds safety</li><li>Design what the approver sees so that the decision is possible</li></ul></td><td><a href="labs/D4_3_approvals.ipynb">Lab 4.3 · One approval on outbound email</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D4_3_approvals.ipynb">Open in Colab</a></td></tr>
+<tr><td>4</td><td><b>Audit logs and regression suites</b><br>Every confirmed attack becomes a test that runs on every change<ul><li>Read an action log to reconstruct what an agent did</li><li>Turn a confirmed attack into a regression test over trials</li><li>Gate a change on the suite in continuous integration</li></ul></td><td><a href="labs/D4_4_regression_suite.ipynb">Lab 4.4 · Three attacks as a suite</a> <span class="muted">(25 min)</span><br><a href="https://colab.research.google.com/github/SDAIAAcademy/ae-308/blob/main/labs/D4_4_regression_suite.ipynb">Open in Colab</a></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-amber"><div><div class="t">Capstone</div><h3>Capstone: red-team day and live defence</h3></div><a class="btn" href="slides/capstone.html">Open the slides</a></div>
+<div class="scroll"><table><tr><td>Attack another team's hardened agent, harden your own, defend the residual risk</td></tr></table></div>
+</div>
+<h2>Capstone</h2>
+<div class="two">
+<div><p>Red-team day: a timed attack on another team's hardened agent, then a final hardening pass on one's own, submitted as a public repository with threat model, attack log, findings and regression suite and defended live; the follow-up task re-runs the suite after a scripted model change</p><p><b>What you submit:</b> A public GitHub repository per team holding the threat model (at least 12 threats, mapped and scored), the attack log with a success rate and interval per technique, the findings report keyed to risk-list entries, the hardened build and the regression suite passing in continuous integration, with the prompts of any attacker model logged and the commit history kept. Then a ten-minute live defence of the residual-risk statement and five minutes of questions: the team reproduces one attack on the build as found and shows why it now fails.</p><p><b>Format:</b> 10 min talk and demo · 5 min Q&amp;A</p></div>
+<div><h3>Rubric</h3><div class="bar c-teal"><span>Threat model<i style="--w:67%"></i></span><b>20%</b></div><div class="bar c-cyan"><span>Attack evidence<i style="--w:67%"></i></span><b>20%</b></div><div class="bar c-coral"><span>Containment and authorisation<i style="--w:100%"></i></span><b>30%</b></div><div class="bar c-purple"><span>Guardrails and approvals<i style="--w:50%"></i></span><b>15%</b></div><div class="bar c-amber"><span>Regression suite and report<i style="--w:50%"></i></span><b>15%</b></div></div>
+</div>
+<h2>Outcomes</h2>
+<p>By the end of the course, participants can:</p>
+<div class="day"><div class="scroll"><table>
+<tr><th></th><th>Outcomes</th><th>Level</th><th>Evidence</th></tr>
+<tr><td><b>LO1</b></td><td>Prepare a threat model with data flows, trust boundaries and threats mapped to recognised risk lists and adversary-technique catalogues, given the clearance agent, its tool list and the classification of its data</td><td>Applied</td><td>a threat model with at least 12 threats, each mapped and scored on the national four-by-four likelihood and impact scale</td></tr>
+<tr><td><b>LO2</b></td><td>Test the application with direct, indirect, memory and tool-poisoning attacks in Arabic and English over repeated trials, given a starter attack corpus and a fixed budget of model calls</td><td>Applied</td><td>an attack log with a success rate and interval for each technique</td></tr>
+<tr><td><b>LO3</b></td><td>Design containment for generated code and outbound actions with a sandbox, an egress allowlist and recipient rules, given the attack log and 50 benign tasks</td><td>Performance</td><td>a rerun in which every logged exfiltration path fails while at least 95% of benign tasks still pass</td></tr>
+<tr><td><b>LO4</b></td><td>Build delegated authorisation in which each tool call carries an exchanged token with one audience, a narrow scope and a short lifetime, given two protocol servers that share one API key and a containerised identity provider</td><td>Performance</td><td>a token audit and a confused-deputy test that fails against the hardened design</td></tr>
+<tr><td><b>LO5</b></td><td>Configure input guardrails and output validation and measure their false-positive and false-negative rates, given bilingual attack and benign sets</td><td>Applied</td><td>a tuning report with the chosen thresholds and both error rates</td></tr>
+<tr><td><b>LO6</b></td><td>Defend a residual-risk statement after another team attacks the hardened agent, with each confirmed finding turned into a regression test, given a timed red-team exercise</td><td>Performance</td><td>a findings report keyed to risk-list entries, a passing regression suite and a live defence</td></tr>
+</table></div></div>
+<h2>Tools</h2>
+<div class="grid">
+<div class="card c-teal"><h3>Locally served open-weight models</h3><p>a free hosted open-weight model (the labs' option) · Ollama · vLLM · llama.cpp</p></div>
+<div class="card c-cyan"><h3>Protocol servers and tool code</h3><p>official Model Context Protocol SDKs · plain function-calling tools</p></div>
+<div class="card c-coral"><h3>Container runtime with egress control</h3><p>Podman · Docker · gVisor</p></div>
+<div class="card c-purple"><h3>Identity provider supporting OAuth token exchange</h3><p>Keycloak · any OAuth 2 provider in a container</p></div>
+<div class="card c-green"><h3>Agent and tool gateway</h3><p>agentgateway · a reverse proxy with allowlist rules written in the lab</p></div>
+<div class="card c-teal"><h3>Guardrail layer</h3><p>an open-source guardrail framework · an open-weight safety classifier</p></div>
+<div class="card c-cyan"><h3>Attack tooling</h3><p>garak · PyRIT · promptfoo</p></div>
+<div class="card c-coral"><h3>Tracing and audit</h3><p>OpenTelemetry with Jaeger · Langfuse</p></div>
+<div class="card c-purple"><h3>Risk and technique references</h3><p>OWASP GenAI Security Project lists and testing guide · MITRE ATLAS</p></div>
+</div>
+<h2>Before you start</h2>
+<h3>Prerequisites</h3>
+<ul><li>AE-207 Responsible and Secure AI Engineering Practice</li><li>AE-302 Agentic Systems Engineering: Loops, Context and Harnesses</li><li>Has built a tool-calling agent and read its traces</li><li>Runs containers locally and changes their network settings</li><li>Setup: a laptop processor with uv, or Google Colab. Nothing downloads a model and no key is needed; a free hosted model is optional. Run 00_setup_check before Day 1 and read labs/PREWORK.md.</li></ul>
+<div class="note tip">The labs are notebooks. Open each one in Google Colab from the table above, or clone the repository and run them locally.</div>
+<h2>Sources</h2>
+<h3>Risk lists and technique catalogues</h3>
+<ul><li><a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP Top 10 for LLM Applications 2026 (OWASP GenAI Security Project)</a></li><li><a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/">OWASP Top 10 for Agentic Applications for 2026 (OWASP GenAI Security Project)</a></li><li><a href="https://atlas.mitre.org/">MITRE ATLAS</a></li><li><a href="https://github.com/mitre-atlas/atlas-data">MITRE ATLAS data, version 5.6.0</a></li></ul>
+<h3>Injection, exfiltration and design patterns</h3>
+<ul><li><a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/">Simon Willison: The lethal trifecta for AI agents (June 2025)</a></li><li><a href="https://simonwillison.net/2023/Apr/25/dual-llm-pattern/">Simon Willison: The Dual LLM pattern for building AI assistants that can resist prompt injection (2023)</a></li><li><a href="https://arxiv.org/abs/2503.18813">Debenedetti and others: Defeating Prompt Injections by Design (CaMeL), 2025</a></li><li><a href="https://arxiv.org/abs/2506.08837">Beurer-Kellner and others: Design Patterns for Securing LLM Agents against Prompt Injections, 2025</a></li><li><a href="https://arxiv.org/abs/2406.13352">Debenedetti and others: AgentDojo, a dynamic environment to evaluate prompt injection attacks and defenses for LLM agents, 2024</a></li></ul>
+<h3>Protocols, identity and authorisation</h3>
+<ul><li><a href="https://modelcontextprotocol.io/specification/draft/basic/authorization">Model Context Protocol specification: authorization</a></li><li><a href="https://modelcontextprotocol.io/specification/draft/basic/security_best_practices">Model Context Protocol specification: security best practices</a></li><li><a href="https://www.rfc-editor.org/rfc/rfc8693">RFC 8693: OAuth 2.0 Token Exchange</a></li><li><a href="https://www.rfc-editor.org/rfc/rfc8707">RFC 8707: Resource Indicators for OAuth 2.0</a></li><li><a href="https://www.keycloak.org/securing-apps/token-exchange">Keycloak: configuring and using token exchange</a></li><li><a href="https://agentgateway.dev/">agentgateway</a></li></ul>
+<h3>Tools named as examples</h3>
+<ul><li><a href="https://github.com/NVIDIA/garak">garak, the LLM vulnerability scanner</a></li><li><a href="https://github.com/Azure/PyRIT">PyRIT, the Python Risk Identification Tool for generative AI</a></li><li><a href="https://www.promptfoo.dev/docs/red-team/">promptfoo: red teaming guide</a></li><li><a href="https://docs.python.org/3/library/audit_events.html">Python documentation: audit events</a></li><li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">scikit-learn: LogisticRegression</a></li></ul>
+<h3>National references</h3>
+<ul><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf">Personal Data Protection Law (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf">Implementing Regulation of the Personal Data Protection Law (SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf">Data Classification Policy (National Data Management Office, SDAIA)</a></li><li><a href="https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf">National AI Risk Management Framework, English executive summary (SDAIA, April 2026)</a></li><li><a href="https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf">National AI Risk Management Framework, full text in Arabic (SDAIA, April 2026)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf">Generative AI Guidelines for Government (SDAIA)</a></li><li><a href="https://nca.gov.sa/en/regulatory-documents/controls-list/">National Cybersecurity Authority: controls list (Essential Cybersecurity Controls; AI Cybersecurity Guidelines AICG-1:2026, consultation draft)</a></li></ul>
+<h2>Files and links</h2>
+<div class="files">
+<a href="practice.html"><b>practice.html</b><span>Practice questions with feedback</span></a>
+<a href="index.md"><b>index.md</b><span>This page as Markdown, for an AI assistant</span></a>
+<a href="llms.txt"><b>llms.txt</b><span>The course for AI assistants (llms.txt)</span></a>
+<a href="https://github.com/SDAIAAcademy/ae-308"><b>SDAIAAcademy/ae-308</b><span>The course repository</span></a>
+</div>
+</main>
+<footer><div class="wrap">SDAIA Academy · AI Engineering Track · Securing Language Model and Agent Applications<br><span class="muted">Course version 2027.1.0 · engine 1.0.0 · built 2026-11-15 · commit 98d8fe3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T17:43:27Z","version":"2027.1.0","commit":"98d8fe3"},"course":{"id":"ae-308","code":"AE-308","title":"Securing Language Model and Agent Applications","track":"ai-engineering","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/ae-308/","repo":"SDAIAAcademy/ae-308","home":"index.html"},"ai":{"context":{"course":"context/course.md","courseJs":"context/course.js","day":null,"llms":"llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="_engine/academy.js"></script>
+</body>
+</html>
