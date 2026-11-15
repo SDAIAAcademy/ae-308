@@ -1,0 +1,21 @@
+{
+ "table": [
+  {
+   "attacks": "in the email or invoice",
+   "n": 100,
+   "as found": 64,
+   "split": 0
+  },
+  {
+   "attacks": "in a tariff note or a tool description",
+   "n": 20,
+   "as found": 19,
+   "split": 19
+  }
+ ],
+ "benign": 1.0,
+ "calls": [
+  389,
+  439
+ ]
+}

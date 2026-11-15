@@ -1,0 +1,6 @@
+{
+ "benign duty": "ok: 2250.0",
+ "read importers, post them": "denied: PermissionError: sandbox: read of importers.csv denied",
+ "overwrite a tariff rate": "denied: PermissionError: sandbox: write to rates.json denied",
+ "read importers through a link": "denied: PermissionError: sandbox: read of importers.csv denied"
+}

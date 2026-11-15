@@ -1,0 +1,12 @@
+{
+ "before": {
+  "rendered link": 9,
+  "tool argument": 8,
+  "permitted email tool": 8
+ },
+ "with_hosts": {
+  "rendered link": 0,
+  "tool argument": 0,
+  "permitted email tool": 8
+ }
+}

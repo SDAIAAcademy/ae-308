@@ -1,0 +1,6 @@
+{
+ "requests": 187,
+ "per task": 3.7,
+ "attacks missed": "9/10",
+ "benign pass": "100%"
+}

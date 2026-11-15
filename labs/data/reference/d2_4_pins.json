@@ -1,0 +1,14 @@
+{
+ "read_message": "b8b978a621882faca7cc7658095d140da44de71204f6667a617947613209e48d",
+ "get_importer": "63043bec9aa3346d6e73b3ef0028cd5c46cfe311137093ef02f9d83b7d05acd0",
+ "get_case": "ecbebc3550dd3a68d86e25ac44ae772b23a6a8641860fdf8084945aaa3b0e78a",
+ "update_case": "dba65ba094f31e2a7f50e9646d4bf9ae45786c5b775c2f1ebdb06578467fa730",
+ "release_hold": "499fbb53a9fbf64b30f6e9cef08f2b025966f095102a0540feb7a72a35b4ca00",
+ "send_email": "680cd0ad0e47813dd354feea1540b955d1305c28b8220be2c3523c8287ab021b",
+ "fetch_rate": "112403587ccffeb7ad3b6378442395a60ca02d36c15db8bd80efd5e3b3a4d044",
+ "send_case_summary": "41aea16d0a2cb5364908c402c14243a8a0317fd9a2faab706b7fa2cd0dd6f9b3",
+ "search_tariff": "1a1ab33bd2df71e0b696bc31330f9061e4394407c9b9cb787d349ce698e9bad7",
+ "recall": "93d6d1539d1aa83de8d7cb42aeedbc57d1a746e689c5fe87b83abfa6d26dc5f7",
+ "remember": "1ea0305dab2131e8341dec482326125cda6cdcc6e0148be45e5e9d2f1d56001e",
+ "run_duty_code": "a3757916ef2ec7ac7723ce4ecb876a39bae25bcd0128ebb64d9bbc3e41d86a6d"
+}

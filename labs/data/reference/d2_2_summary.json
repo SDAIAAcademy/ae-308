@@ -1,0 +1,23 @@
+[
+ {
+  "path": "rendered link",
+  "host": "cdn.fanar-ports.example",
+  "via": "render",
+  "own host": false,
+  "fields": "iban"
+ },
+ {
+  "path": "tool argument",
+  "host": "rates.gulf-fx.example",
+  "via": "fetch_rate",
+  "own host": false,
+  "fields": "iban"
+ },
+ {
+  "path": "permitted email tool",
+  "host": "mail.fanar.example",
+  "via": "send_email",
+  "own host": true,
+  "fields": "cr_number, iban, mobile"
+ }
+]

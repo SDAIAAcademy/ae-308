@@ -1,0 +1,26 @@
+[
+ {
+  "channel": "email",
+  "lang": "en",
+  "task style, 10 trials": "5/10 = 50% [24%, 76%]",
+  "three styles, 30 trials": "11/30 = 37% [22%, 54%]"
+ },
+ {
+  "channel": "invoice",
+  "lang": "en",
+  "task style, 10 trials": "8/10 = 80% [49%, 94%]",
+  "three styles, 30 trials": "16/30 = 53% [36%, 70%]"
+ },
+ {
+  "channel": "email",
+  "lang": "ar",
+  "task style, 10 trials": "8/10 = 80% [49%, 94%]",
+  "three styles, 30 trials": "13/30 = 43% [27%, 61%]"
+ },
+ {
+  "channel": "invoice",
+  "lang": "ar",
+  "task style, 10 trials": "8/10 = 80% [49%, 94%]",
+  "three styles, 30 trials": "23/30 = 77% [59%, 88%]"
+ }
+]

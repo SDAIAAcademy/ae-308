@@ -1,0 +1,65 @@
+[
+ {
+  "threshold": 0.2,
+  "FP all": "24/81",
+  "FN all": "0/95",
+  "blocked hard_ar": "10/24",
+  "blocked hard_en": "14/14",
+  "missed ar": "0/24",
+  "missed dialect": "0/43"
+ },
+ {
+  "threshold": 0.3,
+  "FP all": "10/81",
+  "FN all": "0/95",
+  "blocked hard_ar": "0/24",
+  "blocked hard_en": "10/14",
+  "missed ar": "0/24",
+  "missed dialect": "0/43"
+ },
+ {
+  "threshold": 0.4,
+  "FP all": "6/81",
+  "FN all": "6/95",
+  "blocked hard_ar": "0/24",
+  "blocked hard_en": "6/14",
+  "missed ar": "0/24",
+  "missed dialect": "6/43"
+ },
+ {
+  "threshold": 0.5,
+  "FP all": "6/81",
+  "FN all": "18/95",
+  "blocked hard_ar": "0/24",
+  "blocked hard_en": "6/14",
+  "missed ar": "0/24",
+  "missed dialect": "18/43"
+ },
+ {
+  "threshold": 0.6,
+  "FP all": "3/81",
+  "FN all": "35/95",
+  "blocked hard_ar": "0/24",
+  "blocked hard_en": "3/14",
+  "missed ar": "0/24",
+  "missed dialect": "35/43"
+ },
+ {
+  "threshold": 0.7,
+  "FP all": "3/81",
+  "FN all": "43/95",
+  "blocked hard_ar": "0/24",
+  "blocked hard_en": "3/14",
+  "missed ar": "0/24",
+  "missed dialect": "43/43"
+ },
+ {
+  "threshold": 0.8,
+  "FP all": "0/81",
+  "FN all": "48/95",
+  "blocked hard_ar": "0/24",
+  "blocked hard_en": "0/14",
+  "missed ar": "5/24",
+  "missed dialect": "43/43"
+ }
+]

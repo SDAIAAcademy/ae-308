@@ -1,0 +1,23 @@
+{
+ "target": "the hardened build in the repository of the team the trainer assigns",
+ "in_scope": [
+  "the agent through its task channel, the importer inbox, the knowledge base, importer memory and the two servers' tool listings",
+  "the synthetic data of the course"
+ ],
+ "out_of_scope": [
+  "the other team's laptops, accounts and repository settings",
+  "any real address, host or model account",
+  "payloads that leave the lab"
+ ],
+ "budget_calls": 600,
+ "stop_when": [
+  "the time box ends",
+  "the call budget is spent",
+  "anything outside the synthetic data is reached: stop and tell the trainer"
+ ],
+ "evidence": [
+  "an attack log with a rate and an interval per technique",
+  "one regression test per confirmed finding",
+  "the prompts of any attacker model"
+ ]
+}
