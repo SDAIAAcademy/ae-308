@@ -9,7 +9,7 @@
     "en": "Securing Language Model and Agent Applications",
     "ar": "تأمين تطبيقات النماذج اللغوية والوكلاء"
   },
-  "tagline": "REPLACE: one line under the title: what participants can do after the course",
+  "tagline": "Attack a working agent over repeated trials, then contain it so that a fooled model breaks nothing important",
   "description": "Participants attack and then defend a working agent: a synthetic clearance assistant for a fictional port authority that reads importers' emails and invoices, searches a tariff knowledge base, remembers each importer, runs code to compute duties and acts through Model Context Protocol (MCP) servers. They threat-model it, run injection, exfiltration and poisoning attacks over repeated trials, then contain it with a sandbox and egress rules, scoped short-lived delegated tokens, separated privileged and quarantined model calls, measured guardrails and approvals placed where a person adds safety. Red-team programmes are AE-407.",
   "track": "ai-engineering",
   "level": 300,
@@ -22,7 +22,8 @@
     "AE-207 Responsible and Secure AI Engineering Practice",
     "AE-302 Agentic Systems Engineering: Loops, Context and Harnesses",
     "Has built a tool-calling agent and read its traces",
-    "Runs containers locally and changes their network settings"
+    "Runs containers locally and changes their network settings",
+    "Setup: a laptop processor with uv, or Google Colab. Nothing downloads a model and no key is needed; a free hosted model is optional. Run 00_setup_check before Day 1 and read labs/PREWORK.md."
   ],
   "site": {
     "url": "https://sdaiaacademy.github.io/ae-308/",
@@ -67,8 +68,8 @@
     }
   ],
   "case_study": {
-    "name": "REPLACE: the name of the fictional organisation every lab works on",
-    "summary": "REPLACE: two sentences on the case study and its synthetic data"
+    "name": "Fanar Ports Authority",
+    "summary": "Fanar Ports Authority is a fictional Gulf-coast port authority. Its platform team built Mukhallis, a clearance assistant that reads importers' emails and invoices, searches the tariff notes, remembers each importer, runs code to compute duties and acts through two protocol servers, the case system and outbound communications. Participants take it as found, threat-model it, attack it over repeated trials and contain it. Every one of the 400 importer records, the 200 emails and invoices, the tariff notes and the attack texts is synthetic, generated with a fixed seed, and planted with the weaknesses the labs find: one API key shared by both servers, a server that acts for anyone, a link inside the duty tool's work folder, a tool description that changes after approval, and legitimate Arabic requests that a guardrail blocks."
   },
   "format": "intensive",
   "format_note": "Intensive: 4 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task",
@@ -90,68 +91,158 @@
         {
           "title": "A fooled model must break nothing important",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Explain why a design must hold when the model is fooled",
+            "List the entry points for untrusted text from run traces",
+            "List every action the agent can take and its effect"
           ],
           "lo": [
             "LO1"
           ],
           "lab": {
             "id": "1.1",
-            "title": "Run the agent on ten tasks and list every entry point for untrusted text and every action it can take",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Entry points and actions",
+            "summary": "Run Mukhallis on ten clearance tasks, then read the traces: every place where text written outside the authority enters the context, and every action the agent can take.",
             "minutes": 25,
-            "href": "D1_1_run_agent_ten.ipynb"
-          }
+            "href": "D1_1_entry_points_actions.ipynb",
+            "steps": [
+              {
+                "text": "Run the ten tasks and read one trace",
+                "minutes": 6
+              },
+              {
+                "text": "List the entry points for untrusted text",
+                "minutes": 7
+              },
+              {
+                "text": "List the actions and their effects",
+                "minutes": 7
+              },
+              {
+                "text": "One table: who writes what the model reads",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Find the entry point that no task of the ten exercised"
+          },
+          "summary": "What a fooled model can read and do: entry points for untrusted text, and actions"
         },
         {
           "title": "Data flows and trust boundaries",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Draw the agent as processes, stores, external entities and flows",
+            "Mark trust boundaries and the flows that cross them",
+            "Find where private data, untrusted content and an exit path meet"
           ],
           "lo": [
             "LO1"
           ],
           "lab": {
             "id": "1.2",
-            "title": "Draw the data-flow diagram and mark private data, untrusted content and exit paths",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "The data-flow diagram",
+            "summary": "Write the data-flow diagram of Mukhallis as data, mark each flow as private data, untrusted content or exit path, and let code find every component where the three meet.",
             "minutes": 25,
-            "href": "D1_2_draw_data_flow.ipynb"
-          }
+            "href": "D1_2_data_flow_diagram.ipynb",
+            "steps": [
+              {
+                "text": "Complete the flows of the diagram",
+                "minutes": 8
+              },
+              {
+                "text": "Mark private data, untrusted content and exit paths",
+                "minutes": 7
+              },
+              {
+                "text": "Find the crossings and where the three legs meet",
+                "minutes": 6
+              },
+              {
+                "text": "Draw it and read it",
+                "minutes": 4
+              }
+            ],
+            "stretch": "Add the approver as an entity and see which paths change"
+          },
+          "summary": "Where private data, untrusted content and an exit path meet in one context"
         },
         {
           "title": "Risk lists and technique catalogues",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Tell a risk entry from an adversary technique",
+            "Map a threat to an OWASP entry and a MITRE ATLAS technique",
+            "State a threat as source, entry point, action and harm"
           ],
           "lo": [
             "LO1"
           ],
           "lab": {
             "id": "1.3",
-            "title": "Map ten threats to OWASP risk entries and MITRE ATLAS techniques",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Ten threats, mapped",
+            "summary": "State ten threats to Mukhallis in one form, map each to an OWASP risk entry and a MITRE ATLAS technique, and lint the mapping against the catalogue.",
             "minutes": 25,
-            "href": "D1_3_map_ten_threats.ipynb"
-          }
+            "href": "D1_3_map_threats.ipynb",
+            "steps": [
+              {
+                "text": "Read the catalogue file: two lists and the techniques",
+                "minutes": 4
+              },
+              {
+                "text": "Write threats in the form source, entry, action, harm",
+                "minutes": 6
+              },
+              {
+                "text": "Map ten threats to risk entries and techniques",
+                "minutes": 10
+              },
+              {
+                "text": "Lint the mapping and settle two disputes",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Write threats 11 and 12 for the threat model of the outcome"
+          },
+          "summary": "Each threat mapped to a risk entry and an adversary technique"
         },
         {
           "title": "Scoring and choosing what to test",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Score a threat on the national four-by-four scale with a stated reason",
+            "Choose what to test under a fixed budget of model calls",
+            "Plan trials so that a success rate has a useful interval"
           ],
           "lo": [
-            "LO1"
+            "LO1",
+            "LO2"
           ],
           "lab": {
             "id": "1.4",
-            "title": "Score the threats on the national likelihood and impact scale and pick five to attack",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Score and choose five",
+            "summary": "Score the ten threats on the national likelihood and impact scale, rank them, and pick five to attack within a budget of 300 model calls.",
             "minutes": 25,
-            "href": "D1_4_score_threats_national.ipynb"
-          }
+            "href": "D1_4_score_and_choose.ipynb",
+            "steps": [
+              {
+                "text": "Score likelihood and impact with a reason each",
+                "minutes": 8
+              },
+              {
+                "text": "Level and band, then rank",
+                "minutes": 4
+              },
+              {
+                "text": "What ten trials can and cannot show",
+                "minutes": 6
+              },
+              {
+                "text": "Pick five within 300 calls",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Rescore one threat as if email were removed from the agent"
+          },
+          "summary": "The national likelihood and impact scale, and a budget of model calls"
         }
-      ]
+      ],
+      "subtitle": "What the agent reads, what it can do, and which threats deserve the budget"
     },
     {
       "id": "day2",
@@ -162,68 +253,157 @@
         {
           "title": "Direct and indirect injection",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Tell direct injection from indirect injection by who writes the text",
+            "Run an attack over repeated trials and judge success by code",
+            "Report a success rate with an interval, in Arabic and English"
           ],
           "lo": [
             "LO2"
           ],
           "lab": {
             "id": "2.1",
-            "title": "Inject through an importer email and a poisoned invoice, ten trials each, and record success rates",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Injection over ten trials",
+            "summary": "Inject through an importer email and through a poisoned invoice, ten trials each, judge every run by code and report each success rate with its interval.",
             "minutes": 25,
-            "href": "D2_1_inject_through_importer.ipynb"
-          }
+            "href": "D2_1_injection_trials.ipynb",
+            "steps": [
+              {
+                "text": "One run by hand: read the trace of a hijacked task",
+                "minutes": 5
+              },
+              {
+                "text": "Write the success check",
+                "minutes": 6
+              },
+              {
+                "text": "Ten trials through the email, ten through the invoice",
+                "minutes": 7
+              },
+              {
+                "text": "Rates, intervals, Arabic against English",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Try the direct channel: the importer portal chat"
+          },
+          "summary": "Injected text by the task channel or inside what the agent reads, measured as a rate"
         },
         {
           "title": "Exfiltration paths",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Name the exit paths of an agent from its tool list",
+            "Leak a record through a link, a tool argument and a permitted tool",
+            "Detect a leak in an egress log, encoded or not"
           ],
           "lo": [
             "LO2"
           ],
           "lab": {
             "id": "2.2",
-            "title": "Leak a synthetic importer record through a rendered link, a tool argument and the permitted email tool",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "One record, three exits",
+            "summary": "Leak one synthetic importer record three ways, through a rendered link, a tool argument and the permitted email tool, and write the detector that finds it in the egress log.",
             "minutes": 25,
-            "href": "D2_2_leak_synthetic_importer.ipynb"
-          }
+            "href": "D2_2_exfiltration_paths.ipynb",
+            "steps": [
+              {
+                "text": "The egress log of a clean run",
+                "minutes": 4
+              },
+              {
+                "text": "Write the leak detector",
+                "minutes": 7
+              },
+              {
+                "text": "Three paths: link, tool argument, email",
+                "minutes": 9
+              },
+              {
+                "text": "Which path used an allowed host",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Encode the record in base64 and extend the detector"
+          },
+          "summary": "Data leaves by a rendered link, a tool argument, or the email tool itself"
         },
         {
           "title": "Memory and retrieval poisoning",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Explain why stored text is more dangerous than passing text",
+            "Plant an instruction that retrieval returns for a chosen query",
+            "Trigger a memory instruction in a later session and measure it"
           ],
           "lo": [
             "LO2"
           ],
           "lab": {
             "id": "2.3",
-            "title": "Plant an instruction in the knowledge base and in importer memory and trigger it in a later session",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Plant now, trigger later",
+            "summary": "Plant an instruction in the tariff knowledge base and in importer memory, then trigger each in a later session on a benign task and measure the rates.",
             "minutes": 25,
-            "href": "D2_3_plant_instruction_knowledge.ipynb"
-          }
+            "href": "D2_3_memory_kb_poisoning.ipynb",
+            "steps": [
+              {
+                "text": "Make a planted note rank first for a query",
+                "minutes": 7
+              },
+              {
+                "text": "Trigger it on a benign tariff question",
+                "minutes": 5
+              },
+              {
+                "text": "Plant in importer memory through one email",
+                "minutes": 6
+              },
+              {
+                "text": "A later session: rates and what persists",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Find how many sessions one memory note reaches"
+          },
+          "summary": "An instruction planted in notes or memory waits for a later session"
         },
         {
           "title": "Hostile tools",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Explain why a tool description is an entry point",
+            "Observe an agent after a description changes post approval",
+            "Pin approved descriptions by hash and refuse a changed tool"
           ],
           "lo": [
             "LO2"
           ],
           "lab": {
             "id": "2.4",
-            "title": "Change a protocol server's tool description after approval, observe the agent, then pin approved descriptions by hash",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A changed tool, then pins",
+            "summary": "Approve the two servers' tools, let one server change a description afterwards, observe the agent over ten trials, then pin approved descriptions by hash.",
             "minutes": 25,
-            "href": "D2_4_change_protocol_server.ipynb"
-          }
+            "href": "D2_4_hostile_tools.ipynb",
+            "steps": [
+              {
+                "text": "List and approve the tools of both servers",
+                "minutes": 4
+              },
+              {
+                "text": "The server changes one description: ten trials",
+                "minutes": 7
+              },
+              {
+                "text": "Write the manifest of hashes",
+                "minutes": 6
+              },
+              {
+                "text": "Verify on every listing, rerun, read the refusal",
+                "minutes": 8
+              }
+            ],
+            "stretch": "Pin the argument schema as well and change a default"
+          },
+          "summary": "A tool description is text the model obeys, and a server can change it"
         }
-      ]
+      ],
+      "subtitle": "Injection, exfiltration and poisoning, each measured over repeated trials"
     },
     {
       "id": "day3",
@@ -234,68 +414,157 @@
         {
           "title": "Sandboxes for generated code",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "State what a sandbox for generated code must deny",
+            "Run a code tool with no network and read-only mounts",
+            "Fix a path check that a symbolic link escapes"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "3.1",
-            "title": "Run the duty-calculation tool with no network and read-only mounts, then fix a symbolic-link escape",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "The duty tool in a sandbox",
+            "summary": "Run the duty-calculation tool with no network and read-only mounts, watch a link inside the work folder reach the importer file, then fix the path check.",
             "minutes": 25,
-            "href": "D3_1_run_duty_calculation.ipynb"
-          }
+            "href": "D3_1_sandbox.ipynb",
+            "steps": [
+              {
+                "text": "The duty tool as found: what the code can reach",
+                "minutes": 5
+              },
+              {
+                "text": "Deny the network, mount the tariff table read-only",
+                "minutes": 7
+              },
+              {
+                "text": "The link escape: read the importer file through /work",
+                "minutes": 5
+              },
+              {
+                "text": "Resolve before the check, rerun three attacks",
+                "minutes": 8
+              }
+            ],
+            "stretch": "Write the same policy as container flags and compare"
+          },
+          "summary": "No network, read-only mounts, and a path resolved before it is checked"
         },
         {
           "title": "Egress rules as capability grants",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Write an egress allowlist by host for the agent's gateway",
+            "Show which leak an allowed host still carries",
+            "Close it with recipient rules while benign tasks still pass"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "3.2",
-            "title": "Allow only the case-system host, show that email still leaks data, then close it with recipient rules",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Egress, then recipients",
+            "summary": "Allow only the case-system and mail hosts, rerun the three leaks, see email still carry the record, then close it with recipient rules and keep at least 95% of 50 benign tasks passing.",
             "minutes": 25,
-            "href": "D3_2_allow_only_case.ipynb"
-          }
+            "href": "D3_2_egress_recipients.ipynb",
+            "steps": [
+              {
+                "text": "An allowlist by host at the gateway",
+                "minutes": 6
+              },
+              {
+                "text": "Rerun the three leaks: two fail, one survives",
+                "minutes": 5
+              },
+              {
+                "text": "A first recipient rule and its cost on 50 tasks",
+                "minutes": 7
+              },
+              {
+                "text": "The rule that passes 95% and still stops the leak",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Add a per-recipient daily limit and measure its cost"
+          },
+          "summary": "An allowed host grants all it can do: email leaks until recipients are ruled"
         },
         {
           "title": "Delegated authorisation",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Explain token passthrough and the confused deputy",
+            "Exchange a user token for an audience-bound short-lived token",
+            "Audit every tool call's token and test the deputy"
           ],
           "lo": [
             "LO4"
           ],
           "lab": {
             "id": "3.3",
-            "title": "Replace the shared API key with exchanged, audience-bound short-lived tokens across two servers",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Exchanged tokens, two servers",
+            "summary": "Replace the API key shared by both servers with exchanged tokens bound to one audience, a narrow scope and a short lifetime, audit every call, and run the confused-deputy test until it fails.",
             "minutes": 25,
-            "href": "D3_3_replace_shared_api.ipynb"
-          }
+            "href": "D3_3_token_exchange.ipynb",
+            "steps": [
+              {
+                "text": "The shared key: what each server can do with it",
+                "minutes": 4
+              },
+              {
+                "text": "The confused deputy, run as found",
+                "minutes": 5
+              },
+              {
+                "text": "Exchange a token per tool call",
+                "minutes": 8
+              },
+              {
+                "text": "Servers check audience, scope and expiry; audit; deputy test",
+                "minutes": 8
+              }
+            ],
+            "stretch": "Shorten the lifetime until a slow task breaks"
+          },
+          "summary": "One exchanged token per call: one audience, a narrow scope, a short life"
         },
         {
           "title": "Privileged and quarantined calls",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Describe the privileged and the quarantined call",
+            "Split the agent so invoice text never reaches the planner",
+            "Rerun the attacks and state what the split leaves open"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "3.4",
-            "title": "Split the agent so the model that reads invoices cannot call tools, and rerun the supplied attacks",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Split the agent",
+            "summary": "Split Mukhallis so that the model call that reads emails and invoices cannot call tools, pass only validated fields to the planner, and rerun the supplied attacks and the 50 benign tasks.",
             "minutes": 25,
-            "href": "D3_4_split_agent_so.ipynb"
-          }
+            "href": "D3_4_quarantined_calls.ipynb",
+            "steps": [
+              {
+                "text": "Where raw text reaches the planner today",
+                "minutes": 4
+              },
+              {
+                "text": "The quarantined extraction: typed fields only",
+                "minutes": 8
+              },
+              {
+                "text": "Validate each field before it crosses",
+                "minutes": 6
+              },
+              {
+                "text": "Rerun the attacks and the benign tasks",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Send a payload through a field the schema lets through"
+          },
+          "summary": "The model that reads untrusted text has no tools; the planner sees typed fields"
         }
-      ]
+      ],
+      "subtitle": "Deterministic controls: a sandbox, egress and recipient rules, exchanged tokens, a split"
     },
     {
       "id": "day4",
@@ -306,80 +575,169 @@
         {
           "title": "Guardrails and their error rates",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Compute false-positive and false-negative rates at a threshold",
+            "Tune a threshold on bilingual attack and benign sets",
+            "Report both error rates by language with intervals"
           ],
           "lo": [
             "LO5"
           ],
           "lab": {
             "id": "4.1",
-            "title": "Tune an input classifier on bilingual attack and benign sets and report both error rates",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Tune the input guardrail",
+            "summary": "Train a small input classifier on bilingual attack and benign texts, tune its threshold, and report the false-positive and false-negative rates by language, with the blocked legitimate Arabic requests counted.",
             "minutes": 25,
-            "href": "D4_1_tune_input_classifier.ipynb"
-          }
+            "href": "D4_1_guardrail_error_rates.ipynb",
+            "steps": [
+              {
+                "text": "Train the classifier and read its scores",
+                "minutes": 5
+              },
+              {
+                "text": "Both error rates at one threshold",
+                "minutes": 6
+              },
+              {
+                "text": "Sweep the threshold; rates by language",
+                "minutes": 7
+              },
+              {
+                "text": "Choose a threshold and write the tuning report",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Add twenty dialect attacks to training and measure again"
+          },
+          "summary": "A classifier with two error rates; a blocked legitimate request is a cost"
         },
         {
           "title": "Validating outputs and tool arguments",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Write an argument schema that rejects wrong types and ranges",
+            "Add policy rules that depend on the case in hand",
+            "Escape model output so that a link or image cannot fire"
           ],
           "lo": [
             "LO5"
           ],
           "lab": {
             "id": "4.2",
-            "title": "Check tool arguments against schemas and policy rules and escape model output before rendering",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Validate arguments, escape output",
+            "summary": "Check tool arguments against schemas and policy rules, escape model output before the case screen renders it, and measure what each check stops and what it blocks by mistake.",
             "minutes": 25,
-            "href": "D4_2_check_tool_arguments.ipynb"
-          }
+            "href": "D4_2_validate_arguments_output.ipynb",
+            "steps": [
+              {
+                "text": "Schemas for three tools",
+                "minutes": 7
+              },
+              {
+                "text": "Policy rules that read the case in hand",
+                "minutes": 7
+              },
+              {
+                "text": "Escape output before rendering",
+                "minutes": 5
+              },
+              {
+                "text": "Both error rates of the validation layer",
+                "minutes": 6
+              }
+            ],
+            "stretch": "Allow links to one host and test a look-alike host"
+          },
+          "summary": "Schemas and policy rules on tool arguments; output escaped before rendering"
         },
         {
           "title": "Approvals that people can judge",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Explain approval fatigue with counts from 50 tasks",
+            "Place one approval where a person adds safety",
+            "Design what the approver sees so that the decision is possible"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "4.3",
-            "title": "Place one approval on outbound email, design what the approver sees and count approvals over 50 tasks",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "One approval on outbound email",
+            "summary": "Place one approval on outbound email, design what the approver sees, and count approvals and missed attacks over 50 benign tasks and the attack set under three placements.",
             "minutes": 25,
-            "href": "D4_3_place_one_approval.ipynb"
-          }
+            "href": "D4_3_approvals.ipynb",
+            "steps": [
+              {
+                "text": "Approve everything: count the requests",
+                "minutes": 5
+              },
+              {
+                "text": "Approve only email that breaks a rule",
+                "minutes": 7
+              },
+              {
+                "text": "Design the card: what the approver must see",
+                "minutes": 7
+              },
+              {
+                "text": "Counts and misses under three placements",
+                "minutes": 6
+              }
+            ],
+            "stretch": "Add a timeout that denies, and see which tasks wait"
+          },
+          "summary": "One approval where a person can judge, showing what they need to decide"
         },
         {
           "title": "Audit logs and regression suites",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Read an action log to reconstruct what an agent did",
+            "Turn a confirmed attack into a regression test over trials",
+            "Gate a change on the suite in continuous integration"
           ],
           "lo": [
             "LO6"
           ],
           "lab": {
             "id": "4.4",
-            "title": "Turn three supplied attacks into a regression suite in continuous integration, then choose the capstone target",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Three attacks as a suite",
+            "summary": "Turn three supplied attacks into a regression suite that fails on the build as found and passes on the hardened build, wire it into continuous integration, then choose the capstone target.",
             "minutes": 25,
-            "href": "D4_4_turn_three_supplied.ipynb"
-          }
+            "href": "D4_4_regression_suite.ipynb",
+            "steps": [
+              {
+                "text": "Read the action log of one attack",
+                "minutes": 4
+              },
+              {
+                "text": "Three attacks as tests over trials",
+                "minutes": 9
+              },
+              {
+                "text": "Run the suite on both builds; the gate file",
+                "minutes": 6
+              },
+              {
+                "text": "Choose the capstone target and its rules",
+                "minutes": 6
+              }
+            ],
+            "stretch": "Run the suite after the scripted model change"
+          },
+          "summary": "Every confirmed attack becomes a test that runs on every change"
         }
-      ]
+      ],
+      "subtitle": "Measured guardrails, validated arguments, one approval and a regression suite"
     },
     {
       "id": "capstone",
       "kind": "capstone",
-      "title": "Capstone project presentations",
+      "title": "Capstone: red-team day and live defence",
       "deck": "slides/capstone.html",
-      "subtitle": "REPLACE: the catalog gives no length for the presentations; set capstone.talk_minutes and capstone.qa_minutes in course.json, write them on the format slide, add a timer for each to the now-presenting slide, and remove this line"
+      "subtitle": "Attack another team's hardened agent, harden your own, defend the residual risk"
     }
   ],
   "capstone": {
     "summary": "Red-team day: a timed attack on another team's hardened agent, then a final hardening pass on one's own, submitted as a public repository with threat model, attack log, findings and regression suite and defended live; the follow-up task re-runs the suite after a scripted model change",
-    "submission": "REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code",
+    "submission": "A public GitHub repository per team holding the threat model (at least 12 threats, mapped and scored), the attack log with a success rate and interval per technique, the findings report keyed to risk-list entries, the hardened build and the regression suite passing in continuous integration, with the prompts of any attacker model logged and the commit history kept. Then a ten-minute live defence of the residual-risk statement and five minutes of questions: the team reproduces one attack on the build as found and shows why it now fails.",
     "rubric": [
       {
         "criterion": "Threat model",
@@ -401,7 +759,9 @@
         "criterion": "Regression suite and report",
         "weight": 15
       }
-    ]
+    ],
+    "talk_minutes": 10,
+    "qa_minutes": 5
   },
   "labs": {
     "kind": "notebooks",
@@ -411,6 +771,7 @@
     {
       "slot": "Locally served open-weight models",
       "examples": [
+        "a free hosted open-weight model (the labs' option)",
         "Ollama",
         "vLLM",
         "llama.cpp"
@@ -472,6 +833,141 @@
       "examples": [
         "OWASP GenAI Security Project lists and testing guide",
         "MITRE ATLAS"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "group": "Risk lists and technique catalogues",
+      "items": [
+        {
+          "title": "OWASP Top 10 for LLM Applications 2026 (OWASP GenAI Security Project)",
+          "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+        },
+        {
+          "title": "OWASP Top 10 for Agentic Applications for 2026 (OWASP GenAI Security Project)",
+          "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+        },
+        {
+          "title": "MITRE ATLAS",
+          "url": "https://atlas.mitre.org/"
+        },
+        {
+          "title": "MITRE ATLAS data, version 5.6.0",
+          "url": "https://github.com/mitre-atlas/atlas-data"
+        }
+      ]
+    },
+    {
+      "group": "Injection, exfiltration and design patterns",
+      "items": [
+        {
+          "title": "Simon Willison: The lethal trifecta for AI agents (June 2025)",
+          "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"
+        },
+        {
+          "title": "Simon Willison: The Dual LLM pattern for building AI assistants that can resist prompt injection (2023)",
+          "url": "https://simonwillison.net/2023/Apr/25/dual-llm-pattern/"
+        },
+        {
+          "title": "Debenedetti and others: Defeating Prompt Injections by Design (CaMeL), 2025",
+          "url": "https://arxiv.org/abs/2503.18813"
+        },
+        {
+          "title": "Beurer-Kellner and others: Design Patterns for Securing LLM Agents against Prompt Injections, 2025",
+          "url": "https://arxiv.org/abs/2506.08837"
+        },
+        {
+          "title": "Debenedetti and others: AgentDojo, a dynamic environment to evaluate prompt injection attacks and defenses for LLM agents, 2024",
+          "url": "https://arxiv.org/abs/2406.13352"
+        }
+      ]
+    },
+    {
+      "group": "Protocols, identity and authorisation",
+      "items": [
+        {
+          "title": "Model Context Protocol specification: authorization",
+          "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization"
+        },
+        {
+          "title": "Model Context Protocol specification: security best practices",
+          "url": "https://modelcontextprotocol.io/specification/draft/basic/security_best_practices"
+        },
+        {
+          "title": "RFC 8693: OAuth 2.0 Token Exchange",
+          "url": "https://www.rfc-editor.org/rfc/rfc8693"
+        },
+        {
+          "title": "RFC 8707: Resource Indicators for OAuth 2.0",
+          "url": "https://www.rfc-editor.org/rfc/rfc8707"
+        },
+        {
+          "title": "Keycloak: configuring and using token exchange",
+          "url": "https://www.keycloak.org/securing-apps/token-exchange"
+        },
+        {
+          "title": "agentgateway",
+          "url": "https://agentgateway.dev/"
+        }
+      ]
+    },
+    {
+      "group": "Tools named as examples",
+      "items": [
+        {
+          "title": "garak, the LLM vulnerability scanner",
+          "url": "https://github.com/NVIDIA/garak"
+        },
+        {
+          "title": "PyRIT, the Python Risk Identification Tool for generative AI",
+          "url": "https://github.com/Azure/PyRIT"
+        },
+        {
+          "title": "promptfoo: red teaming guide",
+          "url": "https://www.promptfoo.dev/docs/red-team/"
+        },
+        {
+          "title": "Python documentation: audit events",
+          "url": "https://docs.python.org/3/library/audit_events.html"
+        },
+        {
+          "title": "scikit-learn: LogisticRegression",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+        }
+      ]
+    },
+    {
+      "group": "National references",
+      "items": [
+        {
+          "title": "Personal Data Protection Law (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "Implementing Regulation of the Personal Data Protection Law (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "Data Classification Policy (National Data Management Office, SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf"
+        },
+        {
+          "title": "National AI Risk Management Framework, English executive summary (SDAIA, April 2026)",
+          "url": "https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf"
+        },
+        {
+          "title": "National AI Risk Management Framework, full text in Arabic (SDAIA, April 2026)",
+          "url": "https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf"
+        },
+        {
+          "title": "Generative AI Guidelines for Government (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf"
+        },
+        {
+          "title": "National Cybersecurity Authority: controls list (Essential Cybersecurity Controls; AI Cybersecurity Guidelines AICG-1:2026, consultation draft)",
+          "url": "https://nca.gov.sa/en/regulatory-documents/controls-list/"
+        }
       ]
     }
   ]
