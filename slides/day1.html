@@ -1,158 +1,262 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Welcome. Introduce yourself in one sentence. Ask the room: who has shipped an agent that can send email or change a record? That show of hands sets the pace. Then the rhythm: four sessions a day, each about 25 minutes of concepts and a 25-minute lab on one agent, Mukhallis. The supervised entry check, without AI assistance, comes before session 1: an unseen architecture diagram to mark.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>Day 1 is the only day without an attack. Say why: you cannot spend a budget of model calls well until you know what the agent reads and what it can do. The first threat model is written without AI assistants.</p></aside>
+</section>
+
+<section class="slide" id="the-case" data-lo="LO1">
+  <div class="kicker">The case</div>
+  <h2>One agent for four days: Mukhallis, the clearance assistant of Fanar Ports Authority</h2>
+  <div class="cols cols-2"><div class="stack"><ul class="bullets"><li>Reads importers' <b>emails and invoices</b>, in Arabic and English</li><li>Searches the <b>tariff notes</b>, remembers each importer</li><li>Runs <b>code</b> to compute duties</li><li>Acts through <b>two protocol servers</b>: the case system and outbound communications</li></ul></div><div class="stack"><div class="cols cols-2 gap-s"><div class="card c-teal"><h4>The data</h4><p class="small mb0">400 importer records, classified Restricted. 200 emails and invoices. 12 tariff notes. 50 benign tasks. 30 starter attacks. All synthetic, seed 308.</p></div><div class="card c-coral"><h4>Your role</h4><p class="small mb0">Luay Al-Najdi, AI security engineer. The platform team built it; you take it as found.</p></div></div></div></div>
+  <aside class="notes"><p>Introduce the people: Siham Al-Nuwaiser, director of clearance services, owns the risk. Jihad Al-Khuraiji, desk supervisor, approves outbound email on Day 4. Wissam Al-Fulaij built Mukhallis. Maysa Al-Bulaihi is the information security officer, Hajar Al-Sayyari the data protection officer.</p><p>Say plainly what is simulated: the two servers run in process, the network is a log, the default model is a scripted stand-in so that every laptop gets the same runs. The labs' README has the table "What stands in for what".</p></aside>
+</section>
+
+<section class="slide" id="from-207-and-302" data-lo="LO1">
+  <div class="kicker">Where this course starts</div>
+  <h2>You arrive with a risk list, a first attack log and an agent you built</h2>
+  <table class="t small"><tr><th>From</th><th>You already have</th><th>Here it becomes</th></tr><tr><td>AE-207</td><td>The OWASP list, ten injection attempts, four basic controls, a register on the national scale</td><td>Two lists and a technique catalogue; rates over repeated trials; containment that does not depend on the model</td></tr><tr><td>AE-302</td><td>A loop, tools, a protocol server, traces, one planted instruction and one leg removed</td><td>A full threat model of an agent someone else built, attacked through every entry point</td></tr></table>
+  <div class="callout note mt-s"><b>Not here.</b> Planning and running a red-team programme, assurance cases and briefing an executive are AE-407.</div>
+  <aside class="notes"><p>One minute. Ask two people what their AE-302 agent could have leaked. Nothing from those courses is retaught; sessions point back to them by name.</p></aside>
+</section>
 
 <!-- Session 1 -->
-
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea" data-lo="LO1">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide section" id="s1" data-auto="section" data-session="1">
+  <aside class="notes"><p>Session 1 sets the stance for the whole course. The title is the thesis: a fooled model must break nothing important.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO1">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
-  </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+<section class="slide" id="assume-fooled" data-lo="LO1">
+  <div class="kicker">The stance</div>
+  <h2>Assume the model will be fooled, then ask what it can reach</h2>
+  <div class="cols cols-2"><div class="stack"><div class="card flat c-coral"><h4>The question that fails</h4><p class="small mb0">"How do we stop the model from obeying an attacker?" Nobody can promise that, and an attacker retries for free.</p></div></div><div class="stack"><div class="card flat c-teal"><h4>The question that works</h4><p class="small mb0">"When the model obeys an attacker, what can it read, and what can it do?" That has an answer you can test.</p></div></div></div>
+  <div class="callout tip mt-s"><b>The design goal.</b> A fooled model must break nothing important.</div>
+  <aside class="notes"><p>Write the two questions on the board and leave them there all week. Every control of Day 3 answers the second question; the guardrail of Day 4 is the only control that tries to answer the first, and it comes last and with two error rates.</p></aside>
+</section>
+
+<section class="slide" id="component-or-actor" data-lo="LO1">
+  <div class="kicker">Two ways to see the model</div>
+  <h2>A component transforms text; an actor chooses what happens next</h2>
+  <table class="t small"><tr><th>Model as component</th><th>Model as actor</th></tr><tr><td>It decides</td><td>Nothing: the application calls it and uses the output</td><td>Which tool to call, with which arguments, and when to stop</td></tr><tr><td>A fooled model</td><td>Returns wrong text</td><td>Takes wrong actions</td></tr><tr><td>The worst case</td><td>Whatever the application does with that text</td><td>Everything its tools and credentials allow</td></tr><tr class="hl"><td>Mukhallis</td><td>The quarantined extraction of Day 3</td><td>The planner with twelve tools</td></tr></table>
+  <aside class="notes"><p>The distinction comes back on Day 3: the split turns the model that reads invoices into a component. Ask: in your own systems, which calls are components and which are actors?</p></aside>
+</section>
+
+<section class="slide" id="three-legs-recap" data-lo="LO1">
+  <div class="kicker">From AE-302</div>
+  <h2>Private data, untrusted content, an exit path: any agent that holds all three can be made to leak</h2>
+  <div class="flow"><div class="step c-teal"><b>Private data</b>400 importer records, classified Restricted</div><div class="arrow">→</div><div class="step c-cyan"><b>Untrusted content</b>emails, invoices, notes, memory, tool text</div><div class="arrow">→</div><div class="step c-purple"><b>An exit path</b>email, a fetched address, a rendered image</div></div>
+  <div class="callout warn mt-s"><b>What goes wrong.</b> Teams look for the three in the architecture diagram and miss that one context window holds all of them at once.</div>
+  <aside class="notes"><p>This is the recap of AE-302 Lab 4.3, one slide. The source is Simon Willison's essay on the three together. Here the three become columns of a threat model. Sources: Willison, The lethal trifecta for AI agents (June 2025).</p></aside>
+</section>
+
+<section class="slide" id="entry-points" data-lo="LO1">
+  <div class="kicker">What the model reads</div>
+  <h2>Every tool result has an author, and the author is not always the authority</h2>
+  <table class="t small"><tr><th>Origin</th><th>Arrives by</th><th>Who can write it</th><th>Outsider?</th></tr><tr><td>importer</td><td><code>read_message</code></td><td>The importer, or anyone who emails the inbox</td><td>Yes</td></tr><tr><td>kb</td><td><code>search_tariff</code></td><td>The tariff committee, and brokers who upload circulars</td><td>Yes</td></tr><tr><td>memory</td><td><code>recall</code></td><td>The model, from what it read earlier</td><td>Yes</td></tr><tr><td>web</td><td><code>fetch_rate</code></td><td>Whoever runs the page the model was pointed at</td><td>Yes</td></tr><tr><td>system</td><td>case-system answers</td><td>The authority's own records</td><td>No</td></tr></table>
+  <aside class="notes"><p>These are the four origins Lab 1.1 finds in the traces of ten tasks. Dwell on memory: only the model writes to it, and the model writes what it read. Two more entry points never show as a tool result: the tool descriptions each server sends, and the system prompt. They are the lab's stretch.</p></aside>
+</section>
+
+<section class="slide" id="actions" data-lo="LO1">
+  <div class="kicker">What the agent can do</div>
+  <h2>The ten tasks used four of seven actions; the attacker wants the other three</h2>
+  <div class="cols cols-2"><div class="stack"><table class="t small"><tr><th>Tool</th><th>Effect</th><th>Used by a benign task</th></tr><tr><td><code>update_case</code></td><td>write</td><td>Yes</td></tr><tr><td><code>send_email</code></td><td>send</td><td>Yes</td></tr><tr><td><code>fetch_rate</code></td><td>request</td><td>Yes</td></tr><tr><td><code>run_duty_code</code></td><td>exec</td><td>Yes</td></tr><tr class="hl"><td><code>release_hold</code></td><td>write</td><td>No</td></tr><tr class="hl"><td><code>remember</code></td><td>write</td><td>No</td></tr><tr class="hl"><td><code>send_case_summary</code></td><td>send</td><td>No</td></tr></table></div><div class="stack"><div class="callout tip mt-s"><b>Read the tool list, not the logs.</b> A benign run shows what the agent does. The tool list shows what it can do.</div>
+  <p class="small">Result of Lab 1.1 on the build as found.</p></div></div>
+  <aside class="notes"><p>Real output of the lab's solution run. Ask which of the seven cannot be undone: an email that left, a released hold, anything generated code sent or overwrote.</p></aside>
+</section>
+
+<section class="slide" id="check-fooled" data-lo="LO1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which claim survives a fooled model?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1"><p class="lead">Wissam, who built Mukhallis, lists four reasons why it is safe. Which one still holds on the day the model obeys a hostile invoice?</p><div class="opts"><div class="opt" data-why="Treats an instruction as a control: the attacker&#x27;s text sits in the same context and competes with it">The system prompt says never to share one importer's data with another</div><div class="opt" data-why="Reads benign behaviour as a limit: the tool is on the list, so a fooled model can call it">In ten test tasks the agent never called <code>release_hold</code></div><div class="opt" data-ok>The case server refuses any call for a case other than the one the officer opened</div><div class="opt" data-why="Takes past obedience on benign text as evidence about hostile text">The model was tested on 200 messages and followed its instructions every time</div></div><div class="callout tip why"><b>Why.</b> Only the third is enforced outside the model. The other three describe what the model usually does, which is exactly what an attacker changes.</div></div>
+  <aside class="notes"><p>Answer: the case server's refusal. As found, the case server does no such thing: that is Lab 3.3. If the room picks the system prompt, go back to the two questions on the board.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Walk the room. Typical problems: listing the origin <code>system</code> as an entry point; forgetting that <code>fetch_rate</code> is both an action and an entry point. Anyone stuck on an exercise can run on: the cell after it loads the reference result. Work without AI assistants today.</p></aside>
 </section>
 
 <!-- Session 2 -->
-
-<section class="slide section" id="s2" data-auto="section" data-session="2"></section>
-
-<section class="slide" id="s2-idea" data-lo="LO1">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide section" id="s2" data-auto="section" data-session="2">
+  <aside class="notes"><p>Session 2 gives the threat model its drawing. Keep it practical: the diagram is data, and code reads it.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO1">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
-  </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+<section class="slide" id="dfd-elements" data-lo="LO1">
+  <div class="kicker">The notation</div>
+  <h2>Four shapes are enough to draw any agent</h2>
+  <div class="cols cols-4 gap-s"><div class="card c-teal"><h4>External entity</h4><p class="small mb0">Outside your control: the importer, a rate site, the officer.</p></div><div class="card c-cyan"><h4>Process</h4><p class="small mb0">Code that transforms data: the planner, the code runner, each server, the case screen.</p></div><div class="card c-purple"><h4>Data store</h4><p class="small mb0">Where data rests: importer records, tariff notes, memory.</p></div><div class="card c-coral"><h4>Data flow</h4><p class="small mb0">An arrow with a name: what moves, from where to where.</p></div></div>
+  <aside class="notes"><p>Classic data-flow diagrams; nothing here is special to AI. What is special comes on the next slides: one process, the planner, reads and writes almost every flow.</p></aside>
+</section>
+
+<section class="slide" id="trust-boundaries" data-lo="LO1">
+  <div class="kicker">Boundaries</div>
+  <h2>A trust boundary is where the author of the data changes</h2>
+  <div class="cols cols-2"><div class="stack"><ul class="bullets"><li>Mukhallis has four zones: <b>outside</b>, <b>authority</b>, <b>agent</b>, <b>servers</b></li><li>A flow that crosses a boundary needs a decision: who checks it, and how</li><li>Trust follows the <b>author</b>, not the transport: an importer's email is still the importer's after the case server stored it</li></ul></div><div class="stack"><div class="stat center"><div class="big">13 of 19</div><div class="lbl">flows of Mukhallis cross a trust boundary (Lab 1.2)</div></div></div></div>
+  <div class="callout warn mt-s"><b>What goes wrong.</b> "It comes from our own case server" is said about text an outsider wrote yesterday.</div>
+  <aside class="notes"><p>The number is from the lab's solution. Ask the room for a flow that does not cross a boundary: planner to memory, planner to code. They are inside the agent zone and still carry an outsider's words.</p></aside>
+</section>
+
+<section class="slide" id="mark-sources" data-lo="LO1">
+  <div class="kicker">Marking</div>
+  <h2>Mark where private data and untrusted content start; taint spreads by itself</h2>
+  <div class="flow"><div class="step c-teal"><b>Private source</b><code>records</code>, the Restricted importer file</div><div class="arrow">→</div><div class="step c-cyan"><b>Untrusted sources</b><code>importer</code>, <code>ratesite</code></div><div class="arrow">→</div><div class="step c-purple"><b>Follow the flows</b>every node the data can arrive at</div><div class="arrow">→</div><div class="step c-coral"><b>Exits</b>flows that end outside</div></div>
+  <div class="callout tip mt-s"><b>Classify first.</b> The national Data Classification Policy gives the level of each store before you draw: the pre-work table.</div>
+  <aside class="notes"><p>Participants bring a five-row classification table from the pre-work. Do not mark every arrow by hand: mark the sources and let a graph search do the rest. That is what the lab's <code>reach</code> function is.</p></aside>
+</section>
+
+<section class="slide" id="meeting-points" data-lo="LO1">
+  <div class="kicker">The finding</div>
+  <h2>Six of nine components inside the authority hold all three legs</h2>
+  <div class="cols cols-2"><div class="stack"><table class="t small"><tr><th>Component</th><th>Private</th><th>Untrusted</th><th>Can reach outside</th></tr><tr class="hl"><td>Planner</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr class="hl"><td>Comms server</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr class="hl"><td>Case server</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr class="hl"><td>Code runner</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr class="hl"><td>Memory</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr class="hl"><td>Case screen</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Tariff notes</td><td>No</td><td>Yes</td><td>Yes</td></tr></table></div><div class="stack"><div class="callout warn mt-s"><b>A model in a loop.</b> Whatever it reads can shape whatever it sends. The diagram cannot be fixed by moving one box.</div></div></div>
+  <aside class="notes"><p>Output of Lab 1.2. The officer and the records store are the two components not on the list. The point of the table is not despair: it is that defences are placed on flows, at entries and exits, not on components.</p></aside>
+</section>
+
+<section class="slide" id="four-exits" data-lo="LO1">
+  <div class="kicker">Exits</div>
+  <h2>The diagram's use is a short list: four ways out</h2>
+  <table class="t small"><tr><th>Exit</th><th>Tool or part</th><th>Day 3 or 4 control</th></tr><tr><td>Email to any address</td><td><code>send_email</code>, <code>send_case_summary</code></td><td>Recipient rules, one approval</td></tr><tr><td>A request to an address the model chose</td><td><code>fetch_rate</code></td><td>Egress allowlist, a fixed argument</td></tr><tr><td>Images of the rendered reply</td><td>the case screen</td><td>Escaping before rendering</td></tr><tr><td>Whatever generated code sends</td><td><code>run_duty_code</code></td><td>A sandbox with no network</td></tr></table>
+  <aside class="notes"><p>This table is the plan of Days 3 and 4. Each control removes one leg at one exit. Keep it on screen when you introduce those sessions.</p></aside>
+</section>
+
+<section class="slide" id="dfd-as-data" data-lo="LO1">
+  <div class="kicker">In the lab</div>
+  <h2>Write the diagram as data, so that code can check it</h2>
+  <pre class="code s" data-file="dfd.json"><code class="language-python">{"id": "F03", "from": "case", "to": "planner",
+ "data": "message text (read_message)"}</code></pre>
+  <ul class="bullets"><li>A flow is a row: <code>from</code>, <code>to</code>, <code>data</code></li><li>A zone per node gives the boundaries</li><li><code>reach(flows, start)</code> is twelve lines of graph search</li><li>The same file renders as a Mermaid diagram in the capstone README</li></ul>
+  <aside class="notes"><p>Demonstration: open <code>labs/data/dfd.json</code>, show three nodes and three flows, then the Mermaid text the lab writes. A diagram in a drawing tool is out of date the day a tool is added; a file in the repository is reviewed with the change.</p></aside>
+</section>
+
+<section class="slide" id="check-boundary" data-lo="LO1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which flow carries untrusted content?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1"><p class="lead">A broker uploads a circular. It becomes a tariff note. A week later the planner retrieves it for another importer's question. Where does untrusted content cross into the agent's context?</p><div class="opts"><div class="opt" data-ok>On the flow from the tariff notes to the planner: the note is still the broker's words</div><div class="opt" data-why="Lets storage launder the author: trust follows who wrote the text, not where it rests">Nowhere: the note was stored inside the authority, so it is trusted now</div><div class="opt" data-why="Sees the boundary as a gate passed once, and misses that the text is read again on every retrieval">Only at upload, where the broker's file crossed the boundary once</div><div class="opt" data-why="Confuses the exit path with the entry of untrusted content">On the flow from the planner to the comms server, when the reply is sent</div></div><div class="callout tip why"><b>Why.</b> The note's author is outside. Every retrieval brings an outsider's text into a context that also holds a record and an email tool.</div></div>
+  <aside class="notes"><p>Answer: the first option. This is the mechanism of Lab 2.3. If the room chooses "only at upload", ask who reviews uploads and whether the review reads for instructions.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-2" data-auto="lab" data-lab="1.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Typical problems: marking the planner as a source; forgetting the code runner's flow to the outside (as found, generated code has the network). The check prints which pairs are missing.</p></aside>
 </section>
 
 <!-- Session 3 -->
-
-<section class="slide section" id="s3" data-auto="section" data-session="3"></section>
-
-<section class="slide" id="s3-idea" data-lo="LO1">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide section" id="s3" data-auto="section" data-session="3">
+  <aside class="notes"><p>Session 3 is about names. Participants map threats to entries and techniques, and learn that a mapping is an argument.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO1">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
-  </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+<section class="slide" id="risk-or-technique" data-lo="LO1">
+  <div class="kicker">Two kinds of list</div>
+  <h2>A risk list names what goes wrong in your application; a technique catalogue names what an adversary does</h2>
+  <div class="cols cols-2"><div class="stack"><div class="card c-teal"><h4>OWASP lists</h4><p class="small mb0">Weaknesses and their consequences, ranked. You map your <b>threats</b> and your <b>controls</b> to entries.</p></div></div><div class="stack"><div class="card c-coral"><h4>MITRE ATLAS</h4><p class="small mb0">Tactics (the adversary's goal at a step) and techniques (how). You map your <b>tests</b> to techniques.</p></div></div></div>
+  <div class="callout tip mt-s"><b>Use both.</b> The entry tells the owner why it matters. The technique tells the tester what to reproduce.</div>
+  <aside class="notes"><p>AE-207 used the OWASP list to rank risks of one assistant. Here each threat gets both an entry and a technique, and the capstone findings are keyed to them. Sources: OWASP GenAI Security Project; MITRE ATLAS.</p></aside>
+</section>
+
+<section class="slide" id="owasp-two-lists" data-lo="LO1">
+  <div class="kicker">Risk lists</div>
+  <h2>Two OWASP lists apply to an agent</h2>
+  <div class="cols cols-2"><div class="stack"><table class="t small"><tr><th>LLM applications 2026</th></tr><tr><td>LLM01 Prompt Injection</td></tr><tr><td>LLM02 Sensitive Information Disclosure</td></tr><tr><td>LLM03 Excessive Agency</td></tr><tr><td>LLM04 Supply Chain</td></tr><tr><td>LLM05 Data and Model Poisoning</td></tr><tr><td>LLM08 Hidden Context Exposure</td></tr><tr><td>LLM10 Improper Output Handling</td></tr></table></div><div class="stack"><table class="t small"><tr><th>Agentic applications 2026</th></tr><tr><td>ASI01 Agent Goal Hijack</td></tr><tr><td>ASI02 Tool Misuse and Exploitation</td></tr><tr><td>ASI03 Identity and Privilege Abuse</td></tr><tr><td>ASI04 Agentic Supply Chain Vulnerabilities</td></tr><tr><td>ASI05 Unexpected Code Execution</td></tr><tr><td>ASI06 Memory and Context Poisoning</td></tr><tr><td>ASI09 Human-Agent Trust Exploitation</td></tr></table></div></div>
+  <aside class="notes"><p>Seven entries of each list, the ones Mukhallis meets; the catalogue file of the lab has all twenty. Names as published in the 2026 editions. Editions are renamed and reordered: a threat model cites the edition it used. Sources: OWASP Top 10 for LLM Applications 2026; OWASP Top 10 for Agentic Applications for 2026.</p></aside>
+</section>
+
+<section class="slide" id="atlas" data-lo="LO1">
+  <div class="kicker">Technique catalogue</div>
+  <h2>ATLAS gives the adversary's steps their ids</h2>
+  <table class="t small"><tr><th>Technique</th><th>Id</th><th>In Mukhallis</th></tr><tr><td>LLM Prompt Injection: Indirect</td><td>AML.T0051.001</td><td>An instruction in an email or invoice</td></tr><tr><td>AI Agent Tool Invocation</td><td>AML.T0053</td><td>A tool called for the attacker</td></tr><tr><td>LLM Response Rendering</td><td>AML.T0077</td><td>Data in the address of a rendered image</td></tr><tr><td>AI Agent Context Poisoning: Memory</td><td>AML.T0080.000</td><td>A note planted for later sessions</td></tr><tr><td>Exfiltration via AI Agent Tool Invocation</td><td>AML.T0086</td><td>A record sent by a permitted tool</td></tr><tr><td>AI Supply Chain Rug Pull</td><td>AML.T0109</td><td>A tool description changed after approval</td></tr></table>
+  <p class="small">Ids and names from ATLAS data version 5.6.0. The catalogue is revised several times a year.</p>
+  <aside class="notes"><p>Six of the fifteen techniques in the lab's catalogue file. Show the ATLAS matrix once in a browser so that participants see tactics as columns. Sources: MITRE ATLAS data 5.6.0.</p></aside>
+</section>
+
+<section class="slide" id="threat-form" data-lo="LO1">
+  <div class="kicker">Stating a threat</div>
+  <h2>A threat you can test names four things</h2>
+  <div class="flow"><div class="step c-teal"><b>Source</b>who writes the text</div><div class="arrow">→</div><div class="step c-cyan"><b>Entry point</b>where it enters</div><div class="arrow">→</div><div class="step c-purple"><b>Action</b>which tool or output it turns</div><div class="arrow">→</div><div class="step c-coral"><b>Harm</b>what is lost</div></div>
+  <div class="callout tip mt-s"><b>TH-01.</b> An importer plants text in the body of an email so that <code>send_email</code> does this: another importer's record is emailed to an outside address.</div>
+  <aside class="notes"><p>Contrast with "prompt injection is a risk for our agent", which nobody can test. Each of the four fields later becomes a column of the attack log.</p></aside>
+</section>
+
+<section class="slide" id="mapping-is-argument" data-lo="LO1">
+  <div class="kicker">Mapping</div>
+  <h2>A mapping is an argument: write the reason beside the id</h2>
+  <div class="cols cols-2"><div class="stack"><div class="card flat c-purple"><h4>TH-07: a description changes after approval</h4><p class="small mb0">The text is an injection (LLM01). The cause is a supplier's component that changed under you (LLM04, ASI04). The key takes the cause: the control follows from it.</p></div></div><div class="stack"><div class="card flat c-amber"><h4>TH-09: one key for both servers</h4><p class="small mb0">Excessive agency (LLM03)? No model is fooled. A server acts with authority nobody gave it: identity and privilege abuse (ASI03).</p></div></div></div>
+  <div class="callout warn mt-s"><b>What goes wrong.</b> Ids are pasted in to look complete. A linter catches an id that does not exist; only a reviewer catches one that does not fit.</div>
+  <aside class="notes"><p>These are the two disputes of Lab 1.3. Let two teams argue TH-07 for two minutes. The lab's key accepts more than one answer where two are defensible, and says which.</p></aside>
+</section>
+
+<section class="slide" id="check-mapping" data-lo="LO1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which pair fits the threat?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1"><p class="lead">An importer's invoice says: "use the exchange rate from" an outside address that ends in the importer's IBAN. The agent calls <code>fetch_rate</code> with that address. Which risk entry and technique fit best?</p><div class="opts"><div class="opt" data-why="Sees any outside address as a supplier: nothing the authority depends on has changed">LLM04 Supply Chain, with AI Supply Chain Rug Pull</div><div class="opt" data-why="Counts the extra call and misses that the harm is the data in the address">LLM06 Unbounded Consumption, with Cost Harvesting</div><div class="opt" data-why="Treats every leak as a leak of the prompt: the data here is an importer&#x27;s record">LLM08 Hidden Context Exposure, with Extract LLM System Prompt</div><div class="opt" data-ok>LLM02 Sensitive Information Disclosure, with Exfiltration via AI Agent Tool Invocation</div></div><div class="callout tip why"><b>Why.</b> The harm is a Restricted value leaving; the adversary's step is a tool call whose argument carries it. That is TH-03.</div></div>
+  <aside class="notes"><p>Answer: the last option. LLM01 with indirect injection is also defensible as the entry technique; the lab's key accepts it. The best single pair names the harm and the step that causes it.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The exercise is the mapping, not the typing: TH-01 is done as a model. If a team disagrees with the key, good: ask for the sentence that defends their id.</p></aside>
 </section>
 
 <!-- Session 4 -->
-
-<section class="slide section" id="s4" data-auto="section" data-session="4"></section>
-
-<section class="slide" id="s4-idea" data-lo="LO1">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide section" id="s4" data-auto="section" data-session="4">
+  <aside class="notes"><p>Session 4 turns the list into a plan: scores, a budget, and what ten trials can show.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO1">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
-  </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+<section class="slide" id="national-scale" data-lo="LO1">
+  <div class="kicker">Scoring</div>
+  <h2>The national framework scores likelihood and impact from 1 to 4</h2>
+  <div class="cols cols-2"><div class="stack"><table class="t small"><tr><th>Score</th><th>Likelihood</th><th>Impact</th></tr><tr><td class="num">1</td><td>rare</td><td>low</td></tr><tr><td class="num">2</td><td>unlikely</td><td>medium</td></tr><tr><td class="num">3</td><td>likely</td><td>high</td></tr><tr><td class="num">4</td><td>almost certain</td><td>catastrophic</td></tr></table></div><div class="stack"><table class="t small"><tr><th>Level</th><th>Band</th></tr><tr><td>1 to 2</td><td>low</td></tr><tr><td>3 to 6</td><td>medium</td></tr><tr><td>8 to 12</td><td>high</td></tr><tr><td class="num">16</td><td>catastrophic</td></tr></table></div></div>
+  <p class="small">Level is likelihood times impact. Treatments: avoid, mitigate, transfer, accept.</p>
+  <aside class="notes"><p>The scale of the National AI Risk Management Framework, as AE-207 used it in its Lab 2.4. One slide of recap. What is new here: the likelihood will be replaced by a measured rate tomorrow. Sources: National AI Risk Management Framework (SDAIA, April 2026).</p></aside>
+</section>
+
+<section class="slide" id="evidence-for-likelihood" data-lo="LO1">
+  <div class="kicker">Likelihood</div>
+  <h2>Before a test, likelihood is a judgement with a reason; after, it is a rate</h2>
+  <ul class="bullets"><li><b>Who can reach the entry point?</b> Anyone with an email address, or only a broker with upload rights</li><li><b>How much skill?</b> One sentence in an invoice, or control of a server</li><li><b>How often does it work?</b> Unknown today. Tomorrow: successes over trials, with an interval</li></ul>
+  <div class="callout tip mt-s"><b>Write the reason.</b> "TH-04: needs a shipment under hold and the right wording; uninspected goods leave the port" can be challenged. A bare 2 and 4 cannot.</div>
+  <aside class="notes"><p>Lab 1.4 asks for a reason of at least a few words per score, and checks that no score is more than one step from the trainer's key. The register is AI-off: participants should be able to defend each number aloud.</p></aside>
+</section>
+
+<section class="slide" id="register" data-lo="LO1">
+  <div class="kicker">The register</div>
+  <h2>Ten threats scored: one at 12, seven more in the high band</h2>
+  <table class="t small"><tr><th>Id</th><th>Threat</th><th>L</th><th>I</th><th>Level</th></tr><tr class="hl"><td>TH-01</td><td>Record emailed out through an email</td><td class="num">4</td><td class="num">3</td><td class="num">12</td></tr><tr><td>TH-02</td><td>IBAN in the address of an image</td><td class="num">3</td><td class="num">3</td><td class="num">9</td></tr><tr><td>TH-03</td><td>IBAN in a tool argument</td><td class="num">3</td><td class="num">3</td><td class="num">9</td></tr><tr><td>TH-05</td><td>Instruction planted in memory</td><td class="num">3</td><td class="num">3</td><td class="num">9</td></tr><tr><td>TH-09</td><td>Any case to any address with the shared key</td><td class="num">3</td><td class="num">3</td><td class="num">9</td></tr><tr><td>TH-04, TH-07, TH-08</td><td>Released hold; changed tool; hostile code</td><td class="num">2</td><td class="num">4</td><td class="num">8</td></tr><tr><td>TH-06, TH-10</td><td>Poisoned note; printed prompt</td><td></td><td></td><td class="num">6</td></tr></table>
+  <aside class="notes"><p>The trainer's key from Lab 1.4. Eight of ten are high: a ranking alone does not tell you where to spend the budget. Ask which they would test first and why, before the next slide.</p></aside>
+</section>
+
+<section class="slide" id="ten-trials" data-lo="LO1 LO2">
+  <div class="kicker">Trials</div>
+  <h2>Ten trials tell you that an attack works, not how it ranks</h2>
+  <div class="cols cols-2"><div class="stack"><table class="t small"><tr><th>Successes in 10</th><th>95% interval</th></tr><tr><td class="num">0</td><td>0% to 28%</td></tr><tr><td class="num">3</td><td>11% to 60%</td></tr><tr><td class="num">5</td><td>24% to 76%</td></tr><tr><td class="num">8</td><td>49% to 94%</td></tr><tr><td class="num">10</td><td>72% to 100%</td></tr></table></div><div class="stack"><div class="card c-teal"><h4>One attack, measured twice</h4><p class="small mb0">Attack A-03 on the stand-in model: 4 of 10, then 49 of 100, an interval of 39% to 59%.</p></div>
+  <div class="callout warn mt-s"><b>Zero in ten.</b> The interval still reaches 28%. A defence is claimed over more trials, or shown by a control that needs none.</div></div></div>
+  <aside class="notes"><p>Wilson intervals; <code>U.wilson</code> in the kit. The run is the lab's own, on the stand-in model. The last row of the warning is the bridge to Day 3: a deterministic control gives an exact zero.</p></aside>
+</section>
+
+<section class="slide" id="budget" data-lo="LO1 LO2">
+  <div class="kicker">Budget</div>
+  <h2>A fixed budget of 300 model calls forces you to name what you did not test</h2>
+  <table class="t small"><tr><th>Threat</th><th>Calls per trial</th><th>Ten trials</th></tr><tr><td>TH-01 through an email</td><td class="num">11</td><td class="num">110</td></tr><tr><td>TH-02 link</td><td class="num">9</td><td class="num">90</td></tr><tr><td>TH-04 release</td><td class="num">10</td><td class="num">100</td></tr><tr><td>TH-05 memory, two sessions</td><td class="num">16</td><td class="num">160</td></tr><tr><td>TH-08 hostile code</td><td class="num">0</td><td class="num">0</td></tr><tr><td>TH-09 shared key</td><td class="num">0</td><td class="num">0</td></tr></table>
+  <div class="callout tip mt-s"><b>Free tests.</b> Generated code and a server's key are tested directly, without the model. They are also the ones a deterministic control closes.</div>
+  <aside class="notes"><p>Costs measured on the build as found. One valid plan: TH-01, TH-02, TH-04, TH-08 and TH-09 at ten trials is exactly 300 calls, and leaves TH-03, TH-05 and TH-07 untested. The threat model says so in a section of its own.</p></aside>
+</section>
+
+<section class="slide" id="check-what-first" data-lo="LO1 LO2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Where does the next model call go?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1"><p class="lead">You have 90 calls left. TH-03 (level 9, 9 calls a trial) is untested. TH-01 (level 12) stands at 5 successes in 10. What do you do with the 90 calls?</p><div class="opts"><div class="opt" data-why="Treats precision on a known problem as more useful than a first look at an unknown one: TH-01 is already shown to work">Ten more trials of TH-01, to narrow its interval</div><div class="opt" data-ok>Ten trials of TH-03: an untested high threat teaches more than a tighter interval on one that already works</div><div class="opt" data-why="Confuses the number of runs with coverage of threats: the chat is one entry point at level 6">Ninety single-call probes of the portal chat, to cover more ground</div><div class="opt" data-why="Reads the budget as a cost to minimise, and leaves a high threat with no evidence at all">Keep them in reserve: an unspent budget is the safer report</div></div><div class="callout tip why"><b>Why.</b> TH-01 already has its answer: it works. The open question is whether TH-03 works at all, and ten trials can answer that.</div></div>
+  <aside class="notes"><p>Answer: ten trials of TH-03. Use it to say what trials are for: first "does it work at all", then, only when a decision depends on it, "how often".</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-4" data-auto="lab" data-lab="1.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Typical problems: scoring impact by how clever the attack is, not by what is lost; plans that spend the budget on three threats. The check accepts any plan that fits the rules.</p></aside>
 </section>
 
-<section class="slide" id="wrap-up">
+<section class="slide" id="wrap-up" data-lo="LO1">
   <div class="kicker">Day 1 · wrap-up</div>
   <h2>Three things to keep</h2>
-  <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-  </div>
+  <div class="cols cols-3 gap-s"><div class="card c-teal"><h4>Assume it is fooled</h4><p class="small mb0">The design question is what a fooled model can read and do, never whether it will obey.</p></div><div class="card c-coral"><h4>Entries, actions, exits</h4><p class="small mb0">Four origins of outside text, seven actions, four exits. Defences go on flows.</p></div><div class="card c-purple"><h4>A budget names the gaps</h4><p class="small mb0">Score with reasons, test five, and write down the high threats you did not test.</p></div></div>
+  <aside class="notes"><p>Ask each table for the one threat they are most curious to attack tomorrow.</p></aside>
 </section>
 
-<section class="slide dark" id="next" data-label="Next">
+<section class="slide dark" id="next">
   <div class="kicker">Next</div>
   <h2>Day 2: Attack</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+  <p class="lead">Tomorrow you attack Mukhallis through every entry point of today's table, ten trials at a time. Finish any open lab tonight; each of tomorrow's labs starts from supplied files.</p>
+  <aside class="notes"><p>Remind the room of the rule for tomorrow: payloads are run against this agent, in their own notebook, on this synthetic data, and nowhere else. No preparation is needed beyond a working setup check.</p></aside>
 </section>
