@@ -1,15 +1,46 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">Today is theirs: keep your own talking to the opening and the closing. Confirm the running order and the demo setup (screen sharing, accounts, a recorded backup) first.</aside>
+  <aside class="notes"><p>Today is theirs: keep your own talking to the opening, the rules and the closing. Before the room fills, confirm the pairing of teams (who attacks whom), that every team's repository is public and its suite passes, and the running order of the defences.</p><p>AI assistants are allowed all day, attacker models included, on one condition: every prompt given to one is logged and submitted.</p></aside>
 </section>
 
 <section class="slide" id="agenda" data-label="Agenda">
   <div class="kicker">Capstone</div>
-  <h2>How the presentations run</h2>
+  <h2>How the red-team day runs</h2>
   <div class="agenda">
-    <div class="item now"><div><b>Expectations and final prep</b><small>the rubric, a last rehearsal, then the first presentations</small></div></div>
-    <div class="item"><div><b>Presentations</b><small>each one timed, with questions after it</small></div></div>
-    <div class="item"><div><b>Review and closing</b><small>peer feedback, the trainer's review, what next</small></div></div>
+    <div class="item now"><div><b>Rules</b><small>teams exchange repositories and state their rules of engagement</small></div></div>
+    <div class="item"><div><b>Attack</b><small>a timed attack on the other team's hardened agent, every trial logged</small></div></div>
+    <div class="item"><div><b>Report</b><small>findings handed over: risk entry, rate and interval, one trace, a proposed test</small></div></div>
+    <div class="item"><div><b>Harden</b><small>each confirmed finding becomes a test that fails, then a fix that makes it pass</small></div></div>
+    <div class="item"><div><b>Defend</b><small>the residual-risk statement, with one attack reproduced live</small></div></div>
   </div>
+  <aside class="notes">The duration of each block is in the capstone brief in <code>labs/capstone/</code>: 20, 120, 40 and 90 minutes, then 15 minutes a team. Breaks are not on the list: press B when the room needs one, and never in the middle of the attack block.</aside>
+</section>
+
+<section class="slide" id="rules" data-label="Rules of engagement" data-lo="LO6">
+  <div class="kicker">Rules of engagement</div>
+  <h2>Attack the assigned build, on the synthetic data, within the budget</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>In scope</h4><p class="small mb0">The other team's <code>build.py</code>, through the task channel, the inbox, the tariff notes, importer memory and the two servers' tool listings.</p></div>
+    <div class="card c-coral"><h4>Out of scope</h4><p class="small mb0">The other team's laptops, accounts and repository settings. Any real address, host or model account. Any payload that leaves the lab.</p></div>
+    <div class="card c-purple"><h4>Stop when</h4><p class="small mb0">The time box ends, the budget of 600 model calls is spent, or anything outside the synthetic data is reached: then stop and tell the trainer.</p></div>
+  </div>
+  <div class="callout tip mt"><b>A finding counts when</b> it has at least ten trials, a judge written in code, the trace of one successful trial and the model's name.</div>
+  <aside class="notes"><p>Each team wrote these rules in the last step of Lab 4.4; have each attacker read its own aloud before the timer starts. Planning and running a red-team programme across an organisation is AE-407; today is one exercise with fixed rules.</p><p>With the stand-in model the wording that works is bounded by what it recognises; the channel, the goal, the victim task and the combination are the attacker's choice. With a hosted model any wording is in scope.</p></aside>
+</section>
+
+<section class="slide dark" id="attack-block" data-label="Attack">
+  <div class="kicker">Attack</div>
+  <h1>Attack · 120 minutes</h1>
+  <div class="timer" data-minutes="120"></div>
+  <p class="lead">Record every trial. Ten trials and a judge in code make a finding.</p>
+  <aside class="notes">Press T to start the timer. Walk the room and watch for two things: teams that polish one payload and log nothing, and teams that drift out of scope. Say the remaining time at the half and at the last twenty minutes.</aside>
+</section>
+
+<section class="slide dark" id="harden-block" data-label="Harden">
+  <div class="kicker">Harden</div>
+  <h1>Harden · 90 minutes</h1>
+  <div class="timer" data-minutes="90"></div>
+  <p class="lead">For each confirmed finding: a test that fails, a fix, the test passing, benign tasks at 95% or more.</p>
+  <aside class="notes">Press T to start the timer. The 40 minutes of reporting come before this slide: findings are handed over in writing, from the template. A team that cannot fix a finding in the time writes it into its residual-risk statement; that is a valid outcome and is graded as such.</aside>
 </section>
 
 <section class="slide" id="rubric" data-label="The rubric">
@@ -22,70 +53,75 @@
     <div class="row"><span>Guardrails and approvals</span><div class="bar c-purple" style="--w:50%"></div><span class="val">15%</span></div>
     <div class="row"><span>Regression suite and report</span><div class="bar c-amber" style="--w:50%"></div><span class="val">15%</span></div>
   </div>
-  <div class="callout tip mt"><b>Show results from at least two measured runs.</b> A claim without a number is a plan, not a result.</div>
-  <aside class="notes">Walk through each criterion with one example of what full marks look like.</aside>
+  <div class="callout tip mt"><b>The assessors read the evidence.</b> Attack logs row by row, one trace per finding, the commit history, and the suite running.</div>
+  <aside class="notes"><p>Walk through each criterion with one example of full marks. Threat model: twelve or more threats, mapped and scored, the untested ones named. Attack evidence: a rate and an interval per technique, in Arabic and English. Containment and authorisation: every logged exfiltration path fails with 95% of benign tasks passing, the token audit, the deputy test failing. Guardrails and approvals: both error rates, the approval placement with its counts. Regression suite and report: red then green in the pipeline, and the statement.</p><p>Authenticity: ask a team to rerun one row of its log live. The stand-in gives the same result for the same attack and trial number.</p></aside>
 </section>
 
 <section class="slide" id="format" data-label="Format">
   <div class="kicker">Format</div>
-  <h2>REPLACE: how many minutes each presentation and its questions take</h2>
+  <h2>Ten minutes of defence, five minutes of questions</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>1 · The problem</h4><p class="small mb0">Who, what, why now. One slide.</p></div>
-    <div class="card c-cyan"><h4>2 · What you built</h4><p class="small mb0">Design, decisions, trade-offs. Then the live demo.</p></div>
-    <div class="card c-coral"><h4>3 · What you measured</h4><p class="small mb0">Baseline, improvement, failures found, what comes next.</p></div>
+    <div class="card c-teal"><h4>1 · One attack, twice</h4><p class="small mb0">Reproduce one attack on the build as found. Run it on your build and show which control refuses it, in the action log.</p></div>
+    <div class="card c-cyan"><h4>2 · What the others found</h4><p class="small mb0">Each confirmed finding: its rate, the test that failed, the fix, the test passing, and what the fix cost benign tasks.</p></div>
+    <div class="card c-coral"><h4>3 · What remains</h4><p class="small mb0">The residual-risk statement: what is closed exactly, what is lowered to a rate, what is open, and who accepts it.</p></div>
   </div>
-  <div class="callout note mt"><b>Peer feedback.</b> After each talk, everyone writes one strength, one question and one suggestion.</div>
+  <div class="callout note mt"><b>Peer feedback.</b> After each defence, the attacking team says which open point it would try next.</div>
+  <aside class="notes">Questions the assessors ask every team: which of your zeros are exact and which are rates? What did your controls cost legitimate users, and in which language? Your suite passes: what does that not prove? The supplier changes the model next month: what do you run?</aside>
 </section>
 
 <section class="slide order" id="running-order" data-label="Running order">
   <div class="kicker">Running order</div>
-  <h2>Who presents when</h2>
+  <h2>Who defends when</h2>
   <table class="t small">
-    <tr><th>#</th><th>Presenter</th><th>Project</th></tr>
-    <tr><td>1</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>2</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>3</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>4</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>5</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>6</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>7</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>8</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
+    <tr><th>#</th><th>Team</th><th>Attacked by</th></tr>
+    <tr><td>1</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
+    <tr><td>2</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
+    <tr><td>3</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
+    <tr><td>4</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
+    <tr><td>5</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
+    <tr><td>6</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
+    <tr><td>7</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
+    <tr><td>8</td><td><input placeholder="name"></td><td><input placeholder="team"></td></tr>
   </table>
-  <aside class="notes">Type the names in at the start; the fields can be edited live and are not saved, so keep the list in your notes too.</aside>
+  <aside class="notes">Type the teams in at the start, with the team that attacked each; the fields can be edited live and are not saved, so keep the list in your notes too.</aside>
 </section>
 
-<section class="slide dark" id="final-prep" data-label="Before the first presentation">
-  <div class="kicker">Before the first presentation</div>
+<section class="slide dark" id="final-prep" data-label="Before the first defence">
+  <div class="kicker">Before the first defence</div>
   <h1>Final prep · 20 minutes</h1>
   <div class="timer" data-minutes="20"></div>
-  <p class="lead">Rehearse once, record a backup, try the demo on this screen.</p>
+  <p class="lead">Rehearse the one attack on this screen, on both builds. Record a backup run.</p>
   <aside class="notes">Press T to start the timer. Breaks are not slides: press B when the room needs one.</aside>
 </section>
 
-<section class="slide dark presenting" id="now-presenting" data-label="Now presenting">
-  <div class="kicker center">Now presenting</div>
-  <div class="center"><input placeholder="Presenter · project"></div>
-  <aside class="notes">Type the presenter's name and press T to start the timer. Reuse this slide for every presenter.</aside>
+<section class="slide dark presenting" id="now-presenting" data-label="Now defending">
+  <div class="kicker center">Now defending</div>
+  <div class="center"><input placeholder="Team"></div>
+  <div class="timer" data-minutes="10"></div>
+  <aside class="notes">Type the team's name and press T to start the ten minutes. When they end, the five minutes of questions start; keep them to five. Reuse this slide for every team.</aside>
 </section>
 
 <section class="slide" id="review" data-label="Trainer review">
   <div class="kicker">Trainer review</div>
-  <h2>What the presentations showed</h2>
+  <h2>What the day showed</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>Strongest patterns</h4><p class="small mb0">What several projects got right.</p></div>
-    <div class="card c-coral"><h4>Common gaps</h4><p class="small mb0">What most projects would fix next.</p></div>
-    <div class="card c-purple"><h4>One surprise</h4><p class="small mb0">Something nobody expected.</p></div>
+    <div class="card c-teal"><h4>Strongest patterns</h4><p class="small mb0">Controls that held against every attacker, and why.</p></div>
+    <div class="card c-coral"><h4>Common gaps</h4><p class="small mb0">Paths most builds left open, and suites that were green without testing.</p></div>
+    <div class="card c-purple"><h4>One surprise</h4><p class="small mb0">A finding nobody had in a threat model.</p></div>
   </div>
-  <aside class="notes">Fill these in from your scoring notes during the last break. Name projects for strengths; keep gaps anonymous.</aside>
+  <aside class="notes">Fill these in from your scoring notes during the last break. Name teams for strengths; keep gaps anonymous. The notes for assessors in the solutions folder list what the reference build leaves open: compare with what the teams found.</aside>
 </section>
 
 <section class="slide" id="what-next" data-label="After the course">
   <div class="kicker">After the course</div>
   <h2>Keep going</h2>
   <ul class="bullets">
-    <li><b>Your project stays yours:</b> keep it reproducible and add the next improvement you named today</li>
-    <li><b>Next Academy course:</b> REPLACE: the course that follows this one</li>
+    <li><b>In two weeks, the follow-up task:</b> the supplier changes the model. Rerun your suite with the second model profile, on the build as found and on yours</li>
+    <li><b>Send one page:</b> which tests changed, which new entry point the new model obeys, and whether your residual-risk statement still holds</li>
+    <li><b>Your repository stays yours:</b> keep the suite running on every change</li>
+    <li><b>Next Academy course:</b> AE-407, AI Assurance, Red Teaming and Governance for Engineering Leads</li>
   </ul>
+  <aside class="notes">The follow-up task is part of the assessment: it shows whether the suite is something the team runs or something it wrote once. The command is in the capstone brief: the environment variable <code>MUKHALLIS_PROFILE=v2</code>. AE-407 takes over from here: planning a red-team programme, assurance cases, and briefing the people who accept the risk.</aside>
 </section>
 
 <section class="slide dark" id="thanks" data-label="Thank you">
