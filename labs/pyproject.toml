@@ -1,6 +1,6 @@
 [project]
 name = "ae-308-labs"
-version = "2027.1.0"
+version = "2027.2.0"
 description = "Lab notebooks of the SDAIA Academy course AE-308 Securing Language Model and Agent Applications"
 requires-python = ">=3.11,<3.14"
 dependencies = [

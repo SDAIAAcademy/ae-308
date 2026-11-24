@@ -14,6 +14,7 @@ U.wilson(k, n)      the 95% Wilson interval of k successes in n trials, as (low,
 U.rate(k, n)        "3/10 = 30% [11%, 60%]"
 U.band(level)       the national band of a level: low, medium, high, catastrophic
 U.save(name, text)  write a lab output under labs/artifacts/
+U.service_signs(rows)  per account of a service log: volume and the signs of copying (Lab 4.4)
 """
 
 from __future__ import annotations
@@ -92,6 +93,35 @@ def rate(k: int, n: int) -> str:
 
 def band(level: int) -> str:
     return "catastrophic" if level >= 16 else "high" if level >= 8 else "medium" if level >= 3 else "low"
+
+
+def service_signs(rows: list[dict]) -> list[dict]:
+    """One row per account of a service log: volume, keys, busiest hour and five shares.
+
+    near_dup: requests that differ from the same key's previous request in exactly one word.
+    outside_day: requests outside the working day (the log's minutes before 7 h or from 18 h).
+    """
+    acc, prev = {}, {}
+    for r in sorted(rows, key=lambda r: (r["t"], r["key"])):
+        a = acc.setdefault(r["account"], {"account": r["account"], "keys": set(), "requests": 0, "hours": {},
+                                          "chapters": set(), "near": 0, "scores": 0, "outside": 0, "declared": 0})
+        words, last = r["text"].split(), prev.get(r["key"])
+        a["near"] += bool(last and len(last) == len(words) and sum(x != y for x, y in zip(last, words)) == 1)
+        prev[r["key"]] = words
+        a["keys"].add(r["key"])
+        a["requests"] += 1
+        a["hours"][r["t"] // 60] = a["hours"].get(r["t"] // 60, 0) + 1
+        a["chapters"].add(r["chapter"])
+        a["scores"] += r["all_scores"]
+        a["outside"] += not (420 <= r["t"] < 1080)
+        a["declared"] += r["declared"]
+    out = []
+    for a in acc.values():
+        n = a["requests"]
+        out.append({"account": a["account"], "keys": len(a["keys"]), "requests": n, "busiest_hour": max(a["hours"].values()),
+                    "chapters": len(a["chapters"]), "near_dup": round(a["near"] / n, 2), "all_scores": round(a["scores"] / n, 2),
+                    "outside_day": round(a["outside"] / n, 2), "declared": round(a["declared"] / n, 2)})
+    return sorted(out, key=lambda s: -s["requests"])
 
 
 def save(name: str, text: str) -> Path:

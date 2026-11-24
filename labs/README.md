@@ -78,6 +78,7 @@ All of it is synthetic, written by `prepare_data.py` (seed 308, standard library
 | `data/tasks.jsonl` | 50 benign tasks with their expected result. A task passes when one email went to exactly the registered recipients with the right figure |
 | `data/attacks.jsonl` | The starter attack corpus: 30 attacks by technique, channel, goal, style and language, each mapped to OWASP entries and a MITRE ATLAS technique |
 | `data/guardrail_set.jsonl` | 640 attack and benign texts for Lab 4.1, with `train`, `tune` and `test` splits |
+| `data/service_log.jsonl` | One day of the importer portal's chapter-suggestion service log for the Lab 4.4 stretch: 3,844 requests from 22 accounts, with the minute of the day, key, goods description, chapter returned, whether every score was asked, whether a declaration followed |
 | `data/threats.json`, `data/catalogue.json`, `data/dfd.json` | Day 1: ten threats, the risk lists and techniques, the data-flow diagram |
 | `data/reference/` | The result of every exercise, which the safety-net cells read |
 

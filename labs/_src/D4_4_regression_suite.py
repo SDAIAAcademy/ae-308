@@ -13,6 +13,7 @@
 # - [ ] Run the suite on both builds; the gate file (6 min)
 # - [ ] Choose the capstone target and its rules (6 min)
 # - [ ] ✱ Stretch · Run the suite after the scripted model change
+# - [ ] ✱ Stretch · Signs of copying in the service log
 # %%
 import os, sys, subprocess
 from pathlib import Path
@@ -179,6 +180,65 @@ print(json.dumps(rules, indent=1))
 # `os.environ["MUKHALLIS_PROFILE"] = "v2"` and run the suite again on both builds, then
 # `M.attacks()` for all thirty on the hardened build. Which tests change on the build as found?
 # Which entry point does the new model obey that the old one ignored (read `M.PROFILES`)?
+#
+# ## ✱ Stretch · Signs of copying in the service log
+#
+# The action log answers what the agent did. The importer portal has a second log: its
+# chapter-suggestion service, which answers a goods description with the suggested HS chapter, and
+# with every chapter's score when asked. That model was trained on the Authority's own
+# declarations. Someone who sends it enough descriptions and keeps the answers can train a copy
+# (MITRE ATLAS calls it Extract AI Model). `data/service_log.jsonl` is one synthetic day of the log;
+# `U.service_signs` turns it into one row per account.
+#
+# ✏️ **Exercise** · `copying_signs(s)`: return the list of signs an account row shows, from these five:
+# near-duplicate requests at 20% or more, every score asked in half the requests or more, 30% or more
+# outside the working day, follow-on declarations at 5% or fewer, and 10 or more of the 12 chapters.
+# An account with three signs or more raises the alert. Then compare with the rule "the busiest
+# account" and with a cap of 1,000 requests per key per day.
+
+# %%
+def copying_signs(s):
+    # BEGIN SOLUTION
+    found = []
+    if s["near_dup"] >= 0.2:
+        found.append("near-duplicates")
+    if s["all_scores"] >= 0.5:
+        found.append("every score asked")
+    if s["outside_day"] >= 0.3:
+        found.append("round the clock")
+    if s["declared"] <= 0.05:
+        found.append("no declarations follow")
+    if s["chapters"] >= 10:
+        found.append("every chapter")
+    return found
+    # END SOLUTION
+
+# %%
+log = U.jsonl("service_log.jsonl")
+table = U.service_signs(log)
+try:
+    alerts = [s["account"] for s in table if len(copying_signs(s)) >= 3]
+except NotImplementedError:
+    alerts = U.reference("d4_4_alerts")
+U.keep("d4_4_alerts", alerts)
+per_key = {}
+for r in log:
+    per_key[(r["account"], r["key"])] = per_key.get((r["account"], r["key"]), 0) + 1
+over_cap = sorted({a for (a, k), n in per_key.items() if n > 1000})
+U.show(table[:6])
+print("\nthe busiest account:", table[0]["account"])
+print("accounts with a key over 1,000 requests:", over_cap)
+print("accounts with three signs or more:", alerts)
+U.check(alerts == ["IMP-0317"], "the signs raise one alert, on the account that spreads its requests over three keys")
+U.check(table[0]["account"] not in alerts and not over_cap, "volume points at a busy broker whose requests turn into declarations, and the cap per key reaches no account")
+
+# %% [markdown]
+# **Look at** · IMP-0317 sends 1,290 requests over three keys, about 430 a key: a cap per key never
+# fires, and a cap per account low enough to stop it would stop both brokers first. Write the three
+# controls you would add, and who does what: rate controls per account (they slow a copier), answers
+# with the top chapter only and no scores (each answer then carries less), and the daily signs as an
+# alert that the information security officer reviews and acts on. The platform engineer who sets the
+# limits does not clear the alerts. The answer key has one acceptable set.
 #
 # ## Check yourself
 #

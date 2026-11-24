@@ -641,6 +641,34 @@
       "session": 4
     },
     {
+      "id": "q-lo6-05",
+      "type": "single",
+      "prompt": "One day of the importer portal's chapter-suggestion log. BRK-03: 1,180 requests on one key, 8% asking for every score, 3% outside the working day, 52% followed by a declaration. IMP-0208: 560 requests over two keys, 34% near-duplicates, 97% asking for every score, 54% outside the working day, none followed by a declaration. IMP-0145: 36 requests, 72% followed by a declaration. The cap is 1,000 requests per key per day. What should the team do?",
+      "options": [
+        "Alert on IMP-0208, cap per account, and stop returning scores",
+        "Suspend BRK-03, since it sends the most requests in the day",
+        "Nothing: only BRK-03 crosses the per-key cap, and it files declarations",
+        "Block every account that has asked for every chapter score even once"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "IMP-0208 shows the signs of copying the model: near-duplicate probing, every score asked, a steady rate outside the working day and no declarations, spread over two keys that each stay under the cap. Quotas per account slow it, plainer answers make each answer worth less, and the alert brings a person in.",
+      "misconceptions": [
+        "",
+        "Takes volume as the sign of copying, which flags the busy honest broker",
+        "Trusts a cap per key that a copier stays under by adding keys",
+        "Blocks honest importers who sometimes ask for the scores, a false positive paid by them"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day4",
+      "level": "analyze",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
       "id": "q-lo6-03",
       "type": "single",
       "prompt": "In a residual-risk statement a team writes: \"Exfiltration by email: 0 successes in 10 trials after hardening.\" The control is an input classifier. What should the reviewer ask for?",
