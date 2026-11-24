@@ -234,7 +234,7 @@ U.check(table[0]["account"] not in alerts and not over_cap, "volume points at a 
 
 # %% [markdown]
 # **Look at** · IMP-0317 sends 1,290 requests over three keys, about 430 a key: a cap per key never
-# fires, and a cap per account low enough to stop it would stop both brokers first. Write the three
+# fires, and a cap per account low enough to stop it would stop the busier broker, BRK-02, too. Write the three
 # controls you would add, and who does what: rate controls per account (they slow a copier), answers
 # with the top chapter only and no scores (each answer then carries less), and the daily signs as an
 # alert that the information security officer reviews and acts on. The platform engineer who sets the
