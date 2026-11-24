@@ -41,7 +41,7 @@ Every number below comes from the solution runs on the stand-in model, profile v
 | 4.1 | Threshold 0.4. Test split: false positives 10 of 99, false negatives 2 of 79; Arabic 0 of 60 and 2 of 52; English 10 of 39 and 0 of 27. In the agent: 88% benign (six tasks broken, three Arabic), 4 of 110 attack runs succeed against 70 without |
 | 4.2 | With schemas, policy and escaping: link, tool_arg, release, memory, prompt_leak 0; email_record 40 of 75 and redirect 18 of 20 unchanged; with the recipient rule all 0. Benign 100%, no false refusal |
 | 4.3 | Requests and attacks missed: every action 187 and 9 of 10; every email 68 and 6 of 10; flagged email, raw 10 and 2 of 10; flagged email, card 10 and 0 of 10 |
-| 4.4 | As found: fail, fail, fail, pass; exit code 1. Hardened: four passes; exit code 0 |
+| 4.4 | As found: fail, fail, fail, pass; exit code 1. Hardened: four passes; exit code 0. Stretch on the service log: one alert, IMP-0317 (1,290 requests over three keys, five signs); the busiest account BRK-02 (1,350 requests over two keys, one sign: every chapter) is not; a cap of 1,000 per key reaches no account. One acceptable set of controls: a quota per account per hour and per day that throttles before it blocks, set by the platform engineer; the top chapter only, without scores; the five signs computed daily per account as an alert that the information security officer reviews, contacts the account about and suspends if needed, never the engineer who set the limits; the risk owner accepts the thresholds |
 
 ## Points to make that the numbers do not make by themselves
 

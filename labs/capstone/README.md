@@ -20,14 +20,17 @@ Each team owns a repository that holds:
 | Rules | 20 min | Teams exchange repositories. Each attacker states its rules of engagement (Lab 4.4): target, scope, budget of model calls, stop conditions |
 | Attack | 120 min | Attack the other team's `build.py` with `attack.py`. Record every trial. A finding needs at least ten trials and a judge written in code |
 | Report | 40 min | Hand over `findings.md` (from `findings_template.md`): each finding keyed to a risk-list entry, with its rate and interval, the trace of one successful trial, and a proposed regression test |
-| Harden | 90 min | Fix what the other team found in your build. Every confirmed finding becomes a test in `ci/security_suite.py` that fails before the fix and passes after it. Benign tasks stay at 95% or more |
+| Harden | 90 min | Fix what the other team found in your build. Every confirmed finding becomes a test in `ci/security_suite.py` that fails before the fix and passes after it: `--build team` runs the suite on your `build.py`, and the pipeline file does the same. Benign tasks stay at 95% or more |
 | Defend | 15 min per team | Ten minutes of defence, five of questions: your residual-risk statement (`residual_risk_template.md`). You reproduce one attack on the build as found and show why it now fails |
 
 ```bash
 cd labs
 uv run python capstone/attack.py --build capstone/build.py --attacks data/attacks.jsonl --trials 10
 uv run python capstone/attack.py --build ../../other-team/build.py --attacks my_attacks.jsonl --trials 10 --log attack_log.jsonl
+uv run python ci/security_suite.py --build team
 ```
+
+The capstone has six hours. The four blocks above take 270 minutes and the final preparation before the defences 20, which leaves 70 minutes: the defences of four teams at 15 minutes each. With more teams, the defences run in two rooms at once, each with its own assessor, or the trainer splits the cohort over two capstone sessions; the 15 minutes per team are not shortened.
 
 The first line runs all thirty starter attacks at ten trials against your own build: about 2,500 model calls, so run it with the stand-in, never against a hosted model and never out of the attack budget of 600 calls. The attack budget counts the calls made against the other team's build.
 

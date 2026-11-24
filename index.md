@@ -1,7 +1,7 @@
 ---
 course: "Securing Language Model and Agent Applications"
 code: "AE-308"
-version: "2027.1.0"
+version: "2027.2.0"
 language: "en"
 view: "trainee"
 source: "https://sdaiaacademy.github.io/ae-308/index.html"
@@ -222,4 +222,4 @@ Red-team day: a timed attack on another team's hardened agent, then a final hard
 
 SDAIA Academy · AI Engineering Track · Securing Language Model and Agent Applications
 
-Course version 2027.1.0 · engine 1.0.0 · built 2026-11-15 · commit 98d8fe3
+Course version 2027.2.0 · engine 1.0.0 · built 2026-11-24 · commit 4170aba

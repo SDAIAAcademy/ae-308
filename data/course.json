@@ -2,9 +2,9 @@
   "v": 1,
   "engine": "1.0.0",
   "build": {
-    "at": "2026-11-15T17:43:27Z",
-    "version": "2027.1.0",
-    "commit": "98d8fe3"
+    "at": "2026-11-24T16:50:31Z",
+    "version": "2027.2.0",
+    "commit": "4170aba"
   },
   "lang": "en",
   "dir": "ltr",
@@ -15,7 +15,7 @@
   "course": {
     "id": "ae-308",
     "code": "AE-308",
-    "version": "2027.1.0",
+    "version": "2027.2.0",
     "title": "Securing Language Model and Agent Applications",
     "tagline": "Attack a working agent over repeated trials, then contain it so that a fooled model breaks nothing important",
     "description": "Participants attack and then defend a working agent: a synthetic clearance assistant for a fictional port authority that reads importers' emails and invoices, searches a tariff knowledge base, remembers each importer, runs code to compute duties and acts through Model Context Protocol (MCP) servers. They threat-model it, run injection, exfiltration and poisoning attacks over repeated trials, then contain it with a sandbox and egress rules, scoped short-lived delegated tokens, separated privileged and quarantined model calls, measured guardrails and approvals placed where a person adds safety. Red-team programmes are AE-407.",

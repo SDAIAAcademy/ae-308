@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install uv
         run: pip install uv
-      - name: Run the suite on the hardened build
+      - name: Run the suite on the team's build (capstone/build.py)
         working-directory: labs
-        run: uv run python ci/security_suite.py --build hardened
+        run: uv run python ci/security_suite.py --build team

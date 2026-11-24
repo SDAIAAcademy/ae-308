@@ -386,6 +386,53 @@ DFD = {
 }
 
 
+# The importer portal's chapter-suggestion service: an importer or broker sends a goods description
+# with an API key and gets the suggested HS chapter back, with every chapter's score when asked.
+# One day of its request log; `t` is the minute of the day. Lab 4.4 (stretch) reads it.
+QUAL = ["boxed", "bulk", "assorted", "grade A", "for retail", "for site work", "spare stock", "sample lot"]
+SWAP = ["red", "blue", "small", "large", "steel", "cotton", "plastic", "boxed", "bulk", "used", "new", "12 mm",
+        "16 mm", "220 V", "110 V", "kids", "adult", "frozen", "dried", "medical"]
+PROFILES = {  # share of requests asking for every score, share followed by a declaration, working day only
+    "importer": (0.05, 0.60, 0.92),
+    "broker": (0.08, 0.55, 0.95),
+    "copier": (0.97, 0.00, None),
+}
+
+
+def _minute(rng, day_share):
+    if day_share is None or rng.random() > day_share:
+        return rng.randrange(1440)
+    return rng.randrange(7 * 60, 18 * 60)
+
+
+def service_log(rng, plan):
+    """plan: (account, number of keys, requests, profile, chapters or None for all) per account."""
+    rows, chapters = [], list(CHAPTERS)
+    for account, nkeys, n, profile, own in plan:
+        p_scores, p_declared, day = PROFILES[profile]
+        keys = [f"K-{rng.randrange(1000, 10000)}" for _ in range(nkeys)]
+        for k, key in enumerate(keys):
+            words = None
+            count = n // nkeys + (1 if k < n % nkeys else 0)
+            for t in sorted(_minute(rng, day) for _ in range(count)):
+                if profile == "copier" and words and rng.random() < 0.45:
+                    words = list(words)
+                    words[rng.randrange(len(words))] = rng.choice(SWAP)
+                else:
+                    ch = rng.choice(own or chapters)
+                    words = CHAPTERS[ch][3].split() + [str(rng.choice([20, 40, 60, 120, 240, 480])), "cartons", rng.choice(QUAL), "from", rng.choice(ORIGINS)]
+                    chosen = ch
+                rows.append({"t": t, "key": key, "account": account, "text": " ".join(words),
+                             "chapter": chosen, "all_scores": rng.random() < p_scores,
+                             "declared": rng.random() < p_declared})
+    rows.sort(key=lambda r: (r["t"], r["key"]))
+    return rows
+
+
+LOG_PLAN = ([(f"IMP-{i:04d}", 1, 4 + (i * 7) % 37, "importer", [c for c in CHAPTERS][i % 12: i % 12 + 1 + i % 3]) for i in range(11, 300, 16)]
+            + [("BRK-02", 2, 1350, "broker", None), ("BRK-04", 1, 900, "broker", None), ("IMP-0317", 3, 1290, "copier", None)])
+
+
 def main():
     rng = random.Random(SEED)
     DATA.mkdir(exist_ok=True)
@@ -400,6 +447,7 @@ def main():
     write_json("threats.json", [{"id": t[0], "source": t[1], "entry": t[2], "action": t[3], "harm": t[4]} for t in THREATS])
     write_json("reference/threat_key.json", {t[0]: {"owasp": t[5], "atlas": t[6], "likelihood": t[7], "impact": t[8]} for t in THREATS})
     write_json("dfd.json", DFD)
+    write_jsonl("service_log.jsonl", service_log(random.Random(SEED + 2), LOG_PLAN))
     print(f"wrote {len(imps)} importers, {len(msgs)} messages, 50 tasks, {len(rows)} attacks into {DATA.name}/")
 
 

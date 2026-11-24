@@ -1,7 +1,7 @@
 ---
 course: "Securing Language Model and Agent Applications"
 code: "AE-308"
-version: "2027.1.0"
+version: "2027.2.0"
 deck: "day3"
 day: 3
 language: "en"

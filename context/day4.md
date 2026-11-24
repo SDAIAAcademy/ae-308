@@ -1,7 +1,7 @@
 ---
 course: "Securing Language Model and Agent Applications"
 code: "AE-308"
-version: "2027.1.0"
+version: "2027.2.0"
 deck: "day4"
 day: 4
 language: "en"
@@ -379,13 +379,52 @@ Place one approval on outbound email, design what the approver sees, and count a
 
 *The action log*
 
-| Tool | Effect | As found: audience | Hardened: audience |
+| Tool call | As found: audience | Hardened: audience |
+| --- | --- | --- |
+| `get_importer` | any | case-server |
+| `send_email` to the attacker | any | not made |
+| `send_email` to the importer | any | comms-server |
+
+#### [day4#extraction-log] A copy of a model is built from its answers, and the service log keeps every request
+
+*The service log*
+
+The importer portal's chapter-suggestion service: one synthetic day, three of its accounts.
+
+| In the day | BRK-01 | IMP-0072 | IMP-0128 |
 | --- | --- | --- | --- |
-| `read_message` | read | any | case-server |
-| `get_importer` | read | any | case-server |
-| `send_email` to the attacker | send | any | not made |
-| `update_case` | write | any | case-server |
-| `send_email` to the importer | send | any | comms-server |
+| Requests | 1,420 | 940 | 31 |
+| Near-duplicates | 0% | 30% | 0% |
+| Every score asked | 7% | 97% | 6% |
+| Declaration follows | 58% | 0% | 55% |
+
+#### [day4#extraction-signs] Volume points at a broker; the signs point at the copier
+
+*Reading the signs*
+
+- **Near-duplicates:** one word changed at a time
+- **Every score asked:** the most per answer
+- **Round the clock:** busy when no one works
+- **No declarations:** the answers are the goal
+- **Every chapter:** brokers too, so only with others
+
+| Rule | Points at |
+| --- | --- |
+| The busiest account | BRK-01, a broker |
+| A cap of 1,000 per key per day | BRK-01 only |
+| Three signs or more | IMP-0072 (five signs) |
+
+> **What goes wrong.** A cap tuned to the busiest honest client stops no one who stays under it, and a copier can spread its requests over several keys.
+
+#### [day4#extraction-controls] Rate controls slow a copier; plainer answers and a reviewed alert make copying pay less
+
+*What to put in place*
+
+- **Rate controls.** Quotas per account, per hour and per day, that slow down before they refuse.
+- **Plainer answers.** The top chapter only, no scores: each answer teaches a copy less.
+- **A reviewed alert.** The signs, daily per account, go to Maysa in information security, who acts on them. Wissam sets the quotas and clears no alerts.
+
+> **Measure the cost first.** Blocking an honest broker is a false positive, paid by the importers who wait.
 
 #### [day4#attack-to-test] A regression test reruns a confirmed attack over trials and fails if it ever succeeds
 
@@ -425,9 +464,8 @@ def test_a06_record_by_invoice(build):
 
 *The gate*
 
-- The suite runs in continuous integration and **blocks the merge** on exit code 1
-- It names the **model** in its last line
-- Changes that must trigger it: code, prompts, tool descriptions, pins, policies, **the model**
+- In continuous integration, exit code 1 **blocks the merge**; the last line names the **model**
+- It runs on any change to code, prompts, tool descriptions, pins, policies or **the model**
 
 - **After a model change.** With the stand-in's second profile, the suite on the build as found gives A-06 5 of 10, A-08 7 of 10, A-11 3 of 10, and the new model obeys text on the rate page 3 times in 10: an entry point that was quiet before.
 
